@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="2648.65" height="762.399" viewBox="0 0 2648.65 762.399">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-2 {
+        fill: url(#linear-gradient-2);
+      }
+
+      .cls-3 {
+        fill: #fff;
+      }
+
+      .cls-4 {
+        filter: url(#Path_5);
+      }
+
+      .cls-5 {
+        filter: url(#Path_6);
+      }
+
+      .cls-6 {
+        filter: url(#Ellipse_2);
+      }
+
+      .cls-7 {
+        filter: url(#Ellipse_1);
+      }
+
+      .cls-8 {
+        filter: url(#Path_1);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#4a148c"/>
+      <stop offset="1" stop-color="#2478d8"/>
+    </linearGradient>
+    <filter id="Path_1" x="520.016" y="43.115" width="1540" height="676.169" filterUnits="userSpaceOnUse">
+      <feOffset dx="12" dy="12" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="15" result="blur"/>
+      <feFlood flood-opacity="0.4"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <linearGradient id="linear-gradient-2" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#c1c2c4"/>
+    </linearGradient>
+    <filter id="Ellipse_1">
+      <feOffset dx="12" dy="12" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="15" result="blur-2"/>
+      <feFlood flood-opacity="0.4" result="color"/>
+      <feComposite operator="out" in="SourceGraphic" in2="blur-2"/>
+      <feComposite operator="in" in="color"/>
+      <feComposite operator="in" in2="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_2" x="1417.711" y="140.952" width="455.63" height="455.63" filterUnits="userSpaceOnUse">
+      <feOffset dx="12" dy="12" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="15" result="blur-3"/>
+      <feFlood flood-opacity="0.4" result="color-2"/>
+      <feComposite operator="out" in="SourceGraphic" in2="blur-3"/>
+      <feComposite operator="in" in="color-2"/>
+      <feComposite operator="in" in2="SourceGraphic"/>
+    </filter>
+    <filter id="Path_6" x="0" y="37.484" width="559.464" height="687.432" filterUnits="userSpaceOnUse">
+      <feOffset dx="12" dy="12" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="15" result="blur-4"/>
+      <feFlood flood-opacity="0.4"/>
+      <feComposite operator="in" in2="blur-4"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Path_5" x="2020.567" y="0" width="628.083" height="762.399" filterUnits="userSpaceOnUse">
+      <feOffset dx="12" dy="12" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="15" result="blur-5"/>
+      <feFlood flood-opacity="0.4"/>
+      <feComposite operator="in" in2="blur-5"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_5" data-name="Group 5" transform="translate(8884.016 427.612)">
+    <g id="Group_4" data-name="Group 4" transform="translate(-8331 -351.497)">
+      <g id="reading-glasses-optic-svgrepo-com" transform="translate(0 0)">
+        <g id="Group_1" data-name="Group 1">
+          <g class="cls-8" transform="matrix(1, 0, 0, 1, -553.02, -76.11)">
+            <path id="Path_1-2" data-name="Path 1" class="cls-1" d="M1403.727,399.32h-25.262c-22.257-139.7-143.556-246.809-289.42-246.809-96.785,0-182.748,47.168-236.152,119.716a293.977,293.977,0,0,0-255.781,0c-53.4-72.545-139.367-119.719-236.152-119.719C215.1,152.511,93.794,259.624,71.54,399.32H46.278a46.275,46.275,0,1,0,0,92.551H71.537c22.257,139.7,143.556,246.809,289.42,246.809,198.458,0,340.674-194.669,278.585-384.146a201.4,201.4,0,0,1,170.919,0C748.414,543.879,890.466,738.68,1089.043,738.68c145.861,0,267.166-107.113,289.42-246.809h25.262a46.276,46.276,0,0,0,0-92.551Z" transform="translate(553.02 -76.4)"/>
+          </g>
+        </g>
+      </g>
+      <g data-type="innerShadowGroup">
+        <circle id="Ellipse_1-2" data-name="Ellipse 1" class="cls-2" cx="227.815" cy="227.815" r="227.815" transform="translate(132.622 65.427)"/>
+        <g class="cls-7" transform="matrix(1, 0, 0, 1, -553.02, -76.11)">
+          <circle id="Ellipse_1-3" data-name="Ellipse 1" class="cls-3" cx="227.815" cy="227.815" r="227.815" transform="translate(685.64 141.54)"/>
+        </g>
+      </g>
+      <g data-type="innerShadowGroup">
+        <circle id="Ellipse_2-2" data-name="Ellipse 2" class="cls-2" cx="227.815" cy="227.815" r="227.815" transform="translate(864.695 64.837)"/>
+        <g class="cls-6" transform="matrix(1, 0, 0, 1, -553.02, -76.11)">
+          <circle id="Ellipse_2-3" data-name="Ellipse 2" class="cls-3" cx="227.815" cy="227.815" r="227.815" transform="translate(1417.71 140.95)"/>
+        </g>
+      </g>
+      <ellipse id="Ellipse_3" data-name="Ellipse 3" class="cls-1" cx="138" cy="137.5" rx="138" ry="137.5" transform="translate(336 245.233)"/>
+      <circle id="Ellipse_4" data-name="Ellipse 4" class="cls-1" cx="137.5" cy="137.5" r="137.5" transform="translate(1045 245.233)"/>
+    </g>
+    <g class="cls-5" transform="matrix(1, 0, 0, 1, -8884.02, -427.61)">
+      <path id="Path_6-2" data-name="Path 6" class="cls-1" d="M499.224,9.672,189.72-434.5,123.5,9.672H111.6L63.984-580.32H186L440.448-272.3,519.312-587.76h14.136L505.176,9.672Z" transform="translate(-30.98 658.24)"/>
+    </g>
+    <g class="cls-4" transform="matrix(1, 0, 0, 1, -8884.02, -427.61)">
+      <path id="Path_5-2" data-name="Path 5" class="cls-1" d="M553.644,16.38Q413.6,16.38,315.315-3.276T156.429-58.968Q95.823-95,67.568-145.373T39.312-257.166q0-98.28,25.389-172.809t67.977-124.9q42.588-50.369,95-75.758t106.47-25.389a630.382,630.382,0,0,1,126.945,13.1q63.882,13.1,116.3,40.131l-45.864,133.5Q427.518-574.938,309.582-574.938q-27.846,0-52.416,22.932t-42.588,61.016a400.513,400.513,0,0,0-28.256,83.538,407.25,407.25,0,0,0-10.238,89.681q0,61.425,17.609,111.793t60.2,90.09q42.588,39.722,116.3,69.615T555.282,5.733Z" transform="translate(2014.26 689.02)"/>
+    </g>
+  </g>
+</svg>

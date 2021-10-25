@@ -12,12 +12,36 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
+        <Image src='/logo.svg' width='200' height='100' />
         <h1 className={styles.title}>New optic Corner</h1>
-
         <p className={styles.description}>
-          Shop latest and trendy Sunglasses online <br />
-          At the comfort of your home.
+          Our online services will be live very soon.
+          <br />
+          with the latest and trendy <br />
+          eyewear, lenses, power glasses, sunglasses very soon.
         </p>
+        <p className={styles.description}>
+          Subscribe below to get notified by the offers and great deals earlier.
+        </p>
+        <form
+          action='https://formspree.io/f/mknkakpa'
+          method='POST'
+          className={styles.form}
+        >
+          <label className={styles.label} htmlFor='email'>
+            Your email:
+          </label>
+          <input
+            className={styles.input}
+            type='email'
+            name='_replyto'
+            id='email'
+          />
+
+          <button className={styles.btn} type='submit'>
+            Send
+          </button>
+        </form>
       </main>
 
       <footer className={styles.footer}>

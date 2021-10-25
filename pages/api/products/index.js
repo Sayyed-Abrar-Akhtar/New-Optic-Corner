@@ -6,7 +6,9 @@ import {
   addNewProduct,
 } from '../../../controllers/productControllers';
 
-const handler = nc();
+import onError from '../../../middlewares/errors';
+
+const handler = nc({ onError });
 
 dbConnect();
 
