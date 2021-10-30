@@ -6,6 +6,8 @@ export default (err, req, res, next) => {
   let error = { ...err };
 
   error.message = err.message;
+  console.log(err);
+  console.log(err.length);
 
   // WRONG MONGOOSE ID ERROR
   if (err.name === 'CastError') {
@@ -16,8 +18,13 @@ export default (err, req, res, next) => {
 
   // MONGOOSE VALIDATION ERROR HANDLER
   if (err.name === 'ValidationError') {
-    const message = Object.values(err.errors).map((value) => value.messagge);
-    error = new ErrorHandler(message, 400);
+    if (err.length === undefined) {
+      const message = err.message;
+      error = new ErrorHandler(message, 400);
+    } else {
+      const message = Object.values(err.errors).map((value) => value.messagge);
+      error = new ErrorHandler(message, 400);
+    }
   }
 
   res.status(err.statusCode).json({

@@ -1,6 +1,6 @@
-import next from 'next';
 import AsyncHandler from '../middlewares/AsyncHandler';
 import Product from '../models/product';
+import APIFeatures from '../utils/apiFeatures';
 import ErrorHandler from '../utils/errorHandler';
 
 /*--------------------------------------------------------------------------------------*/
@@ -8,8 +8,29 @@ import ErrorHandler from '../utils/errorHandler';
 // @route   GET https://localhost:3000/api/products/
 // @access  Public
 const allProducts = AsyncHandler(async (req, res) => {
-  const products = await Product.find({});
-  res.status(200).json({ success: true, products });
+  const resPerPage = 3;
+
+  const productsCount = await Product.countDocuments();
+
+  const apiFeatures = new APIFeatures(Product.find(), req.query)
+    .search()
+    .filter();
+
+  let products = await apiFeatures.query;
+
+  let filteredProductsCount = products.length;
+
+  apiFeatures.pagination(resPerPage);
+
+  products = await apiFeatures.query.clone();
+
+  res.status(200).json({
+    success: true,
+    resPerPage,
+    productsCount,
+    filteredProductsCount,
+    products,
+  });
 });
 
 /*--------------------------------------------------------------------------------------*/
@@ -39,7 +60,7 @@ const addNewProduct = AsyncHandler(async (req, res) => {
 // @desc    Update Room.
 // @route   UPDATE https://localhost:3000/api/products/:id
 // @access  Public
-const updateProduct = AsyncHandler(async (req, res) => {
+const updateProduct = AsyncHandler(async (req, res, next) => {
   const product = await Product.findById(req.query.id);
   if (!product) {
     return next(new ErrorHandler('Product does not exist!!', 404));
@@ -62,7 +83,7 @@ const updateProduct = AsyncHandler(async (req, res) => {
 // @desc    Delete Product.
 // @route   DELETE https://localhost:3000/api/products/:id
 // @access  Public
-export const deleteProduct = AsyncHandler(async (req, res) => {
+export const deleteProduct = AsyncHandler(async (req, res, next) => {
   const product = await Product.findById(req.query.id);
   if (!product) {
     return next(new ErrorHandler('Product does not exist!!', 404));
