@@ -6,8 +6,6 @@ export default (err, req, res, next) => {
   let error = { ...err };
 
   error.message = err.message;
-  console.log(err);
-  console.log(err.length);
 
   // WRONG MONGOOSE ID ERROR
   if (err.name === 'CastError') {

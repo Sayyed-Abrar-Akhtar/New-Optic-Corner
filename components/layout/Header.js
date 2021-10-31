@@ -1,32 +1,23 @@
 import React from 'react';
+import Image from 'next/image';
+
+import styles from '../../styles/Header.module.css';
+import Nav from './Nav';
 
 const Header = () => {
   return (
-    <header className='header'>
-      <section className='logo'>
-        <a href='#' className='logo__link'>
-          <img src='#' alt='New Optic Corner' className='logo__image' />
+    <header className={styles.header}>
+      <section className={styles.logo}>
+        <a href='#' className={styles.logo__link}>
+          <Image
+            src='/logo.svg'
+            alt='New Optic Corner'
+            width={600}
+            height={400}
+          />
         </a>
       </section>
-      <nav className='nav'>
-        <ul className='nav__lists'>
-          <a href='#' className='nav__link'>
-            <li className='nav__list'>Home</li>
-          </a>
-          <a href='#' className='nav__link'>
-            <li className='nav__list'>Account</li>
-          </a>
-          <a href='#' className='nav__link'>
-            <li className='nav__list'>Cart</li>
-          </a>
-          <a href='#' className='nav__link'>
-            <li className='nav__list'>Contact us</li>
-          </a>
-          <a href='#' className='nav__link'>
-            <li className='nav__list'>About us</li>
-          </a>
-        </ul>
-      </nav>
+      <Nav />
     </header>
   );
 };

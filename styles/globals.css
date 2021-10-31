@@ -1,15 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
 :root {
-  --primary-color: rgb(33, 201, 131);
-  --primary-color-light: rgb(103, 253, 179);
-  --primary-color-dark: rgb(0, 151, 86);
-  --gradient-from: #23ca85;
-  --gradient-to: #1eb88b;
+  --primary-color: #5b9210;
+  --primary-color-light: #8cc346;
+  --primary-color-dark: #296400;
   --white: rgb(255, 255, 255);
   --black: rgb(0, 0, 0);
-
+  --margin-3: 3rem;
+  --padding-3: 3rem;
+  --margin-6: 6rem;
+  --padding-6: 6rem;
+  --margin-9: 9rem;
+  --padding-9: 9rem;
   --border-radius: 4px;
+  --box-shadow-dense: 2px 2px 16px rgba(0, 0, 0, 0.4);
+  --box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
 }
 
 html {
@@ -23,15 +28,17 @@ body {
 }
 
 body {
-  font-family: -apple-system, 'Merriweather', serif, sans-serif;
+  font-family: -apple-system, 'Lato', serif, sans-serif;
   font-size: 1.6rem;
   line-height: 2.2rem;
 }
 
 h1 {
-  font-family: 'Irish Grover', cursive;
+  font-family: 'Roboto', serif, sans-serif;
   font-size: 4.8rem;
   line-height: 5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 h2 {
@@ -55,7 +62,6 @@ h4 {
   }
 
   h1 {
-    font-family: 'Irish Grover', cursive;
     font-size: 3.2rem;
     line-height: 4rem;
   }
@@ -82,7 +88,6 @@ h4 {
   }
 
   h1 {
-    font-family: 'Irish Grover', cursive;
     font-size: 4rem;
     line-height: 4.5rem;
   }
@@ -110,4 +115,74 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.cta {
+  display: inline-block;
+  background: linear-gradient(
+    to right bottom,
+    var(--primary-color-dark),
+    var(--primary-color-light)
+  );
+  margin-top: 1.5rem;
+  color: var(--white);
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  border-radius: var(--border-radius);
+  position: relative;
+  z-index: 100;
+  transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.cta::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: linear-gradient(
+    to right bottom,
+    var(--primary-color-dark),
+    var(--primary-color-light)
+  );
+  top: 0;
+  left: 0;
+  z-index: -9;
+  border-radius: var(--border-radius);
+  transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.cta:hover::after {
+  transform: scale(1.5);
+  opacity: 0;
+}
+
+.cta:active {
+  box-shadow: var(--box-shadow);
+  transform: scale(0.95);
+}
+
+.heading {
+  text-transform: uppercase;
+  text-align: center;
+  margin: var(--margin-9) 0;
+  position: relative;
+  letter-spacing: 1px;
+}
+
+.heading::after {
+  content: '';
+  width: 10rem;
+  display: inline-block;
+  padding-bottom: 1.5rem;
+  border-bottom: 3px solid var(--primary-color-dark);
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
 }

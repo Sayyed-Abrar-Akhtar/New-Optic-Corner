@@ -42,17 +42,11 @@ const productSchema = new mongoose.Schema(
         trim: true,
       },
     ],
-    season: {
-      year: {
-        type: Number,
-        required: true,
-      },
-      name: {
-        type: String,
-        required: true,
-        enum: {
-          values: ['Autumn/Winter', 'Spring/Summer'],
-        },
+    category: {
+      type: String,
+      required: true,
+      enum: {
+        values: ['men', 'women', 'kid', 'unisex'],
       },
     },
   },

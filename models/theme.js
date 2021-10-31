@@ -1,41 +1,8 @@
 import mongoose from 'mongoose';
 
-const themeSchema = new mongoose.Schema({
-  herobanner: {
-    title: {
-      type: String,
-      required: [true, 'Please enter banner title'],
-      trim: true,
-    },
-    subtitle: {
-      type: String,
-      trim: true,
-    },
-    image: {
-      public_id: {
-        type: String,
-        required: true,
-      },
-      url: {
-        type: String,
-        required: true,
-      },
-    },
-    cta: {
-      text: {
-        type: String,
-        required: [true, 'Please enter CTA text'],
-        trim: true,
-      },
-      link: {
-        type: String,
-        required: [true, 'Please enter CTA link'],
-        trim: true,
-      },
-    },
-  },
-  categorybanner: [
-    {
+const themeSchema = new mongoose.Schema(
+  {
+    herobanner: {
       title: {
         type: String,
         required: [true, 'Please enter banner title'],
@@ -45,10 +12,11 @@ const themeSchema = new mongoose.Schema({
         type: String,
         trim: true,
       },
-      images: {
+      image: {
         public_id: {
           type: String,
           required: true,
+          unique: true,
         },
         url: {
           type: String,
@@ -68,40 +36,78 @@ const themeSchema = new mongoose.Schema({
         },
       },
     },
-  ],
-  promotions: {
-    title: {
-      type: String,
-      required: [true, 'Please enter promotions title'],
-      trim: true,
-    },
-    subtitle: {
-      type: String,
-      trim: true,
-    },
-    image: {
-      public_id: {
-        type: String,
-        required: true,
+    categorybanner: [
+      {
+        title: {
+          type: String,
+          required: [true, 'Please enter banner title'],
+          trim: true,
+        },
+        subtitle: {
+          type: String,
+          trim: true,
+        },
+        image: {
+          public_id: {
+            type: String,
+            required: true,
+            unique: true,
+          },
+          url: {
+            type: String,
+            required: true,
+          },
+        },
+        cta: {
+          text: {
+            type: String,
+            required: [true, 'Please enter CTA text'],
+            trim: true,
+          },
+          link: {
+            type: String,
+            required: [true, 'Please enter CTA link'],
+            trim: true,
+          },
+        },
       },
-      url: {
+    ],
+    promotions: {
+      title: {
         type: String,
-        required: true,
-      },
-    },
-    cta: {
-      text: {
-        type: String,
-        required: [true, 'Please enter CTA text'],
+        required: [true, 'Please enter promotions title'],
         trim: true,
       },
-      link: {
+      subtitle: {
         type: String,
-        required: [true, 'Please enter CTA link'],
         trim: true,
+      },
+      image: {
+        public_id: {
+          type: String,
+          required: true,
+          unique: true,
+        },
+        url: {
+          type: String,
+          required: true,
+        },
+      },
+      cta: {
+        text: {
+          type: String,
+          required: [true, 'Please enter CTA text'],
+          trim: true,
+        },
+        link: {
+          type: String,
+          required: [true, 'Please enter CTA link'],
+          trim: true,
+        },
       },
     },
   },
-});
+  { timestamps: true }
+);
 
 export default mongoose.models.Theme || mongoose.model('Theme', themeSchema);

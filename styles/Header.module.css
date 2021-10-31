@@ -1,0 +1,10 @@
+.header {
+  display: flex;
+  margin: 1rem var(--margin-3);
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 12rem;
+}

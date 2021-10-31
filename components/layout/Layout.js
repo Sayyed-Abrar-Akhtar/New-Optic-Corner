@@ -2,6 +2,7 @@ import React from 'react';
 import Footer from './Footer';
 import Header from './Header';
 import Head from 'next/head';
+import Notification from './Notification';
 
 const Layout = ({
   title = 'Home | New Optic Corner',
@@ -24,6 +25,7 @@ const Layout = ({
         <meta property='og:site_name' content='New Optic Corner' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
+      <Notification />
       <Header />
       <main>{children}</main>
       <Footer />

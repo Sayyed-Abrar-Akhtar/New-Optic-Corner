@@ -1,0 +1,18 @@
+.notification__banner {
+  background-color: var(--primary-color-dark);
+  display: flex;
+  justify-content: center;
+  padding: 0 var(--padding-3);
+  color: var(--white);
+}
+
+.notification {
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.4rem;
+  width: 33%;
+  padding: 0 0.5%;
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
