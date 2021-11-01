@@ -1,0 +1,38 @@
+.frame {
+  display: grid;
+
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(6, 1fr);
+
+  margin: 6rem 6rem 3rem 6rem;
+}
+
+.details {
+  display: grid;
+
+  grid-template-rows: 7fr 1fr;
+  grid-template-columns: 1fr;
+  grid-gap: 0.5rem;
+}
+
+.image__container {
+  width: 90%;
+
+  margin: 1rem auto;
+  position: relative;
+  border-radius: 50%;
+
+  background-color: #f7f7f7;
+  overflow: hidden;
+}
+
+.image {
+  height: 100%;
+  width: 90%;
+}
+
+.title {
+  text-align: center;
+  margin: 0;
+  text-transform: capitalize;
+}

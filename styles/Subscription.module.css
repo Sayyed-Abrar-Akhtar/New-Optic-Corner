@@ -1,0 +1,30 @@
+.subscribe {
+  margin: -3rem var(--margin-6) var(--margin-3);
+}
+
+.info {
+  width: 70%;
+  margin: 0 auto;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  text-align: center;
+}
+
+.form {
+  width: 65%;
+  margin: 3rem auto;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2rem;
+  align-items: bottom;
+}
+
+.input {
+  border: 2px solid var(--primary-color-dark);
+  border-radius: var(--border-radius);
+  outline: none;
+  padding: 0.6rem;
+  box-sizing: border-box;
+  margin: 1rem 0;
+}

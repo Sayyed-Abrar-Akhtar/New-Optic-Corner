@@ -1,0 +1,43 @@
+.prescription {
+  margin: var(--margin-3) var(--margin-6);
+  background-position: center;
+  background-size: cover;
+
+  overflow: hidden;
+}
+
+.info {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background: linear-gradient(
+    to right,
+    var(--primary-color-light),
+    var(--primary-color-dark)
+  );
+  padding: 3rem;
+  margin-top: -1rem;
+}
+
+.image__container {
+  position: relative;
+  height: 30rem;
+  width: 50%;
+}
+
+.detail__container {
+  width: 70%;
+  padding-right: 10%;
+}
+
+.title,
+.details {
+  color: var(--white);
+}
+
+.details {
+  text-align: justify;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+}

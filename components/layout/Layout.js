@@ -3,6 +3,7 @@ import Footer from './Footer';
 import Header from './Header';
 import Head from 'next/head';
 import Notification from './Notification';
+import Subscription from './Subscription';
 
 const Layout = ({
   title = 'Home | New Optic Corner',
@@ -36,6 +37,7 @@ const Layout = ({
       <Notification />
       <Header />
       <main>{children}</main>
+      <Subscription />
       <Footer />
     </>
   );
