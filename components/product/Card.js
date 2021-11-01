@@ -8,7 +8,7 @@ const Card = () => {
   return (
     <Link href='/'>
       <section className={styles.card}>
-        <section className={styles.badge}>10%</section>
+        <section className={styles.badge}>-10%</section>
         <section className={styles.image__container}>
           <Image
             blurDataURL='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mPsOey2HwAFzgJWC3pwEAAAAABJRU5ErkJggg=='
@@ -18,6 +18,9 @@ const Card = () => {
             objectPosition='top'
             placeholder='blur'
           />
+          <p className={styles.info}>
+            <span>newin</span>
+          </p>
         </section>
         <section className={styles.details}>
           <h4 className={styles.title}>

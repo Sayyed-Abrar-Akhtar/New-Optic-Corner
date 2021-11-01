@@ -8,7 +8,7 @@ const Layout = ({
   title = 'Home | New Optic Corner',
   description = 'The latest and trendy eyewear, lenses, power glasses, sunglasses online first time in Nepal.',
   ogUrl = 'https://www.newopticcorner.com.np',
-  ogImage = '',
+  ogImage = 'https://res.cloudinary.com/new-optic-corner-abdul/image/upload/v1635756426/Group_27_tlgj6a.png',
   children,
 }) => {
   return (
@@ -23,6 +23,14 @@ const Layout = ({
         <meta property='og:url' content={ogUrl} />
         <meta property='og:image' content={ogImage} />
         <meta property='og:site_name' content='New Optic Corner' />
+        <meta name='twitter:card' content='summary_large_image' />
+        <meta
+          name='twitter:creator'
+          content='Abdullah Muslim | New Optic Corner'
+        />
+        <meta name='twitter:title ' content={title} />
+        <meta name='twitter:description' content={description} />
+        <meta name='twitter:image' content={ogImage} />
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <Notification />

@@ -34,6 +34,13 @@ const productSchema = new mongoose.Schema(
             },
           },
         ],
+        stock: {
+          type: Number,
+          required: [
+            true,
+            'Please enter number of stock available for the color.',
+          ],
+        },
       },
     ],
     tags: [

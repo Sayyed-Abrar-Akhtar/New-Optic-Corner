@@ -27,11 +27,11 @@ const HeroBanner = () => {
           </section>
           <section className={styles.caption}>
             <h1 className={styles.title}>
-              {theme.herobanner.title || 'Best dewali deals on Eyewear'}
+              {theme.herobanner.title || 'Best depawali deals on Eyewear'}
             </h1>
             <p className={styles.subtitle}>
               {theme.herobanner.subtitle ||
-                'Up to 50% special dewali discount on trendy sunglasses and power glasses for the first time online in Nepal.'}
+                'Up to 50% special depawali discount on trendy sunglasses and power glasses online in Nepal.'}
             </p>
             <a href='#' className='cta'>
               {theme.herobanner.cta.text || 'Grab now'}
