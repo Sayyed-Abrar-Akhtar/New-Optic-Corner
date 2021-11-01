@@ -6,7 +6,7 @@ import Notification from './Notification';
 
 const Layout = ({
   title = 'Home | New Optic Corner',
-  description = 'The latest and trendy eyewear, lenses, power glasses, sunglasses online first time in Nepal.',
+  description = 'The latest and trendy eyewear, lenses, power glasses, sunglasses online in Nepal.',
   ogUrl = 'https://www.newopticcorner.com.np',
   ogImage = 'https://res.cloudinary.com/new-optic-corner-abdul/image/upload/v1635756426/Group_27_tlgj6a.png',
   children,
