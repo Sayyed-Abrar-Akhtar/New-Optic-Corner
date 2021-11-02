@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 import { menus } from '../../utils/menuData';
 import styles from '../../styles/Nav.module.css';
