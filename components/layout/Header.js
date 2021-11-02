@@ -9,7 +9,7 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <section className={styles.logo}>
-        <Link href='/'>
+        <Link href='/' passHref>
           <a className={styles.logo__link}>
             <Image
               src='/logo.svg'
