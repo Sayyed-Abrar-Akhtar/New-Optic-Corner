@@ -9,8 +9,8 @@ const Nav = () => {
     <nav className={styles.nav}>
       <ul className={styles.lists}>
         {menus.map((menu, index) => (
-          <Link href={menu.link}>
-            <a className={styles.link} key={index} id={menu.id}>
+          <Link href={menu.link} key={index}>
+            <a className={styles.link} id={menu.id}>
               <li className={styles.list}>{menu.text}</li>
             </a>
           </Link>
