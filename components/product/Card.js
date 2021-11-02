@@ -6,7 +6,7 @@ import styles from '../../styles/Card.module.css';
 
 const Card = () => {
   return (
-    <Link href='/'>
+    <Link href='/' passHref>
       <section className={styles.card}>
         <section className={styles.badge}>-10%</section>
         <section className={styles.image__container}>
@@ -17,6 +17,7 @@ const Card = () => {
             objectFit='cover'
             objectPosition='top'
             placeholder='blur'
+            alt={styles.title}
           />
           <p className={styles.info}>
             <span>newin</span>

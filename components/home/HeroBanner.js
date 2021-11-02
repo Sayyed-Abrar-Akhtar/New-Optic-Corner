@@ -23,6 +23,7 @@ const HeroBanner = () => {
               objectFit='cover'
               objectPosition='top'
               placeholder='blur'
+              alt={styles.title}
             />
           </section>
           <section className={styles.caption}>

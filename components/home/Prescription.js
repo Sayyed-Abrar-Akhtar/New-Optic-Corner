@@ -17,6 +17,7 @@ const Prescription = () => {
             objectFit='contain'
             objectPosition='center'
             placeholder='blur'
+            alt={styles.title}
           />
         </section>
         <section className={styles.detail__container}>
@@ -28,9 +29,9 @@ const Prescription = () => {
             provide you with the compliments you deserve. Our high-quality
             lenses give you sharper vision along with our state-of-the-art
             equipment which is crafted from the factory directly. With no
-            "middlemen", no retail-space overhead, we bring the best quality
-            eyewear at affordable prices direct to you. We are a trustworthy
-            online retailer of eyeglasses, try it now.
+            &ldquo;middlemen&rdquo;, no retail-space overhead, we bring the best
+            quality eyewear at affordable prices direct to you. We are a
+            trustworthy online retailer of eyeglasses, try it now.
           </p>
         </section>
       </section>
