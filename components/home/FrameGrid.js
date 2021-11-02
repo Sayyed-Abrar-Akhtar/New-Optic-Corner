@@ -87,6 +87,7 @@ const FrameGrid = () => {
             objectFit='contain'
             objectPosition='center'
             placeholder='blur'
+            alt={styles.title}
           />
         </section>
         <h4 className={styles.title}>Cat Eye</h4>
