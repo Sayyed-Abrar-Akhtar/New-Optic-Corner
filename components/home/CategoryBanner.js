@@ -24,16 +24,18 @@ const CategoryBanner = () => {
             {categorybanner.map((category, index) => (
               <section className={styles.grid__item} key={index}>
                 <section className={styles.image__container}>
-                  <Image
-                    className={styles.category__image}
-                    blurDataURL='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8vB8AAqsBtBK3h1QAAAAASUVORK5CYII='
-                    src={`${category.image.url}`}
-                    layout='fill'
-                    objectFit='cover'
-                    objectPosition='center'
-                    placeholder='blur'
-                    alt={styles.title}
-                  />
+                  {category.image.url && (
+                    <Image
+                      className={styles.category__image}
+                      blurDataURL='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8vB8AAqsBtBK3h1QAAAAASUVORK5CYII='
+                      src={`${category.image.url}`}
+                      layout='fill'
+                      objectFit='cover'
+                      objectPosition='center'
+                      placeholder='blur'
+                      alt={styles.title}
+                    />
+                  )}
                 </section>
                 <section className={styles.caption}>
                   <h2 className={styles.title}>

@@ -16,15 +16,17 @@ const HeroBanner = () => {
       ) : (
         <>
           <section>
-            <Image
-              blurDataURL='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8vB8AAqsBtBK3h1QAAAAASUVORK5CYII='
-              src={`${theme.herobanner.image.url}`}
-              layout='fill'
-              objectFit='cover'
-              objectPosition='top'
-              placeholder='blur'
-              alt={styles.title}
-            />
+            {theme.herobanner.image.url && (
+              <Image
+                blurDataURL='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8vB8AAqsBtBK3h1QAAAAASUVORK5CYII='
+                src={`${theme.herobanner.image.url}`}
+                layout='fill'
+                objectFit='cover'
+                objectPosition='top'
+                placeholder='blur'
+                alt={styles.title}
+              />
+            )}
           </section>
           <section className={styles.caption}>
             <h1 className={styles.title}>
