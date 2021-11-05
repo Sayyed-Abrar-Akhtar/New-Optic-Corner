@@ -22,9 +22,9 @@ const HeroBanner = () => {
                 src={`${theme.herobanner.image.url}`}
                 layout='fill'
                 objectFit='cover'
-                objectPosition='top'
+                objectPosition='right'
                 placeholder='blur'
-                alt={styles.title}
+                alt={theme.herobanner.title}
               />
             )}
           </section>

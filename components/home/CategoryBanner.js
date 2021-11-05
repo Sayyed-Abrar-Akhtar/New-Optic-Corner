@@ -33,7 +33,7 @@ const CategoryBanner = () => {
                       objectFit='cover'
                       objectPosition='center'
                       placeholder='blur'
-                      alt={styles.title}
+                      alt={category.title}
                     />
                   )}
                 </section>

@@ -17,7 +17,7 @@ const Prescription = () => {
             objectFit='contain'
             objectPosition='center'
             placeholder='blur'
-            alt={styles.title}
+            alt={'title' || 'How to order prescription glasses?'}
           />
         </section>
         <section className={styles.detail__container}>

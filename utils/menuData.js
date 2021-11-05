@@ -15,8 +15,8 @@ export const menus = [
     link: '/powerglassess',
   },
   {
-    id: 'lenses',
-    text: 'Lenses',
-    link: '/',
+    id: 'contact-lens',
+    text: 'Contact Lens',
+    link: '/contact_lens',
   },
 ];

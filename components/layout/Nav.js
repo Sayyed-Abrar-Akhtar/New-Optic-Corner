@@ -10,19 +10,25 @@ const Nav = () => {
       <ul className={styles.lists}>
         {menus.map((menu, index) => (
           <Link href={menu.link} key={index}>
-            <a className={styles.link} id={menu.id}>
-              <li className={styles.list}>{menu.text}</li>
+            <a className={styles.link}>
+              <li className={styles.list} id={menu.id}>
+                {menu.text}
+              </li>
             </a>
           </Link>
         ))}
         <Link href='/cart'>
-          <a href='/cart' className={styles.link} id='cart'>
-            <li className={styles.list}>Cart</li>
+          <a className={styles.link}>
+            <li className={styles.list} id='cart'>
+              Cart
+            </li>
           </a>
         </Link>
         <Link href='/account'>
-          <a href='/account' className={styles.link} id='account'>
-            <li className={styles.list}>Account</li>
+          <a className={styles.link}>
+            <li className={styles.list} id='account'>
+              Account
+            </li>
           </a>
         </Link>
       </ul>

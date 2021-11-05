@@ -5,6 +5,7 @@ import CategoryBanner from './home/CategoryBanner';
 import FrameGrid from './home/FrameGrid';
 import HeroBanner from './home/HeroBanner';
 import Prescription from './home/Prescription';
+import Promotion from './home/Promotion';
 import ProductGrid from './product/ProductGrid';
 
 const Home = () => {
@@ -18,7 +19,9 @@ const Home = () => {
     <>
       <HeroBanner />
       <ProductGrid />
+      <Promotion />
       <Prescription />
+
       <FrameGrid />
       <CategoryBanner />
     </>
