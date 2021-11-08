@@ -3,6 +3,7 @@ import Image from 'next/image';
 
 import { useSelector } from 'react-redux';
 import styles from '../../styles/Hero.module.css';
+import Btn from '../Btn';
 
 const HeroBanner = () => {
   const { theme, loading, error } = useSelector((state) => state.getTheme);
@@ -36,9 +37,7 @@ const HeroBanner = () => {
               {theme.herobanner.subtitle ||
                 'Up to 50% special depawali discount on trendy sunglasses and power glasses online in Nepal.'}
             </p>
-            <a href='#' className='cta'>
-              {theme.herobanner.cta.text || 'Grab now'}
-            </a>
+            <Btn to='/product' text={theme.herobanner.cta.text} />
           </section>
         </>
       )}

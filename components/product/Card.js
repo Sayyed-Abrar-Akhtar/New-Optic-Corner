@@ -4,9 +4,9 @@ import Link from 'next/link';
 
 import styles from '../../styles/Card.module.css';
 
-const Card = () => {
+const Card = ({ productId }) => {
   return (
-    <Link href='/' passHref>
+    <Link href={`/product/${productId}`} passHref>
       <section className={styles.card}>
         <section className={styles.badge}>-10%</section>
         <section className={styles.image__container}>

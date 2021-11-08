@@ -18,7 +18,7 @@ const Home = () => {
   return (
     <>
       <HeroBanner />
-      <ProductGrid />
+      <ProductGrid title='Latest Product' />
       <Promotion />
       <Prescription />
 

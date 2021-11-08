@@ -6,6 +6,7 @@
   --primary-color-dark: #296400;
   --white: rgb(255, 255, 255);
   --black: rgb(0, 0, 0);
+  --discount: rgb(228, 58, 54);
   --margin-3: 3rem;
   --padding-3: 3rem;
   --margin-6: 6rem;
@@ -112,10 +113,15 @@ h4 {
 a {
   color: inherit;
   text-decoration: none;
+  cursor: pointer;
 }
 
 * {
   box-sizing: border-box;
+}
+
+.main {
+  margin: var(--margin-3) var(--margin-6);
 }
 
 .cta {

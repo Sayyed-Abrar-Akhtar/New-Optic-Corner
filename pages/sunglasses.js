@@ -1,4 +1,5 @@
 import Layout from '../components/layout/Layout';
+import ProductGrid from '../components/product/ProductGrid';
 export default function Sunglasses() {
   return (
     <div>
@@ -7,7 +8,7 @@ export default function Sunglasses() {
         description='The latest and trendy eyewear, lenses, power glasses, sunglasses online in Nepal.'
         ogUrl='https://www.newopticcorner.com.np/sunglasses'
       >
-        Sunglasses
+        <ProductGrid title='Sunglasses' />
       </Layout>
     </div>
   );

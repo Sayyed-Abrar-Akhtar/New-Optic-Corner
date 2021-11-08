@@ -11,6 +11,7 @@ const Layout = ({
   ogUrl = 'https://www.newopticcorner.com.np',
   ogImage = 'https://res.cloudinary.com/new-optic-corner-abdul/image/upload/v1635756426/Group_27_tlgj6a.png',
   children,
+  classValue,
 }) => {
   return (
     <>
@@ -36,7 +37,7 @@ const Layout = ({
       </Head>
       <Notification />
       <Header />
-      <main>{children}</main>
+      <main className={classValue && classValue}>{children}</main>
       <Subscription />
       <Footer />
     </>

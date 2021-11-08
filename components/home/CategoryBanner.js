@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { useSelector } from 'react-redux';
 
 import styles from '../../styles/CategoryBanner.module.css';
+import Btn from '../Btn';
 
 const CategoryBanner = () => {
   const {
@@ -41,9 +42,7 @@ const CategoryBanner = () => {
                   <h2 className={styles.title}>
                     {category.title || 'Sunglasses'}
                   </h2>
-                  <a href='#' className='cta'>
-                    {category.cta.text || 'Shop now'}
-                  </a>
+                  <Btn to='/product' text={category.cta.text} />
                 </section>
               </section>
             ))}

@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import styles from '../../styles/Promotion.module.css';
+import Btn from '../Btn';
 
 const Promotion = () => {
   return (
@@ -35,9 +36,7 @@ const Promotion = () => {
               Start adding eyewear to your cart This offer may not be available
               with other discounts or coupons.
             </p>
-            <Link href='/'>
-              <a className={`cta ${styles.cta}`}>Get it now!</a>
-            </Link>
+            <Btn to='/product' text='Get it now!' extraClass={styles.cta} />
           </section>
         </section>
       </section>

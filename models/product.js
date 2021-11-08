@@ -19,8 +19,13 @@ const productSchema = new mongoose.Schema(
     variant: [
       {
         color: {
-          type: String,
-          required: [true, 'Please enter variant color.'],
+          name: {
+            type: String,
+            required: [true, 'Please enter variant color.'],
+          },
+          code: {
+            type: String,
+          },
         },
         images: [
           {

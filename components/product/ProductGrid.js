@@ -3,15 +3,15 @@ import React from 'react';
 import styles from '../../styles/ProductGrid.module.css';
 import Card from './Card';
 
-const ProductGrid = () => {
+const ProductGrid = ({ title = 'Add title' }) => {
   return (
     <>
-      <h2 className='heading'>Latest Sunglasses</h2>
+      <h2 className='heading'>{title}</h2>
       <section className={styles.product__grid}>
-        <Card />
-        <Card />
-        <Card />
-        <Card />
+        <Card productId='123' />
+        <Card productId='123' />
+        <Card productId='123' />
+        <Card productId='123' />
       </section>
     </>
   );
