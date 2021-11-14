@@ -110,7 +110,7 @@ const Footer = () => {
             target='_blank'
             rel='noreferrer'
           >
-            Sayyed Abrar Akhtar (Software Engineer)
+            &nbsp;
           </a>
         </h4>
       </section>
