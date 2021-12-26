@@ -152,7 +152,7 @@
 .heart {
   padding-left: 5px;
   height: 1.25rem;
-  color: rgb(0, 0, 0);
+  color: rgb(168, 63, 57);
   animation: heartbeat 1.5s cubic-bezier(0.5, 0, 0.5, 1) 0s normal none infinite
     running;
   -webkit-animation: heartbeat 1.5s cubic-bezier(0.5, 0, 0.5, 1) 0s normal none
