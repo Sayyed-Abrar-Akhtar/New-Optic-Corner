@@ -9,14 +9,14 @@ const HeroBanner = () => {
   const { theme, loading, error } = useSelector((state) => state.getTheme);
 
   return (
-    <section className={styles.hero}>
+    <section className={styles.container}>
       {loading ? (
         'loading...'
       ) : error ? (
         'error'
       ) : (
         <>
-          <section className={styles.heroimg}>
+          <section className={styles.img}>
             {theme.herobanner.image.url && (
               <Image
                 blurDataURL='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8vB8AAqsBtBK3h1QAAAAASUVORK5CYII='
