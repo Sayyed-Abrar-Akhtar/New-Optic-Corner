@@ -17,6 +17,16 @@
   --box-shadow-dense: 4px 4px 16px rgba(0, 0, 0, 0.4);
   --box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
   --text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  --linear-gradient: linear-gradient(
+    to right bottom,
+    rgba(32, 191, 85, 0.45),
+    rgba(1, 187, 239, 0.45)
+  );
+  --linear-gradient-dark: linear-gradient(
+    to right bottom,
+    rgba(0, 0, 0, 0.55),
+    rgba(128, 0, 128, 0.75)
+  );
 }
 
 html {

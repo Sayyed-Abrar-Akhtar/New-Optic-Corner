@@ -1,0 +1,76 @@
+.form {
+  width: 100%;
+  margin: auto;
+  padding: 3rem 1.5rem;
+  box-sizing: border-box;
+}
+
+.forgot_password,
+.checkbox_container {
+  width: 90%;
+  padding: 0.5rem 5%;
+}
+
+/* SIGNUP FORM */
+
+.checkbox_container > input {
+  display: none;
+}
+
+.checkbox_container > label {
+  font-size: 1.1rem;
+  word-spacing: 1px;
+  display: flex;
+  align-items: center;
+}
+
+.checkbox_container > label span > a {
+  color: var(--primary-color);
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+.btn__submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 50%;
+  margin: 2rem auto;
+  letter-spacing: 2px;
+}
+
+.icon {
+  color: var(--primary-color);
+  margin-right: 0.5rem;
+}
+
+/* LOGIN FORM */
+
+.separator {
+  margin: 1rem;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.267);
+}
+
+.new_user {
+  display: flex;
+}
+
+.forgot_password {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.new_user {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.new_user > p {
+  margin-right: 1rem;
+}
+
+.new_user > p > b {
+  padding: 0.5rem 0;
+  border-bottom: 2px solid var(--primary-color);
+  cursor: pointer;
+}

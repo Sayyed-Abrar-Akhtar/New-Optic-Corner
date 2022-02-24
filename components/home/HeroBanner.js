@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import Image from 'next/image';
 
 import { useSelector } from 'react-redux';
@@ -16,7 +16,7 @@ const HeroBanner = () => {
         'error'
       ) : (
         <>
-          <section>
+          <section className={styles.heroimg}>
             {theme.herobanner.image.url && (
               <Image
                 blurDataURL='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8vB8AAqsBtBK3h1QAAAAASUVORK5CYII='

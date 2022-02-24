@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import {
   FaHeart,
@@ -13,9 +13,12 @@ import { menus } from '../../utils/footerData';
 
 const Footer = () => {
   const [loadMap, setLoadMap] = useState(false);
-  setTimeout(() => {
-    setLoadMap(true);
-  }, 4000);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoadMap(true);
+    }, 4000);
+  });
 
   return (
     <footer className={styles.footer}>
@@ -110,7 +113,7 @@ const Footer = () => {
             target='_blank'
             rel='noreferrer'
           >
-            &nbsp;
+            Sayyed Abrar Akhtar
           </a>
         </h4>
       </section>

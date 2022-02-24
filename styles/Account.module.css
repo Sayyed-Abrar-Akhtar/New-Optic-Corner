@@ -1,0 +1,47 @@
+.container {
+  margin: 5rem 0 15rem 0;
+}
+.content {
+  width: 80%;
+  margin: 5rem auto;
+  display: grid;
+
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr;
+  border-radius: 4px;
+  box-shadow: 4px 8px 32px rgba(0, 0, 0, 0.301);
+
+  overflow: hidden;
+}
+
+.banner {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  min-height: 25rem;
+}
+
+.caption {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+}
+
+.caption__title,
+.caption__subtitle {
+  color: var(--white);
+}
+
+.caption__title {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  line-height: 3rem;
+}
+
+.caption__subtitle {
+  line-height: 1.5;
+  text-align: justify;
+}
