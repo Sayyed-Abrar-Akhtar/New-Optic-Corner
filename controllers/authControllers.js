@@ -22,11 +22,13 @@ const registerUser = AsyncHandler(async (req, res) => {
     crop: 'scale',
     resource_type: 'auto',
   });
+  console.log(result);
 
   const { name, email, password } = req.body;
+  console.log(req.body);
 
   const userExist = await User.findOne({ email });
-
+  console.log(userExist);
   if (userExist) {
     res.status(200).json({ success: false, message: 'Account already exist!' });
   } else {
