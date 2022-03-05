@@ -29,8 +29,12 @@ export default NextAuth({
           throw new Error('Invalid email or password');
         }
 
+        console.log('User');
+        console.log(user);
+        console.log(user.comparePassword);
+
         // CHECK IF PASSWORD MATCHED
-        const isPasswordMatched = await User.comparePassword(password);
+        const isPasswordMatched = await user.comparePassword(password);
 
         if (!isPasswordMatched) {
           throw new Error('Invalid email or password');

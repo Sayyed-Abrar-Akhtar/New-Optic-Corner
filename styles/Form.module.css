@@ -5,6 +5,22 @@
   box-sizing: border-box;
 }
 
+.header_icon {
+  margin: 0.5rem auto 1rem auto;
+  height: 7.5rem;
+  width: 7.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-color-light);
+}
+
+.select_file {
+  width: 90%;
+
+  margin: 1.5rem auto;
+}
+
 .forgot_password,
 .checkbox_container {
   width: 90%;

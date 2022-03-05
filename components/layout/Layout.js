@@ -1,4 +1,8 @@
 import React from 'react';
+
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 import Footer from './Footer';
 import Header from './Header';
 import Head from 'next/head';
@@ -37,7 +41,9 @@ const Layout = ({
       </Head>
       <Notification />
       <Header />
+
       <main className={classValue && classValue}>{children}</main>
+      <ToastContainer position='top-right' />
       <Subscription />
       <Footer />
     </>
