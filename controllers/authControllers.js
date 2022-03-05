@@ -15,13 +15,13 @@ cloudinary.config({
 // @route   POST https://localhost:3000/api/auth/register
 // @access  Public
 const registerUser = AsyncHandler(async (req, res) => {
-  // const result = await cloudinary.v2.uploader.upload(req.body.avatar, {
-  //   folder: 'new-optic-corner-abdul/users/avatars',
-  //   public_id: `${Date.now()}`,
-  //   width: '150',
-  //   crop: 'scale',
-  //   resource_type: 'auto',
-  // });
+  const result = await cloudinary.v2.uploader.upload(req.body.avatar, {
+    folder: 'new-optic-corner-abdul/users/avatars',
+    public_id: `${Date.now()}`,
+    width: '150',
+    crop: 'scale',
+    resource_type: 'auto',
+  });
   //console.log(result);
 
   const { name, email, password } = req.body;
@@ -37,7 +37,7 @@ const registerUser = AsyncHandler(async (req, res) => {
         name,
         email,
         password,
-        avatar: { public_id: 'result.public_id', url: 'result.secure_url' },
+        avatar: { public_id: result.public_id, url: result.secure_url },
       });
 
       res
