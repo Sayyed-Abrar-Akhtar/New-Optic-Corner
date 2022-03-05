@@ -72,6 +72,50 @@ const themeSchema = new mongoose.Schema(
         },
       },
     ],
+    signup: {
+      bannerImage: {
+        public_id: {
+          type: String,
+          required: true,
+        },
+        url: {
+          type: String,
+          required: true,
+        },
+      },
+      heading: {
+        type: String,
+        required: [true, 'Please enter heading'],
+        trim: true,
+      },
+      subheading: {
+        type: String,
+        required: [true, 'Please enter subheading'],
+        trim: true,
+      },
+    },
+    login: {
+      bannerImage: {
+        public_id: {
+          type: String,
+          required: true,
+        },
+        url: {
+          type: String,
+          required: true,
+        },
+      },
+      heading: {
+        type: String,
+        required: [true, 'Please enter heading'],
+        trim: true,
+      },
+      subheading: {
+        type: String,
+        required: [true, 'Please enter subheading'],
+        trim: true,
+      },
+    },
     promotions: {
       title: {
         type: String,

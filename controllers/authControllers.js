@@ -15,9 +15,6 @@ cloudinary.config({
 // @route   POST https://localhost:3000/api/auth/register
 // @access  Public
 const registerUser = AsyncHandler(async (req, res) => {
-  console.log('req');
-  console.log(req.body);
-
   const result = await cloudinary.v2.uploader.upload(req.body.avatar, {
     folder: 'new-optic-corner-abdul/users/avatars',
     public_id: `${Date.now()}`,
@@ -25,16 +22,29 @@ const registerUser = AsyncHandler(async (req, res) => {
     crop: 'scale',
     resource_type: 'auto',
   });
+
   const { name, email, password } = req.body;
 
-  const user = await User.create({
-    name,
-    email,
-    password,
-    avatar: { public_id: result.public_id, url: result.secure_url },
-  });
+  const userExist = await User.findOne({ email });
 
-  res.status(201).json({ success: true, message: 'Registration successfully' });
+  if (userExist) {
+    res.status(200).json({ success: false, message: 'Account already exist!' });
+  } else {
+    try {
+      await User.create({
+        name,
+        email,
+        password,
+        avatar: { public_id: result.public_id, url: result.secure_url },
+      });
+
+      res
+        .status(201)
+        .json({ success: true, message: 'Registration successfully' });
+    } catch (error) {
+      console.error(error);
+    }
+  }
 });
 
 export { registerUser };

@@ -11,8 +11,11 @@ import Account from './Account';
 import Link from 'next/link';
 
 import { signIn } from 'next-auth/react';
+import { useRouter } from 'next/router';
 
 const LoginForm = () => {
+  const router = useRouter();
+
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
@@ -31,10 +34,8 @@ const LoginForm = () => {
     setLoading(false);
     if (result.error) {
       toast.error(result.error);
-      console.log('Error occured whle login');
-      console.error(result.error);
     } else {
-      window.location.href = '/';
+      router.push('/');
     }
   };
 

@@ -43,7 +43,9 @@ const Layout = ({
       <Header />
 
       <main className={classValue && classValue}>{children}</main>
-      <ToastContainer position='top-right' />
+      <div className='toast-message-container'>
+        <ToastContainer />
+      </div>
       <Subscription />
       <Footer />
     </>
