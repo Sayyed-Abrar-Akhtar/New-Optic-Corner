@@ -11,6 +11,21 @@ const themeSchema = new mongoose.Schema(
       text_light: { type: String },
       text_color: { type: String },
     },
+    notification: {
+      first: {
+        type: String,
+        required: true,
+        trim: true,
+      },
+      second: {
+        type: String,
+        trim: true,
+      },
+      third: {
+        type: String,
+        trim: true,
+      },
+    },
     herobanner: {
       title: {
         type: String,

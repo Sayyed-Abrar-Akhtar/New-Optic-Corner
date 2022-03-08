@@ -16,3 +16,14 @@
   letter-spacing: 1px;
   text-transform: uppercase;
 }
+
+@media screen and (max-width: 60rem) {
+  .notification__banner {
+    flex-direction: column;
+  }
+  .notification {
+    width: 96%;
+    margin: 0 auto;
+    padding: 1.5rem 0;
+  }
+}

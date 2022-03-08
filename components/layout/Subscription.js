@@ -5,8 +5,8 @@ import styles from '../../styles/Subscription.module.css';
 const Subscription = () => {
   return (
     <>
-      <h2 className='heading'>Subscribe to our Newsletter</h2>
       <section className={styles.subscribe}>
+        <h2 className='heading'>Subscribe to our Newsletter</h2>
         <p className={styles.info}>
           Subscribe our newletters to get updated about offers, promotions,
           discounts, new arrivals and many more informations.

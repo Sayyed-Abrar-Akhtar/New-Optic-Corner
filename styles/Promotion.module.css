@@ -63,3 +63,41 @@
   width: max-content;
   height: max-content;
 }
+
+@media screen and (max-width: 60rem) {
+  .promotion {
+    margin: var(--margin-3);
+  }
+
+  .banner__container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 30rem 55rem;
+  }
+
+  .title {
+    margin: 0.75rem 0 0 0;
+  }
+
+  .details {
+    padding: 0 var(--padding-3);
+    z-index: 1;
+  }
+
+  .detail {
+    line-height: 2.5rem;
+  }
+
+  .cta {
+    margin: 0.75rem 0;
+  }
+}
+
+@media screen and (max-width: 90rem) {
+  .banner__container {
+    grid-template-rows: 1.5fr 1fr;
+  }
+
+  .details {
+    padding: var(--padding-3);
+  }
+}

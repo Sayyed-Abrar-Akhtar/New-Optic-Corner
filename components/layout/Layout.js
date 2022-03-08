@@ -8,6 +8,7 @@ import Header from './Header';
 import Head from 'next/head';
 import Notification from './Notification';
 import Subscription from './Subscription';
+import { useSelector } from 'react-redux';
 
 const Layout = ({
   title = 'Home | New Optic Corner',
@@ -17,6 +18,18 @@ const Layout = ({
   children,
   classValue,
 }) => {
+  const { theme } = useSelector((state) => state.getTheme);
+
+  console.log(theme);
+  const styleTag = `
+    :root {
+      --primary-color: ${theme.theme.primary_color};
+      --primary-color-light: ${theme.theme.primary_color_light};
+      --primary-color-dark: ${theme.theme.primary_color_dark};
+      --linear-gradient: ${theme.theme.linear_gradient}
+    }
+  `;
+
   return (
     <>
       <Head>
@@ -38,8 +51,9 @@ const Layout = ({
         <meta name='twitter:description' content={description} />
         <meta name='twitter:image' content={ogImage} />
         <link rel='icon' href='/favicon.ico' />
+        <style>{styleTag}</style>
       </Head>
-      <Notification />
+      <Notification notifications={theme.notification} />
       <Header />
 
       <main className={classValue && classValue}>{children}</main>

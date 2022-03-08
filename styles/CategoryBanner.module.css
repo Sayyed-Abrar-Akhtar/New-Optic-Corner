@@ -63,3 +63,13 @@
   text-align: center;
   color: var(--white);
 }
+
+@media screen and (max-width: 60rem) {
+  .category {
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+    margin: var(--margin-3);
+    padding: 0;
+  }
+}

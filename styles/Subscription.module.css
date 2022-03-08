@@ -28,3 +28,27 @@
   box-sizing: border-box;
   margin: 1rem 0;
 }
+
+@media screen and (max-width: 60rem) {
+  .subscribe {
+    margin: var(--margin-3);
+  }
+
+  .info {
+    width: 100%;
+  }
+
+  .form {
+    width: 100%;
+
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-gap: 0.1rem;
+  }
+}
+
+@media screen and (max-width: 90rem) {
+  .form {
+    width: 70%;
+  }
+}

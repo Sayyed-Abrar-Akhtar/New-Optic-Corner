@@ -1,9 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
 :root {
-  --primary-color: rgb(1, 140, 121);
-  --primary-color-light: rgb(17, 164, 142);
-  --primary-color-dark: rgb(0, 87, 75);
   --white: rgb(255, 255, 255);
   --black: rgb(0, 0, 0);
   --discount: rgb(228, 58, 54);
@@ -20,11 +17,6 @@
   --text-dark: #333;
   --text-light: rgb(255, 255, 255);
   --text-color: rgb(0, 0, 0);
-  --linear-gradient: linear-gradient(
-    to right bottom,
-    rgba(1, 140, 121, 0.45),
-    rgba(17, 164, 142, 0.45)
-  );
   --linear-gradient-dark: linear-gradient(
     to right bottom,
     rgba(0, 0, 0, 0.55),
@@ -77,6 +69,10 @@ h4 {
 }
 
 @media screen and (max-width: 60rem) {
+  html {
+    font-size: 8px;
+  }
+
   body {
     line-height: 2rem;
   }
@@ -209,4 +205,16 @@ a {
 
 button {
   border: none;
+}
+
+@media screen and (max-width: 60rem) {
+  .main {
+    width: 100%;
+    margin: var(--margin-3) 0;
+  }
+
+  .heading {
+    margin: var(--margin-6) 0;
+    line-height: 4rem;
+  }
 }

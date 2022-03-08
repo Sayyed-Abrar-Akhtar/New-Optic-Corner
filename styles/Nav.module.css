@@ -63,3 +63,15 @@
     width: 100%;
   }
 }
+
+@media screen and (max-width: 40rem) {
+  .nav {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 45rem) {
+  .nav {
+    display: block;
+  }
+}

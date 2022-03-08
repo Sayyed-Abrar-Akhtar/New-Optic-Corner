@@ -16,8 +16,6 @@ const Home = () => {
     theme,
   } = useSelector((state) => state.getTheme);
 
-  console.log('theme => ', theme);
-  console.log('theme => ', theme.herobanner);
   return (
     <>
       {!themeLoading && !themeError && <HeroBanner hero={theme.herobanner} />}

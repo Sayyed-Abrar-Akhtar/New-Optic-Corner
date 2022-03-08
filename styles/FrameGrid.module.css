@@ -36,3 +36,22 @@
   margin: 0;
   text-transform: capitalize;
 }
+
+@media screen and (max-width: 60rem) {
+  .frame {
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+
+    grid-gap: 2rem;
+
+    margin: var(--margin-6) var(--margin-3);
+  }
+}
+
+@media screen and (max-width: 90rem) {
+  .frame {
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 3rem;
+  }
+}

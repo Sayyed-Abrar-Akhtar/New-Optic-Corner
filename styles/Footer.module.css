@@ -182,3 +182,35 @@
     transform: scale(1);
   }
 }
+
+@media screen and (max-width: 60rem) {
+  .company {
+    grid-template-rows: 1fr 2fr;
+    grid-template-columns: 1fr;
+  }
+
+  .menu__container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+  .map {
+    width: 100%;
+    height: 100%;
+  }
+
+  .details {
+    grid-template-rows: 3.5fr 1fr;
+  }
+}
+
+@media screen and (max-width: 90rem) {
+  .company {
+    grid-template-rows: 1.25fr 1fr;
+  }
+
+  .menu__container {
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

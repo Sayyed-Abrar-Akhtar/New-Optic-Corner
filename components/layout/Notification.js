@@ -1,12 +1,24 @@
 import React from 'react';
 import styles from '../../styles/Notification.module.css';
 
-const Notification = () => {
+const Notification = ({ notifications }) => {
   return (
     <section className={styles.notification__banner}>
-      <p className={styles.notification}>up to 10% depawali discount</p>
-      {/* <p className={styles.notification}>Notification 2</p>
-      <p className={styles.notification}>Notification 3</p> */}
+      <>
+        {notifications.first !== '' && (
+          <p className={styles.notification}>{notifications.first}</p>
+        )}
+      </>
+      <>
+        {notifications.second !== '' && (
+          <p className={styles.notification}>{notifications.second} </p>
+        )}
+      </>
+      <>
+        {notifications.third !== '' && (
+          <p className={styles.notification}>{notifications.third} </p>
+        )}
+      </>
     </section>
   );
 };

@@ -11,3 +11,21 @@
   margin: var(--margin-3) var(--margin-6);
   box-sizing: border-box;
 }
+
+@media screen and (max-width: 60rem) {
+  .product__grid {
+    grid-template-columns: 1fr;
+
+    grid-auto-rows: 1fr;
+    grid-auto-columns: 1fr;
+    grid-gap: var(--margin-3);
+
+    margin: var(--margin-3);
+  }
+}
+
+@media only screen and (max-width: 900px) and (min-width: 600px) {
+  .product__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}

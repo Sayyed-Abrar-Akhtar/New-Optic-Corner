@@ -41,3 +41,32 @@
   letter-spacing: 1px;
   word-spacing: 2px;
 }
+
+@media screen and (max-width: 60rem) {
+  .prescription {
+    margin: var(--margin-3);
+  }
+
+  .info {
+    flex-direction: column;
+    padding: 0.75rem;
+    margin-top: -1rem;
+  }
+
+  .detail__container {
+    width: 96%;
+    margin: 0 auto;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 90rem) {
+  .info {
+    padding: 2rem;
+    padding-top: 3rem;
+  }
+}

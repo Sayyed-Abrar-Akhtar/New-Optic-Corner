@@ -8,6 +8,11 @@
     "text_light": "rgb(255,255,255)",
     "text_color": "rgb(0,0,0)"
   },
+  "notification": {
+    "first": "New Summer Arrivals",
+    "second": "",
+    "third": ""
+  },
   "herobanner": {
     "title": "Best UV sunglasees",
     "subtitle": "Best summer collections for outdoors during tours and travel to protect you from UV.",
