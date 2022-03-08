@@ -1,6 +1,7 @@
 import Layout from '../components/layout/Layout';
 import ProductGrid from '../components/product/ProductGrid';
-export default function Powerglasses() {
+
+const powerglasses = () => {
   return (
     <div>
       <Layout
@@ -12,4 +13,6 @@ export default function Powerglasses() {
       </Layout>
     </div>
   );
-}
+};
+
+export default powerglasses;

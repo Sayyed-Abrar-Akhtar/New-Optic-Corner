@@ -1,5 +1,6 @@
 import Layout from '../../components/layout/Layout';
-export default function Returns() {
+
+const returns = () => {
   return (
     <div>
       <Layout
@@ -11,4 +12,6 @@ export default function Returns() {
       </Layout>
     </div>
   );
-}
+};
+
+export default returns;

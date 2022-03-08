@@ -1,8 +1,7 @@
 import LoginForm from '../../components/account/LoginForm';
 import Layout from '../../components/layout/Layout';
-import styles from '../../styles/Form.module.css';
 
-export default function login() {
+const login = () => {
   return (
     <Layout
       title='Login | New Optic Corner'
@@ -13,4 +12,6 @@ export default function login() {
       <LoginForm />
     </Layout>
   );
-}
+};
+
+export default login;

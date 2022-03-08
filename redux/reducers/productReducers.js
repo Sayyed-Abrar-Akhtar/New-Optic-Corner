@@ -5,7 +5,12 @@ import {
   CLEAR_ERRORS,
 } from '../constants/productConstants';
 
-export const allProductsReducer = (state = { products: {} }, action) => {
+import productInitialState from '../../data/productInitialState';
+
+export const allProductsReducer = (
+  state = { products: productInitialState },
+  action
+) => {
   switch (action.type) {
     case ALL_PRODUCT_LOADING:
       return { loading: true };

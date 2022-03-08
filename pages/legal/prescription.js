@@ -1,5 +1,6 @@
 import Layout from '../../components/layout/Layout';
-export default function Prescription() {
+
+const prescription = () => {
   return (
     <div>
       <Layout
@@ -11,4 +12,6 @@ export default function Prescription() {
       </Layout>
     </div>
   );
-}
+};
+
+export default prescription;

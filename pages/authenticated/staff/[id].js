@@ -1,17 +1,18 @@
-import Layout from '../components/layout/Layout';
+import Layout from '../../../components/layout/Layout';
 
-const cart = () => {
+const staffAccount = () => {
   return (
     <div>
       <Layout
-        title='Cart | New Optic Corner'
+        title='ADMIN | New Optic Corner'
         description='The latest and trendy eyewear, lenses, power glasses, sunglasses online in Nepal.'
         ogUrl='https://www.newopticcorner.com.np/cart'
+        classValue='main'
       >
-        Cart
+        STAFF DASHBOARD
       </Layout>
     </div>
   );
 };
 
-export default cart;
+export default staffAccount;

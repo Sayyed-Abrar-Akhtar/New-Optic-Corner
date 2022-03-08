@@ -12,7 +12,7 @@ cloudinary.config({
 
 /*--------------------------------------------------------------------------------------*/
 // @desc    Register user
-// @route   POST https://localhost:3000/api/auth/register
+// @route   POST api/auth/register
 // @access  Public
 const registerUser = AsyncHandler(async (req, res) => {
   const result = await cloudinary.v2.uploader.upload(req.body.avatar, {
@@ -49,4 +49,18 @@ const registerUser = AsyncHandler(async (req, res) => {
   }
 });
 
-export { registerUser };
+/*--------------------------------------------------------------------------------------*/
+// @desc    Current User Profile
+// @route   /api/auth/profile
+// @access  Private
+const userProfile = AsyncHandler(async (req, res) => {
+  const user = await User.findById(req.user._id);
+
+  if (user) {
+    res.status(200).json({ success: true, user });
+  } else {
+    res.status(500).json({ success: false, message: 'User not found!' });
+  }
+});
+
+export { registerUser, userProfile };

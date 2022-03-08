@@ -1,5 +1,6 @@
 import Layout from '../../components/layout/Layout';
-export default function PrivacyPolicy() {
+
+const privacyPolicy = () => {
   return (
     <div>
       <Layout
@@ -11,4 +12,6 @@ export default function PrivacyPolicy() {
       </Layout>
     </div>
   );
-}
+};
+
+export default privacyPolicy;

@@ -1,0 +1,32 @@
+{
+  "success": true,
+  "resPerPage": 3,
+  "productsCount": 8,
+  "filteredProductsCount": 8,
+  "products": [
+    {
+      "tags": [],
+      "_id": "61715fe78b8a1eceacc34f9d",
+      "title": "Bluecut Sunglasses",
+      "price": 500,
+      "__v": 0,
+      "variant": []
+    },
+    {
+      "tags": [],
+      "_id": "617160008b8a1eceacc34f9f",
+      "title": "Bluecut Sunglasses",
+      "price": 500,
+      "__v": 0,
+      "variant": []
+    },
+    {
+      "tags": [],
+      "_id": "617160028b8a1eceacc34fa1",
+      "title": "Bluecut Sunglasses",
+      "price": 500,
+      "__v": 0,
+      "variant": []
+    }
+  ]
+}

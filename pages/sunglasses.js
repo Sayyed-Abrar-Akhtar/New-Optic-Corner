@@ -1,6 +1,7 @@
 import Layout from '../components/layout/Layout';
 import ProductGrid from '../components/product/ProductGrid';
-export default function Sunglasses() {
+
+const sunglasses = () => {
   return (
     <div>
       <Layout
@@ -12,4 +13,6 @@ export default function Sunglasses() {
       </Layout>
     </div>
   );
-}
+};
+
+export default sunglasses;

@@ -7,7 +7,7 @@ import Stock from '../../components/product/Stock';
 import Variant from '../../components/product/Variant';
 import styles from '../../styles/Product.module.css';
 
-export default function Cart() {
+const myProduct = () => {
   return (
     <div>
       <Layout
@@ -34,4 +34,6 @@ export default function Cart() {
       </Layout>
     </div>
   );
-}
+};
+
+export default myProduct;

@@ -8,7 +8,11 @@ import { getThemeData } from '../redux/actions/themeActions';
 export default function Index() {
   return (
     <div>
-      <Layout>
+      <Layout
+        title='Home | New Optic Corner'
+        description='The latest and trendy eyewear, lenses, power glasses, sunglasses online in Nepal.'
+        ogUrl='https://www.newopticcorner.com.np/'
+      >
         <Home />
       </Layout>
     </div>

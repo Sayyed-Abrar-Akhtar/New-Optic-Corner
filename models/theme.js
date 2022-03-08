@@ -2,6 +2,15 @@ import mongoose from 'mongoose';
 
 const themeSchema = new mongoose.Schema(
   {
+    theme: {
+      primary_color: { type: String },
+      primary_color_light: { type: String },
+      primary_color_dark: { type: String },
+      linear_gradient: { type: String },
+      text_dark: { type: String },
+      text_light: { type: String },
+      text_color: { type: String },
+    },
     herobanner: {
       title: {
         type: String,
@@ -16,7 +25,6 @@ const themeSchema = new mongoose.Schema(
         public_id: {
           type: String,
           required: true,
-          unique: true,
         },
         url: {
           type: String,
@@ -36,42 +44,53 @@ const themeSchema = new mongoose.Schema(
         },
       },
     },
-    categorybanner: [
-      {
-        title: {
-          type: String,
-          required: [true, 'Please enter banner title'],
-          trim: true,
-        },
-        subtitle: {
-          type: String,
-          trim: true,
-        },
-        image: {
-          public_id: {
-            type: String,
-            required: true,
-            unique: true,
-          },
-          url: {
-            type: String,
-            required: true,
-          },
-        },
-        cta: {
-          text: {
-            type: String,
-            required: [true, 'Please enter CTA text'],
-            trim: true,
-          },
-          link: {
-            type: String,
-            required: [true, 'Please enter CTA link'],
-            trim: true,
-          },
-        },
+    featured_product_heading: {
+      type: String,
+      required: [true, 'Please enter CTA text'],
+      trim: true,
+    },
+    categorybanner: {
+      heading: {
+        type: String,
+        required: true,
+        trim: true,
       },
-    ],
+      categories: [
+        {
+          title: {
+            type: String,
+            required: [true, 'Please enter banner title'],
+            trim: true,
+          },
+          subtitle: {
+            type: String,
+            trim: true,
+          },
+          image: {
+            public_id: {
+              type: String,
+              required: true,
+            },
+            url: {
+              type: String,
+              required: true,
+            },
+          },
+          cta: {
+            text: {
+              type: String,
+              required: [true, 'Please enter CTA text'],
+              trim: true,
+            },
+            link: {
+              type: String,
+              required: [true, 'Please enter CTA link'],
+              trim: true,
+            },
+          },
+        },
+      ],
+    },
     signup: {
       bannerImage: {
         public_id: {
@@ -117,6 +136,11 @@ const themeSchema = new mongoose.Schema(
       },
     },
     promotions: {
+      heading: {
+        type: String,
+        required: true,
+        trim: true,
+      },
       title: {
         type: String,
         required: [true, 'Please enter promotions title'],
@@ -130,7 +154,6 @@ const themeSchema = new mongoose.Schema(
         public_id: {
           type: String,
           required: true,
-          unique: true,
         },
         url: {
           type: String,
@@ -151,6 +174,11 @@ const themeSchema = new mongoose.Schema(
       },
     },
     prescription: {
+      heading: {
+        type: String,
+        required: true,
+        trim: true,
+      },
       title: {
         type: String,
         required: [true, 'Please enter promotions title'],
@@ -164,7 +192,6 @@ const themeSchema = new mongoose.Schema(
         public_id: {
           type: String,
           required: true,
-          unique: true,
         },
         url: {
           type: String,
@@ -193,7 +220,6 @@ const themeSchema = new mongoose.Schema(
           public_id: {
             type: String,
             required: true,
-            unique: true,
           },
           url: {
             type: String,

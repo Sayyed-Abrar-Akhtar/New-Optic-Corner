@@ -1,5 +1,6 @@
 import Layout from '../../components/layout/Layout';
-export default function TermsAndConditions() {
+
+const termsAndConditions = () => {
   return (
     <div>
       <Layout
@@ -11,4 +12,6 @@ export default function TermsAndConditions() {
       </Layout>
     </div>
   );
-}
+};
+
+export default termsAndConditions;

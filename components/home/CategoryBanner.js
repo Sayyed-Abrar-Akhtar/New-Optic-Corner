@@ -5,24 +5,14 @@ import { useSelector } from 'react-redux';
 import styles from '../../styles/CategoryBanner.module.css';
 import Btn from '../Btn';
 
-const CategoryBanner = () => {
-  const {
-    loading,
-    error,
-    theme: { categorybanner },
-  } = useSelector((state) => state.getTheme);
-
+const CategoryBanner = ({ heading = 'category', categories = [] }) => {
   return (
     <>
-      <h2 className='heading'>Shop by Category</h2>
+      <h2 className='heading'>{heading}</h2>
       <section className={styles.category}>
-        {loading ? (
-          'loading'
-        ) : error ? (
-          'error..'
-        ) : (
+        {categories && (
           <>
-            {categorybanner.map((category, index) => (
+            {categories.map((category, index) => (
               <section className={styles.grid__item} key={index}>
                 <section className={styles.image__container}>
                   {category.image.url && (
@@ -42,7 +32,7 @@ const CategoryBanner = () => {
                   <h2 className={styles.title}>
                     {category.title || 'Sunglasses'}
                   </h2>
-                  <Btn to='/product' text={category.cta.text} />
+                  <Btn to={category.cta.link} text={category.cta.text} />
                 </section>
               </section>
             ))}

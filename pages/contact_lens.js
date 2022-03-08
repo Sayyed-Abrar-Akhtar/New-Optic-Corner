@@ -1,6 +1,7 @@
 import Layout from '../components/layout/Layout';
 import ProductGrid from '../components/product/ProductGrid';
-export default function ContactLens() {
+
+const contactLens = () => {
   return (
     <div>
       <Layout
@@ -12,4 +13,6 @@ export default function ContactLens() {
       </Layout>
     </div>
   );
-}
+};
+
+export default contactLens;

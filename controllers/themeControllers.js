@@ -3,10 +3,10 @@ import Theme from '../models/theme';
 import ErrorHandler from '../utils/errorHandler';
 
 /*--------------------------------------------------------------------------------------*/
-// @desc    Add New Theme.
-// @route   POST https://localhost:3000/api/customize/theme
+// @desc    Update Theme.
+// @route   PUT https://localhost:3000/api/customize/theme/:id
 // @access  Public
-const customizeTheme = AsyncHandler(async (req, res) => {
+const newTheme = AsyncHandler(async (req, res) => {
   const themeData = req.body;
 
   const theme = await Theme.create(themeData);
@@ -27,7 +27,7 @@ const getThemeDetails = AsyncHandler(async (req, res) => {
 // @route   PUT https://localhost:3000/api/customize/theme/:id
 // @access  Public
 
-const updateTheme = AsyncHandler(async (req, res, next) => {
+const customizeTheme = AsyncHandler(async (req, res, next) => {
   const theme = await Theme.findById(req.query.id);
   console.log(theme);
 
@@ -44,4 +44,4 @@ const updateTheme = AsyncHandler(async (req, res, next) => {
   res.status(200).json({ success: true, theme: updatedTheme });
 });
 
-export { customizeTheme, getThemeDetails, updateTheme };
+export { newTheme, customizeTheme, getThemeDetails };

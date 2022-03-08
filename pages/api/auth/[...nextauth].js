@@ -35,19 +35,47 @@ export default NextAuth({
         if (!isPasswordMatched) {
           throw new Error('Invalid email or password');
         }
-        return Promise.resolve(user);
+
+        const userData = {
+          avatar: user.avatar,
+          _id: user._id,
+          name: user.name,
+          email: user.email,
+          role: user.role,
+          createdAt: user.createdAt,
+          updatedAt: user.updatedAt,
+          __v: user.__v,
+        };
+
+        console.log('USer data to resolve');
+        console.log(userData);
+        return Promise.resolve(userData);
       },
     }),
   ],
   secret: process.env.NEXTAUTH_SECRET,
+
   callbacks: {
-    jwt: async (token, user) => {
-      user && (token.user = user);
-      return Promise.resolve(token);
+    async jwt({ token, user, account, isNewUser }) {
+      if (account) {
+        token.accessToken = account;
+        token.user = user;
+        token.isNewUser = isNewUser;
+      }
+
+      console.log('Tokenized data from user data');
+      console.log(token);
+      return token;
     },
-    session: async (session, token) => {
+    async session({ session, token }) {
+      // Send properties to the client, like an access_token from a provider.
+      session.accessToken = token.accessToken;
       session.user = token.user;
-      return Promise.resolve(session);
+
+      console.log('Session data from token ');
+      console.log(session);
+
+      return session;
     },
   },
 });

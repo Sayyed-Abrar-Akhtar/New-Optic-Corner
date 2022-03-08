@@ -12,16 +12,18 @@ import Link from 'next/link';
 
 import { signIn } from 'next-auth/react';
 import { useRouter } from 'next/router';
+import { useSelector } from 'react-redux';
 
 const LoginForm = () => {
+  const {
+    theme: { login },
+  } = useSelector((state) => state.getTheme);
+
   const router = useRouter();
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
-
-  const loginBannerImage =
-    'https://img.freepik.com/free-photo/young-smiling-man-red-shirt-with-optical-glasses-points-side-looks-isolated-orange-wall_141793-35497.jpg?w=740';
 
   const submitHandler = async (e) => {
     e.preventDefault();
@@ -42,9 +44,9 @@ const LoginForm = () => {
   return (
     <Account
       pageHeading='Login'
-      bannerImage={loginBannerImage}
-      captionTitle='Login into your account'
-      captionSubtitle={`By logging in your account you will be able to add your desired eye wear into the cart and proceed to the order. Also by creating an account you will be able to add products into wishlist to buy later`}
+      bannerImage={login.bannerImage.url}
+      captionTitle={login.heading}
+      captionSubtitle={login.subheading}
     >
       <form className={styles.form} onSubmit={submitHandler}>
         <SiWebauthn className={styles.header_icon} />

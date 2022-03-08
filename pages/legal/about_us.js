@@ -1,5 +1,6 @@
 import Layout from '../../components/layout/Layout';
-export default function AboutUs() {
+
+const aboutUs = () => {
   return (
     <div>
       <Layout
@@ -11,4 +12,6 @@ export default function AboutUs() {
       </Layout>
     </div>
   );
-}
+};
+
+export default aboutUs;

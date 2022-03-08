@@ -20,6 +20,10 @@ import {
 import { FormValidator } from '../../utils/FormValidator';
 
 const SignupForm = () => {
+  const {
+    theme: { signup },
+  } = useSelector((state) => state.getTheme);
+
   const dispatch = useDispatch();
 
   const { loading, error, user } = useSelector((state) => state.authRegister);
@@ -72,14 +76,12 @@ const SignupForm = () => {
     }
   }, [dispatch, error, user, router]);
 
-  const signupBannerImage = `https://img.freepik.com/free-photo/portrait-smiling-beautiful-girl-her-handsome-boyfriend-laughing-happy-cheerful-couple-sunglasses_158538-5002.jpg?w=740`;
-
   return (
     <Account
       pageHeading='Sign Up'
-      bannerImage={signupBannerImage}
-      captionTitle='Create an account'
-      captionSubtitle={`By creating an account you will be able to add your desired eye wear into the cart and proceed to the order. Also by creating an account you will be able to add products into wishlist to buy later`}
+      bannerImage={signup.bannerImage.url}
+      captionTitle={signup.heading}
+      captionSubtitle={signup.subheading}
     >
       <form className={styles.form} onSubmit={submitHandler}>
         <RiAccountPinCircleFill className={styles.header_icon} />

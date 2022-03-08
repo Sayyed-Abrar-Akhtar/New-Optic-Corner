@@ -10,20 +10,29 @@ import ProductGrid from './product/ProductGrid';
 
 const Home = () => {
   const { error } = useSelector((state) => state.allProducts);
+  const {
+    error: themeError,
+    loading: themeLoading,
+    theme,
+  } = useSelector((state) => state.getTheme);
 
-  useEffect(() => {
-    toast.error(error);
-  }, [error]);
-
+  console.log('theme => ', theme);
+  console.log('theme => ', theme.herobanner);
   return (
     <>
-      <HeroBanner />
-      <ProductGrid title='Latest Product' />
-      <Promotion />
-      <Prescription />
-
-      <FrameGrid />
-      <CategoryBanner />
+      {!themeLoading && !themeError && <HeroBanner hero={theme.herobanner} />}
+      <ProductGrid title={theme.featured_product_heading} />
+      {!themeLoading && !themeError && (
+        <>
+          <Promotion offer={theme.promotions} />
+          <Prescription prescription={theme.prescription} />
+          <FrameGrid frames={theme.frames} />
+          <CategoryBanner
+            heading={theme.categorybanner.heading}
+            categories={theme.categorybanner.categories}
+          />
+        </>
+      )}
     </>
   );
 };

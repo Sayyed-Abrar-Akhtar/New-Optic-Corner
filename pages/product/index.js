@@ -3,7 +3,7 @@ import Card from '../../components/product/Card';
 
 import styles from '../../styles/AllProduct.module.css';
 
-export default function Cart() {
+const product = () => {
   return (
     <div>
       <Layout
@@ -25,4 +25,6 @@ export default function Cart() {
       </Layout>
     </div>
   );
-}
+};
+
+export default product;

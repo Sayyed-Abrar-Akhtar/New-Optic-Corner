@@ -5,7 +5,12 @@ import {
   FETCH_THEME_SUCCESS,
 } from '../constants/themeConstants';
 
-export const getThemeReducer = (state = { theme: {} }, action) => {
+import themeInitialState from '../../data/themeInitialState';
+
+export const getThemeReducer = (
+  state = { theme: themeInitialState },
+  action
+) => {
   switch (action.type) {
     case FETCH_THEME_LOADING:
       return { loading: true };

@@ -1,0 +1,173 @@
+{
+  "theme": {
+    "primary_color": "rgb(1, 140, 121)",
+    "primary_color_light": "rgb(17, 164, 142)",
+    "primary_color_dark": "rgb(0, 87, 75)",
+    "linear_gradient": "linear-gradient( to right bottom, rgba(1, 140, 121, 0.45), rgba(17, 164, 142, 0.45) )",
+    "text_dark": "#eee",
+    "text_light": "rgb(255,255,255)",
+    "text_color": "rgb(0,0,0)"
+  },
+  "herobanner": {
+    "title": "Best UV sunglasees",
+    "subtitle": "Best summer collections for outdoors during tours and travel to protect you from UV.",
+    "image": {
+      "public_id": "newopticcorner/theme/2_s1u52n",
+      "url": "https://res.cloudinary.com/new-optic-corner-abdul/image/upload/v1646726823/handsome-man-outdoors-drinking-coffee-with-sunglasses-guy-with-beard-instagram-effect_psg4yu.jpg"
+    },
+    "cta": {
+      "text": "Shop Now",
+      "link": "/api"
+    }
+  },
+  "featured_product_heading": "Featured Product",
+  "categorybanner": {
+    "heading": "Shop by Category",
+    "categories": [
+      {
+        "title": "Cool night vision and polarized glass for outdoors",
+        "image": {
+          "public_id": "newopticcorner/theme/2_s1u52n",
+          "url": "https://res.cloudinary.com/new-optic-corner-abdul/image/upload/v1635579624/bnr_luqk2l.jpg"
+        },
+        "cta": {
+          "text": "Shop Now",
+          "link": "/api"
+        }
+      },
+      {
+        "title": "Sunglasses for outdoors",
+        "image": {
+          "public_id": "newopticcorner/theme/2_s1u52n",
+          "url": "https://res.cloudinary.com/new-optic-corner-abdul/image/upload/v1636109230/ivana-cajina-_7LbC5J-jw4-unsplash_ead151.jpg"
+        },
+        "cta": {
+          "text": "Shop Now",
+          "link": "/api"
+        }
+      },
+      {
+        "title": "Powerglasses, laptop and reading glasses",
+        "image": {
+          "public_id": "newopticcorner/theme/2_s1u52n",
+          "url": "https://res.cloudinary.com/new-optic-corner-abdul/image/upload/v1635682484/powerglass_ljsljr.jpg"
+        },
+        "cta": {
+          "text": "Shop Now",
+          "link": "/api"
+        }
+      },
+      {
+        "title": "Contact lens",
+        "image": {
+          "public_id": "newopticcorner/theme/2_s1u52n",
+          "url": "https://res.cloudinary.com/new-optic-corner-abdul/image/upload/v1635682763/lens_mfncw8.jpg"
+        },
+        "cta": {
+          "text": "Shop Now",
+          "link": "/api"
+        }
+      }
+    ]
+  },
+  "signup": {
+    "bannerImage": {
+      "public_id": "newopticcorner/theme/2_s1u52n",
+      "url": "https://res.cloudinary.com/new-optic-corner-abdul/image/upload/v1646729307/portrait-smiling-beautiful-girl-her-handsome-boyfriend-laughing-happy-cheerful-couple-sunglasses_158538-5002_zmz8hl.jpg"
+    },
+    "heading": "Create an account",
+    "subheading": "By creating an account you will be able to add your desired eye wear into the cart and proceed to the order. Also by creating an account you will be able to add products into wishlist to buy later."
+  },
+  "login": {
+    "bannerImage": {
+      "public_id": "newopticcorner/theme/2_s1u52n",
+      "url": "https://res.cloudinary.com/new-optic-corner-abdul/image/upload/v1646729204/young-smiling-man-red-shirt-with-optical-glasses-points-side-looks-isolated-orange-wall_141793-35497_tvu3my.jpg"
+    },
+    "heading": "Login into your account",
+    "subheading": "By logging in your account you will be able to add your desired eye wear into the cart and proceed to the order. Also by creating an account you will be able to add products into wishlist to buy later"
+  },
+  "promotions": {
+    "heading": "Offers",
+    "title": "Buy 2 get 1 free",
+    "subtitle": "Buy 2 sunglasses, get 3rd for FREE! (Free pair cannot be prescription. However, you can save on a 3rd prescription pair because you only need to order lenses - see Prescription Lens Replacement Pair on the Parts & Accessories page.) After 2 pair are placed in your cart, you will be given the opportunity to choose the free pair. The price on the available items will be NPR0.00. Click Sunglasses or Prescription Sunglasses tab above to Start adding eyewear to your cart This offer may not be available with other discounts or coupons.",
+    "image": {
+      "public_id": "newopticcorner/theme/2_s1u52n",
+      "url": "https://res.cloudinary.com/new-optic-corner-abdul/image/upload/v1635579624/bnr_luqk2l.jpg"
+    },
+    "cta": {
+      "text": "Get it now",
+      "link": "/api"
+    }
+  },
+  "prescription": {
+    "heading": "Order Prescription Glasses Online",
+    "title": "How to order prescription glasses?",
+    "details": "Still worried where to buy spectacles? New Optic Corner an Optic Shop offers you prescription glasses online with more than 100 fashion styles of frames to choose from that fit your appearance and provide you with the compliments you deserve. Our high-quality lenses give you sharper vision along with our state-of-the-art equipment which is crafted from the factory directly. With no “middlemen”, no retail-space overhead, we bring the best quality eyewear at affordable prices direct to you. We are a trustworthy online retailer of eyeglasses, try it now.",
+    "image": {
+      "public_id": "/_1280_zzyc7",
+      "url": "https://res.cloudinary.com/new-optic-corner-abdul/image/upload/v1635762838/snellen-gd808878d7_1280_zzyc7i.png"
+    },
+    "cta": {
+      "text": "Order now",
+      "link": "/prescription"
+    }
+  },
+  "frames": [
+    {
+      "title": "rectangle",
+      "image": {
+        "public_id": "rect23",
+        "url": "https://res.cloudinary.com/new-optic-corner-abdul/image/upload/v1635770039/glasses-gcae3b527e_1920_m2t6wk.jpg"
+      }
+    },
+    {
+      "title": "cat eye",
+      "image": {
+        "public_id": "caet656",
+        "url": "https://res.cloudinary.com/new-optic-corner-abdul/image/upload/v1635770039/glasses-gc75c8d6e4_1920_flgt6w.jpg"
+      }
+    },
+    {
+      "title": "round eye",
+      "image": {
+        "public_id": "round156",
+        "url": "https://res.cloudinary.com/new-optic-corner-abdul/image/upload/v1635768692/eye-g94b8cd387_1280_tkzfay.png"
+      }
+    },
+    {
+      "title": "wayferer",
+      "image": {
+        "public_id": "wayferer516",
+        "url": "https://res.cloudinary.com/new-optic-corner-abdul/image/upload/v1635768692/spectacles-gbee2e6f9d_1280_fjsjrl.png"
+      }
+    },
+    {
+      "title": "ful vue",
+      "image": {
+        "public_id": "fulvue",
+        "url": "https://res.cloudinary.com/new-optic-corner-abdul/image/upload/v1635684605/prod4_unm0ot.jpg"
+      }
+    },
+    {
+      "title": "biker",
+      "image": {
+        "public_id": "biker456563",
+        "url": "https://res.cloudinary.com/new-optic-corner-abdul/image/upload/v1635684605/prod3_tpr83o.jpg"
+      }
+    },
+    {
+      "title": "clubmaster",
+      "image": {
+        "public_id": "clubmaster26",
+        "url": "https://res.cloudinary.com/new-optic-corner-abdul/image/upload/v1636109005/glasses-gaf8e13a5d_1920_z4edc1.jpg"
+      }
+    },
+    {
+      "title": "oval",
+      "image": {
+        "public_id": "oval23",
+        "url": "https://res.cloudinary.com/new-optic-corner-abdul/image/upload/v1635768692/glasses-gecb4a4b9e_1920_afxi7g.jpg"
+      }
+    }
+  ]
+}

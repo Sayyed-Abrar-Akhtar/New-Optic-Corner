@@ -18,7 +18,7 @@
   padding: var(--padding-3);
   position: absolute;
   top: 50%;
-  background-color: rgba(141, 195, 70, 0.445);
+  background: var(--linear-gradient);
   transform: translateY(-50%);
   display: flex;
   align-items: center;
@@ -32,6 +32,7 @@
 .cta {
   text-align: center;
   margin: 1rem 0;
+  color: var(--white);
 }
 
 .subtitle {
