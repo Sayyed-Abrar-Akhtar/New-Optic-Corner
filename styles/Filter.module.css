@@ -6,6 +6,8 @@
   position: absolute;
   top: 50%;
   left: 1.5rem;
+  color: var(--dashboard-primary-color-dark);
+  font-size: 2rem;
   transform: translateY(-50%);
 }
 
@@ -29,4 +31,5 @@
 .input::placeholder {
   letter-spacing: 1px;
   color: var(--dashboard-faded-text);
+  text-transform: capitalize;
 }

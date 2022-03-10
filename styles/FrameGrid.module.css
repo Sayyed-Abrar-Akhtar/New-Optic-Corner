@@ -37,7 +37,7 @@
   text-transform: capitalize;
 }
 
-@media (max-width: 500px) {
+@media screen and (max-width: 480px) {
   .frame {
     grid-template-rows: repeat(4, 1fr);
     grid-template-columns: repeat(2, 1fr);
@@ -48,7 +48,7 @@
   }
 }
 
-@media (min-width: 501px) and (max-width: 900px) {
+@media (min-width: 481px) and (max-width: 768px) {
   .frame {
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: repeat(4, 1fr);

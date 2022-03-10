@@ -64,13 +64,13 @@
   }
 }
 
-@media screen and (max-width: 40rem) {
+@media screen and (max-width: 480px) {
   .nav {
     display: none;
   }
 }
 
-@media screen and (min-width: 45rem) {
+@media screen and (min-width: 481px) and (max-width: 768px) {
   .nav {
     display: block;
   }

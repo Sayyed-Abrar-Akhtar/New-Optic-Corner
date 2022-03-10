@@ -5,6 +5,7 @@ import {
   MdOutlineLocalMall,
   MdStorefront,
   MdOutlinePeopleAlt,
+  MdTag,
 } from 'react-icons/md';
 
 import {
@@ -12,6 +13,7 @@ import {
   ORDERS,
   PRODUCTS,
   STAFFS,
+  TAGS,
 } from '../../constant/GlobalConstants';
 
 import styles from '../../styles/Sidebar.module.css';
@@ -51,6 +53,16 @@ const SidebarItem = ({ menuType, menuLink, menuName, menuId, url }) => {
       return (
         <li className={styles.item} id={menuId}>
           <MdOutlinePeopleAlt className={styles.icon} />
+          <Link href={`${url}${menuLink}`}>
+            <a className={styles.link}>{menuName}</a>
+          </Link>
+        </li>
+      );
+
+    case TAGS:
+      return (
+        <li className={styles.item} id={menuId}>
+          <MdTag className={styles.icon} />
           <Link href={`${url}${menuLink}`}>
             <a className={styles.link}>{menuName}</a>
           </Link>

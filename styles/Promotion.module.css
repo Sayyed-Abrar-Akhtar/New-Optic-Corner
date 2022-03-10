@@ -64,7 +64,7 @@
   height: max-content;
 }
 
-@media screen and (max-width: 60rem) {
+@media screen and (max-width: 480px) {
   .promotion {
     margin: var(--margin-3);
   }
@@ -92,7 +92,7 @@
   }
 }
 
-@media screen and (max-width: 70rem) {
+@media screen and (min-width: 481px) and (max-width: 768px) {
   .banner__container {
     grid-template-rows: 1.5fr 1fr;
   }

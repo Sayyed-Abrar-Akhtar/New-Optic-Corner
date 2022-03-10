@@ -84,7 +84,7 @@ h4 {
   line-height: 2.16rem;
 }
 
-@media screen and (max-width: 60rem) {
+@media screen and (max-width: 480px) {
   html {
     font-size: 8px;
   }
@@ -114,7 +114,7 @@ h4 {
   }
 }
 
-@media screen and (max-width: 70rem) {
+@media screen and (min-width: 481px) and (max-width: 768px) {
   body {
     line-height: 2rem;
   }
@@ -223,7 +223,7 @@ button {
   border: none;
 }
 
-@media screen and (max-width: 60rem) {
+@media screen and (max-width: 480px) {
   .main {
     width: 100%;
     margin: var(--margin-3) 0;

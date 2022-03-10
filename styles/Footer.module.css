@@ -183,7 +183,7 @@
   }
 }
 
-@media screen and (max-width: 60rem) {
+@media screen and (max-width: 480px) {
   .company {
     grid-template-rows: 1fr 2fr;
     grid-template-columns: 1fr;
@@ -204,7 +204,7 @@
   }
 }
 
-@media screen and (max-width: 70rem) {
+@media screen and (min-width: 481px) and (max-width: 768px) {
   .company {
     grid-template-rows: 1.25fr 1fr;
   }

@@ -252,17 +252,17 @@
   line-height: 3rem;
 }
 
-@media screen and (max-width: 60rem) {
+@media screen and (max-width: 480px) {
   .product {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 0.85fr 1fr;
     column-gap: var(--margin-3);
 
-    margin: var(--margin-9) var(--margin-3);
+    margin: var(--margin-3);
   }
 
   .images {
-    grid-template-rows: 2.5fr 1fr;
+    grid-template-rows: 4fr 1fr;
   }
 
   .image__container {

@@ -2,7 +2,7 @@ import React from 'react';
 
 import { BsSearch } from 'react-icons/bs';
 
-import styles from '../../styles/Search.module.css';
+import styles from '../../styles/Filter.module.css';
 
 const Search = ({ placeholder, val, setVal }) => {
   return (

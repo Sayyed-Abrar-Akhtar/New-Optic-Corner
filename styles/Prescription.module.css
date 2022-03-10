@@ -42,7 +42,7 @@
   word-spacing: 2px;
 }
 
-@media screen and (max-width: 60rem) {
+@media screen and (max-width: 480px) {
   .prescription {
     margin: var(--margin-3);
   }
@@ -64,7 +64,7 @@
   }
 }
 
-@media screen and (max-width: 70rem) {
+@media screen and (min-width: 481px) and (max-width: 768px) {
   .info {
     padding: 2rem;
     padding-top: 3rem;

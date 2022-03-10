@@ -11,3 +11,4 @@ export const PRODUCTS = 'products';
 export const ORDERS = 'orders';
 export const CUSTOMIZE = 'customize';
 export const STAFFS = 'staffs';
+export const TAGS = 'tags';
