@@ -1,6 +1,7 @@
 export class FormValidator {
   constructor(
     name,
+    username,
     email,
     password,
     confirmPassword,
@@ -8,6 +9,7 @@ export class FormValidator {
     termsAndCondtionAccepted
   ) {
     this.name = name;
+    this.username = username;
     this.email = email;
     this.password = password;
     this.confirmPassword = confirmPassword;
@@ -16,9 +18,16 @@ export class FormValidator {
     this.message = [];
   }
 
+  #checkUsername() {
+    const username = this.username.trim();
+    if (username.includes(' ')) {
+      this.message.push('Spaces are not accepted in username!');
+    }
+  }
+
   #termsAndCondtionAccepted() {
     if (!this.termsAndCondtionAccepted)
-      this.message.push('Terms and condition must be accepted');
+      this.message.push('Terms and condition must be accepted!');
   }
 
   #checkOnlyText() {
@@ -57,6 +66,7 @@ export class FormValidator {
   }
 
   validate() {
+    this.#checkUsername();
     this.#checkOnlyText();
     this.#checkPassword();
     this.#checkEmptyField();

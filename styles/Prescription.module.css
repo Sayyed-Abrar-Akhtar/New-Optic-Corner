@@ -64,7 +64,7 @@
   }
 }
 
-@media screen and (max-width: 90rem) {
+@media screen and (max-width: 70rem) {
   .info {
     padding: 2rem;
     padding-top: 3rem;

@@ -12,7 +12,7 @@ export const getThemeData = (req) => async (dispatch) => {
     dispatch({ type: FETCH_THEME_LOADING });
     const { origin } = absoluteUrl(req);
     const { data } = await axios.get(`${origin}/api/customize/theme`);
-    console.log('data from db', data, 'origin=>', origin);
+
     dispatch({ type: FETCH_THEME_SUCCESS, payload: data.theme });
   } catch (error) {
     dispatch({

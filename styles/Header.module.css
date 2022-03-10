@@ -1,5 +1,10 @@
-.header {
+.header,
+.logo {
   display: flex;
+  align-items: center;
+}
+
+.header {
   margin: 1rem var(--margin-3);
   box-sizing: border-box;
   justify-content: space-between;
@@ -7,4 +12,5 @@
 
 .logo {
   width: 12rem;
+  height: 10rem;
 }

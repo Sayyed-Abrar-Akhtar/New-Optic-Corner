@@ -52,7 +52,9 @@ const Nav = () => {
             </a>
           </Link>
         ) : status === AUTHENTICATED && role === ADMIN ? (
-          <Link href={`/authenticated/${role}/${session.user._id}`}>
+          <Link
+            href={`sellercentral/${status}/${role}/${session.user.username}`}
+          >
             <a className={styles.link}>
               <li className={`${styles.list} ${styles.user}`} id='/admin'>
                 <span
@@ -68,7 +70,9 @@ const Nav = () => {
             </a>
           </Link>
         ) : role === STAFF ? (
-          <Link href={`/authenticated/${role}/${session.user._id}`}>
+          <Link
+            href={`sellercentral/${status}/${role}/${session.user.username}`}
+          >
             <a className={styles.link}>
               <li className={`${styles.list} ${styles.user}`} id='/staff'>
                 <span

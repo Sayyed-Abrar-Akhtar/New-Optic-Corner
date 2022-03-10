@@ -2,7 +2,7 @@
   display: grid;
 
   grid-template-rows: 1fr;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(8, 1fr);
 
   margin: 6rem 6rem 3rem 6rem;
 }
@@ -37,21 +37,21 @@
   text-transform: capitalize;
 }
 
-@media screen and (max-width: 60rem) {
+@media (max-width: 500px) {
   .frame {
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
     grid-template-columns: repeat(2, 1fr);
 
-    grid-gap: 2rem;
+    grid-gap: 1rem;
 
     margin: var(--margin-6) var(--margin-3);
   }
 }
 
-@media screen and (max-width: 90rem) {
+@media (min-width: 501px) and (max-width: 900px) {
   .frame {
     grid-template-rows: repeat(2, 1fr);
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 3rem;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
   }
 }

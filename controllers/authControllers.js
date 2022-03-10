@@ -22,19 +22,27 @@ const registerUser = AsyncHandler(async (req, res) => {
     crop: 'scale',
     resource_type: 'auto',
   });
-  //console.log(result);
 
-  const { name, email, password } = req.body;
-  console.log(req.body);
+  const { name, username, email, password } = req.body;
+  console.log(name, username, email, password);
 
   const userExist = await User.findOne({ email });
-  console.log(userExist);
+
+  const usernameExist = await User.findOne({ username });
+
+  if (usernameExist) {
+    res
+      .status(200)
+      .json({ success: false, message: 'Username already taken!' });
+  }
+
   if (userExist) {
     res.status(200).json({ success: false, message: 'Account already exist!' });
   } else {
     try {
       await User.create({
         name,
+        username,
         email,
         password,
         avatar: { public_id: result.public_id, url: result.secure_url },

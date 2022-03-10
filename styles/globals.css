@@ -14,6 +14,7 @@
   --box-shadow-dense: 4px 4px 16px rgba(0, 0, 0, 0.4);
   --box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
   --text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  --text-shadow-dark: 2px 4px 16px rgba(0, 0, 0, 0.4);
   --text-dark: #333;
   --text-light: rgb(255, 255, 255);
   --text-color: rgb(0, 0, 0);
@@ -26,6 +27,21 @@
     to right bottom,
     rgba(0, 0, 0, 0.55),
     rgba(255, 255, 255, 0.75)
+  );
+  --dashboard-bg: rgba(246, 250, 254, 0.9);
+  --dashboard-bg-gradient: linear-gradient(
+    to right,
+    rgb(17, 164, 142),
+    rgb(0, 87, 75)
+  );
+  --dashboard-border-radius: 10px;
+  --dashboard-primary-color-dark: rgb(0, 87, 75);
+  --dashboard-primary-color: rgb(1, 140, 121);
+  --dashboard-faded-text: rgb(116, 118, 121);
+  --dashboard-hover-gradient: linear-gradient(
+    to right,
+    #beece1 20%,
+    transparent 80%
   );
 }
 
@@ -98,7 +114,7 @@ h4 {
   }
 }
 
-@media screen and (min-width: 60.1rem) and (max-width: 90rem) {
+@media screen and (max-width: 70rem) {
   body {
     line-height: 2rem;
   }

@@ -40,6 +40,7 @@ export default NextAuth({
           avatar: user.avatar,
           _id: user._id,
           name: user.name,
+          username: user.username,
           email: user.email,
           role: user.role,
           createdAt: user.createdAt,
@@ -47,8 +48,6 @@ export default NextAuth({
           __v: user.__v,
         };
 
-        console.log('USer data to resolve');
-        console.log(userData);
         return Promise.resolve(userData);
       },
     }),
@@ -63,17 +62,12 @@ export default NextAuth({
         token.isNewUser = isNewUser;
       }
 
-      console.log('Tokenized data from user data');
-      console.log(token);
       return token;
     },
     async session({ session, token }) {
       // Send properties to the client, like an access_token from a provider.
       session.accessToken = token.accessToken;
       session.user = token.user;
-
-      console.log('Session data from token ');
-      console.log(session);
 
       return session;
     },

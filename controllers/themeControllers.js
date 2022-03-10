@@ -29,7 +29,6 @@ const getThemeDetails = AsyncHandler(async (req, res) => {
 
 const customizeTheme = AsyncHandler(async (req, res, next) => {
   const theme = await Theme.findById(req.query.id);
-  console.log(theme);
 
   if (!theme) {
     return next(new ErrorHandler('Theme data does not exist!!', 404));

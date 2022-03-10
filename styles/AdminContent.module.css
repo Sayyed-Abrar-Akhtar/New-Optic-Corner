@@ -1,0 +1,18 @@
+.container {
+  margin: var(--margin-3);
+}
+
+.content {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 5.6fr;
+  grid-gap: 1rem;
+}
+
+.main {
+  padding: 1.5rem;
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+}

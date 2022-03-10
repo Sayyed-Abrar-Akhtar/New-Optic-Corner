@@ -92,7 +92,7 @@
   }
 }
 
-@media screen and (max-width: 90rem) {
+@media screen and (max-width: 70rem) {
   .banner__container {
     grid-template-rows: 1.5fr 1fr;
   }

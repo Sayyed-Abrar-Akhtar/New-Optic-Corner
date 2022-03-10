@@ -204,7 +204,7 @@
   }
 }
 
-@media screen and (max-width: 90rem) {
+@media screen and (max-width: 70rem) {
   .company {
     grid-template-rows: 1.25fr 1fr;
   }

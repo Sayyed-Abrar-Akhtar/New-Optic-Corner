@@ -1,0 +1,51 @@
+.list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.item:not(:first-child) {
+  margin-top: 0.5rem;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  margin: auto 0;
+  padding: 1rem;
+  border-radius: 2rem;
+  box-sizing: border-box;
+  transition: all 0.1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.icon {
+  margin-right: 1rem;
+  cursor: pointer;
+  width: 3rem;
+  height: 3rem;
+  padding: 0.5rem;
+  box-sizing: border-box;
+}
+
+.link {
+  text-transform: capitalize;
+}
+
+.icon,
+.link {
+  color: var(--dashboard-faded-text);
+}
+
+.item:hover > .icon {
+  background-color: white;
+  border-radius: 10px;
+}
+
+.item:hover {
+  background-image: var(--dashboard-hover-gradient);
+}
+
+.item:hover > .icon,
+.item:hover > .link {
+  color: var(--dashboard-primary-color);
+}

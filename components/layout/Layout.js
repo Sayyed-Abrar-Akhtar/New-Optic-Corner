@@ -20,7 +20,6 @@ const Layout = ({
 }) => {
   const { theme } = useSelector((state) => state.getTheme);
 
-  console.log(theme);
   const styleTag = `
     :root {
       --primary-color: ${theme.theme.primary_color};

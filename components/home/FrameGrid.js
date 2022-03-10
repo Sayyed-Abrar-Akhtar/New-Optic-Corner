@@ -9,7 +9,7 @@ const FrameGrid = ({ frames }) => {
       {/* will go on loop */}
       {frames.map(
         (frame, idx) =>
-          idx <= 5 && (
+          idx <= 7 && (
             <section className={styles.details} key={idx}>
               <section className={styles.image__container}>
                 <Image

@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
+import { signOut } from 'next-auth/react';
+
 import Link from 'next/link';
 import InputField from '../form/InputField';
 import { BsSquare } from 'react-icons/bs';
@@ -33,6 +35,7 @@ const SignupForm = () => {
   const [termsAndCondtionAccepted, setTermsAndConditionAccepted] =
     useState(false);
   const [name, setName] = useState('');
+  const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
@@ -40,6 +43,7 @@ const SignupForm = () => {
 
   const data = {
     name,
+    username,
     email,
     password,
     avatar: image,
@@ -50,6 +54,7 @@ const SignupForm = () => {
 
     const validator = new FormValidator(
       name,
+      username,
       email,
       password,
       confirmPassword,
@@ -65,9 +70,16 @@ const SignupForm = () => {
 
   useEffect(() => {
     if (user) {
-      user.success ? toast.success(user.message) : toast.error(user.message);
-      router.push('/account');
-      dispatch(resetUserData());
+      if (user.success) {
+        toast.success(user.message);
+        setTimeout(() => {
+          signOut();
+          router.push('/account');
+          dispatch(resetUserData());
+        }, 1000);
+      } else {
+        toast.error(user.message);
+      }
     }
 
     if (error) {
@@ -92,6 +104,14 @@ const SignupForm = () => {
           id='name'
           setValue={setName}
           value={name}
+        />
+        <InputField
+          text='Username'
+          type='text'
+          label='username'
+          id='username'
+          setValue={setUsername}
+          value={username}
         />
         <InputField
           text='email'
