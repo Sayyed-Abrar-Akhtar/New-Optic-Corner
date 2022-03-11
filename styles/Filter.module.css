@@ -24,7 +24,7 @@
   border-radius: var(--border-radius);
   box-sizing: border-box;
   margin: auto;
-  padding: 1rem 4rem;
+  padding: 1rem 0 1rem 4rem;
   outline: none;
 }
 
@@ -32,4 +32,18 @@
   letter-spacing: 1px;
   color: var(--dashboard-faded-text);
   text-transform: capitalize;
+}
+
+.input__select {
+  padding-right: 0;
+}
+
+.select {
+  color: var(--dashboard-primary-color-dark);
+  text-transform: capitalize;
+}
+
+.option {
+  text-transform: capitalize;
+  color: var(--dashboard-faded-text);
 }

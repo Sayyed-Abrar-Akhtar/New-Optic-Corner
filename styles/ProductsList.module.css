@@ -1,0 +1,44 @@
+.container {
+  min-height: 50rem;
+  max-height: 80rem;
+}
+
+.lists,
+.title__bar {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 7.5rem 2.5fr 1fr 1fr 1fr;
+  align-items: center;
+}
+
+.title__bar {
+  border-bottom: 1px solid var(--dashboard-primary-color);
+}
+
+.product__name,
+.title {
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+}
+
+.lists {
+  height: 7rem;
+}
+
+.img_container {
+  height: 5rem;
+  width: 5rem;
+  background-color: var(--dashboard-bg);
+  overflow: hidden;
+  border-radius: var(--border-radius);
+}
+
+.img {
+  width: 5rem;
+  height: 5rem;
+}
+
+.info {
+  letter-spacing: 1px;
+}

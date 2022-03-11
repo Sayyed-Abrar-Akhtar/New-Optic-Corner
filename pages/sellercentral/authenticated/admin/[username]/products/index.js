@@ -1,4 +1,4 @@
-import ProductListing from '../../../../../../components/product/ProductListing';
+import ProductListing from '../../../../../../components/sellercentral/ProductListing';
 import AdminLayout from '../../../../../../components/sellercentral/AdminLayout';
 
 const productsPage = () => {

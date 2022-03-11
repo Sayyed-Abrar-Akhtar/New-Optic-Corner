@@ -1,0 +1,19 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-auto-rows: 1fr;
+  grid-gap: 1rem;
+  margin: 0.5rem 0;
+}
+
+.filter {
+  padding: 0.75rem 0;
+  background-color: var(--dashboard-primary-color);
+  color: var(--white);
+  text-transform: capitalize;
+  border-radius: var(--border-radius);
+  letter-spacing: 1px;
+  text-align: center;
+  margin: 0;
+}

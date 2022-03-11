@@ -1,14 +1,34 @@
-export const AUTHENTICATED = 'authenticated';
-export const UNAUTHENTICATED = 'unauthenticated';
+// SESSION STATUS
 export const LOADING = 'loading';
+export const UNAUTHENTICATED = 'unauthenticated';
+export const AUTHENTICATED = 'authenticated';
+
+// USER TYPES
 export const USER = 'user';
 export const ADMIN = 'admin';
 export const STAFF = 'staff';
+
+// GREETINGS
 export const GREETING = 'السَّلاَمُ عَلَيْكُمْ وَرَحْمَةُ اللهِ وَبَرَكَاتُهُ';
 export const SALUTATION = 'محترم';
 
+// SELLERCENTRAL NAVGATION PAGES
 export const PRODUCTS = 'products';
 export const ORDERS = 'orders';
 export const CUSTOMIZE = 'customize';
 export const STAFFS = 'staffs';
 export const TAGS = 'tags';
+
+// FILTER TYPES
+export const FILTER_TAG = 'taged by';
+export const FILTER_CATEGORY = 'in category';
+export const FILTER_SORT = 'sorted';
+export const FILTER_SEARCH = 'search';
+
+// INPUT TYPES
+export const INPUT_TYPE_TEXT = 'text';
+export const INPUT_TYPE_NUMBER = 'number';
+export const INPUT_TYPE_EMAIL = 'email';
+export const INPUT_TYPE_PASSWORD = 'password';
+export const INPUT_TYPE_CHECKBOX = 'checkbox';
+export const INPUT_TYPE_RADIO = 'radio';
