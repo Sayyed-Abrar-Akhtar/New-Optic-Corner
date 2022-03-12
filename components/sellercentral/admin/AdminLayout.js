@@ -8,23 +8,23 @@ import SellercentralControl from '../../../utils/sellercentralControl';
 import Layout from '../layout/Layout';
 import AdminContent from './AdminContent';
 
-const AdminLayout = ({ children, adminBaseUrl }) => {
-  const router = useRouter();
-  const { username: paramUsername } = router.query;
+const AdminLayout = ({ children, baseUrl, authorized, menuArr }) => {
+  // const router = useRouter();
+  // const { username: paramUsername } = router.query;
 
-  const { data: session, status } = useSession();
+  // const { data: session, status } = useSession();
 
-  const sellercentralControl = new SellercentralControl(
-    paramUsername,
-    session,
-    status,
-    menus,
-    ADMIN
-  );
+  // const sellercentralControl = new SellercentralControl(
+  //   paramUsername,
+  //   session,
+  //   status,
+  //   menus,
+  //   ADMIN
+  // );
 
-  const [authorized, menuArr] = sellercentralControl.authorizedPageAccess();
+  //const [authorized, menuArr] = sellercentralControl.authorizedPageAccess();
 
-  const baseUrl = sellercentralControl.getBaseUrl();
+  //const baseUrl = sellercentralControl.getBaseUrl();
 
   if (authorized && menuArr.length > 0) {
     return (

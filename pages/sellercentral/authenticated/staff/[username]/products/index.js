@@ -1,13 +1,11 @@
-import React from 'react';
-import ProductListing from '../../../../../../components/sellercentral/product/ProductListing';
-import StaffLayout from '../../../../../../components/sellercentral/staff/StaffLayout';
+import SellercentralScreen from '../../../../../../components/sellercentral/SellercentralScreen';
+import {
+  PRODUCT_INDEX_PAGE,
+  STAFF,
+} from '../../../../../../constant/GlobalConstants';
 
 const productsPage = () => {
-  return (
-    <StaffLayout>
-      <ProductListing />
-    </StaffLayout>
-  );
+  return <SellercentralScreen screenType={STAFF} page={PRODUCT_INDEX_PAGE} />;
 };
 
 export default productsPage;

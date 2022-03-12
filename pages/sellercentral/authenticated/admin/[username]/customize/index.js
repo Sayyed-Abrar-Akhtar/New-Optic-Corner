@@ -1,7 +1,15 @@
-import AdminLayout from '../../../../../../components/sellercentral/admin/AdminLayout';
+import SellercentralScreen from '../../../../../../components/sellercentral/SellercentralScreen';
+import {
+  ADMIN,
+  CUSTOMIZE_PAGE,
+} from '../../../../../../constant/GlobalConstants';
 
 const themeCustomize = () => {
-  return <AdminLayout>Customize</AdminLayout>;
+  return (
+    <SellercentralScreen screenType={ADMIN} page={CUSTOMIZE_PAGE}>
+      Customize
+    </SellercentralScreen>
+  );
 };
 
 export default themeCustomize;

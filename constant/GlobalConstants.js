@@ -32,3 +32,21 @@ export const INPUT_TYPE_EMAIL = 'email';
 export const INPUT_TYPE_PASSWORD = 'password';
 export const INPUT_TYPE_CHECKBOX = 'checkbox';
 export const INPUT_TYPE_RADIO = 'radio';
+
+// PAGES
+export const PRODUCT_INDEX_PAGE = 'PRODUCT_INDEX_PAGE';
+export const PRODUCT_ADD_PAGE = 'PRODUCT_ADD_PAGE';
+export const PRODUCT_PUT_DEL_PAGE = 'PRODUCT_PUT_DEL_PAGE';
+
+export const ORDER_INDEX_PAGE = 'ORDER_INDEX_PAGE';
+export const ORDER_PUT_DEL_PAGE = 'ORDER_PUT_DEL_PAGE';
+
+export const STAFF_INDEX_PAGE = 'STAFF_INDEX_PAGE';
+export const STAFF_ADD_PAGE = 'STAFF_ADD_PAGE';
+export const STAFF_PUT_DEL_PAGE = 'STAFF_PUT_DEL_PAGE';
+
+export const CUSTOMIZE_PAGE = 'CUSTOMIZE_PAGE';
+export const TAGS_PAGE = 'TAGS_PAGE';
+
+export const ADMIN_DASHBOARD = 'ADMIN_DASHBOARD';
+export const STAFF_DASHBOARD = 'STAFF_DASHBOARD';

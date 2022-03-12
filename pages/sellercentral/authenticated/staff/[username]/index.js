@@ -1,7 +1,11 @@
-import StaffLayout from '../../../../../components/sellercentral/staff/StaffLayout';
+import SellercentralScreen from '../../../../../components/sellercentral/SellercentralScreen';
+import {
+  STAFF,
+  STAFF_DASHBOARD,
+} from '../../../../../constant/GlobalConstants';
 
 const staffHomePage = () => {
-  return <StaffLayout>This is staff layout</StaffLayout>;
+  return <SellercentralScreen screenType={STAFF} page={STAFF_DASHBOARD} />;
 };
 
 export default staffHomePage;

@@ -104,7 +104,7 @@ const ProductListing = ({ baseUrl }) => {
           />
         </div>
         <div className={styles.add__products}>
-          <Link href='/new'>
+          <Link href={`${baseUrl}/products/new`}>
             <a href='' className=''>
               <FaPlus /> New Product
             </a>

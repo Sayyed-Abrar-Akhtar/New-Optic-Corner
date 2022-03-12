@@ -1,12 +1,11 @@
-import AdminLayout from '../../../../../../components/sellercentral/admin/AdminLayout';
-import ProductListing from '../../../../../../components/sellercentral/product/ProductListing';
+import SellercentralScreen from '../../../../../../components/sellercentral/SellercentralScreen';
+import {
+  ADMIN,
+  PRODUCT_INDEX_PAGE,
+} from '../../../../../../constant/GlobalConstants';
 
-const productsPage = () => {
-  return (
-    <AdminLayout adminBaseUrl={'baseUrl'}>
-      <ProductListing />
-    </AdminLayout>
-  );
+const ProductsPage = () => {
+  return <SellercentralScreen screenType={ADMIN} page={PRODUCT_INDEX_PAGE} />;
 };
 
-export default productsPage;
+export default ProductsPage;

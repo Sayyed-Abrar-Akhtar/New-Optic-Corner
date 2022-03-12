@@ -1,7 +1,11 @@
-import AdminLayout from '../../../../../../components/sellercentral/admin/AdminLayout';
+import SellercentralScreen from '../../../../../../components/sellercentral/SellercentralScreen';
+import {
+  ADMIN,
+  STAFF_INDEX_PAGE,
+} from '../../../../../../constant/GlobalConstants';
 
-const staffsPage = () => {
-  return <AdminLayout>staffsPage</AdminLayout>;
+const staffPage = () => {
+  return <SellercentralScreen screenType={ADMIN} page={STAFF_INDEX_PAGE} />;
 };
 
-export default staffsPage;
+export default staffPage;

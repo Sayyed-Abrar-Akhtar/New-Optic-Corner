@@ -1,11 +1,11 @@
 import SellercentralScreen from '../../../../../../components/sellercentral/SellercentralScreen';
 import {
   ADMIN,
-  ORDER_INDEX_PAGE,
+  STAFF_PUT_DEL_PAGE,
 } from '../../../../../../constant/GlobalConstants';
 
-const orderPage = () => {
-  return <SellercentralScreen screenType={ADMIN} page={ORDER_INDEX_PAGE} />;
+const updateDeleteStaff = () => {
+  return <SellercentralScreen screenType={ADMIN} page={STAFF_PUT_DEL_PAGE} />;
 };
 
-export default orderPage;
+export default updateDeleteStaff;

@@ -13,7 +13,7 @@ import { LOADING, STAFF } from '../../../constant/GlobalConstants';
 import menus from '../../../data/sidebarMenu';
 import SellercentralControl from '../../../utils/sellercentralControl';
 
-const StaffLayout = ({ children }) => {
+const StaffLayout = ({ children, baseUrl, authorized, menuArr }) => {
   const router = useRouter();
   const { username: paramUsername } = router.query;
 
@@ -27,9 +27,9 @@ const StaffLayout = ({ children }) => {
     STAFF
   );
 
-  const [authorized, menuArr] = sellercentralControl.authorizedPageAccess();
+  //const [authorized, menuArr] = sellercentralControl.authorizedPageAccess();
 
-  const baseUrl = sellercentralControl.getBaseUrl();
+  //const baseUrl = sellercentralControl.getBaseUrl();
 
   if (authorized && menuArr.length > 0) {
     return (

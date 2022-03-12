@@ -1,7 +1,11 @@
-import AdminLayout from '../../../../../components/sellercentral/admin/AdminLayout';
+import SellercentralScreen from '../../../../../components/sellercentral/SellercentralScreen';
+import {
+  ADMIN,
+  ADMIN_DASHBOARD,
+} from '../../../../../constant/GlobalConstants';
 
 const adminHomePage = () => {
-  return <AdminLayout>THis is admin homepage</AdminLayout>;
+  return <SellercentralScreen screenType={ADMIN} page={ADMIN_DASHBOARD} />;
 };
 
 export default adminHomePage;

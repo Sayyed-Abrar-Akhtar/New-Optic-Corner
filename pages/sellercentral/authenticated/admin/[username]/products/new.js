@@ -1,7 +1,12 @@
-import AdminLayout from '../../../../../../components/sellercentral/admin/AdminLayout';
+import SellercentralScreen from '../../../../../../components/sellercentral/SellercentralScreen';
 
-const newProductPage = () => {
-  <AdminLayout>newProductPage</AdminLayout>;
+import {
+  ADMIN,
+  PRODUCT_ADD_PAGE,
+} from '../../../../../../constant/GlobalConstants';
+
+const NewProductPage = () => {
+  return <SellercentralScreen screenType={ADMIN} page={PRODUCT_ADD_PAGE} />;
 };
 
-export default newProductPage;
+export default NewProductPage;
