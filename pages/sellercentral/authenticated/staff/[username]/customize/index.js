@@ -1,4 +1,4 @@
-import StaffLayout from '../../../../../../components/sellercentral/StaffLayout';
+import StaffLayout from '../../../../../../components/sellercentral/staff/StaffLayout';
 
 const customize = () => {
   return <StaffLayout>customize</StaffLayout>;

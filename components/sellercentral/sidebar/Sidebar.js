@@ -1,9 +1,9 @@
 import React from 'react';
 
-import styles from '../../styles/Sidebar.module.css';
+import styles from '../../../styles/Sidebar.module.css';
 import SidebarItem from './SidebarItem';
 
-const Sidebar = ({ menus = [], url }) => {
+const Sidebar = ({ menus = [], baseUrl }) => {
   return (
     <aside>
       <ul className={styles.list}>
@@ -13,7 +13,7 @@ const Sidebar = ({ menus = [], url }) => {
             menuLink={menu.link}
             menuName={menu.name}
             menuId={menu.id}
-            url={url}
+            baseUrl={baseUrl}
             key={idx}
           />
         ))}

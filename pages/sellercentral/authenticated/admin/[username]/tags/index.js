@@ -1,4 +1,4 @@
-import AdminLayout from '../../../../../../components/sellercentral/AdminLayout';
+import AdminLayout from '../../../../../../components/sellercentral/admin/AdminLayout';
 
 const tagsPage = () => {
   return <AdminLayout>show all tags</AdminLayout>;

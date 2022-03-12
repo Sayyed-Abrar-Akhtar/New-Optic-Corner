@@ -4,7 +4,7 @@ import React from 'react';
 
 import { FaHashtag } from 'react-icons/fa';
 
-import styles from '../../styles/ProductsList.module.css';
+import styles from '../../../styles/ProductsList.module.css';
 
 const ProductsList = () => {
   return (

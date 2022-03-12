@@ -4,31 +4,29 @@ import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
 import Link from 'next/link';
 import Image from 'next/image';
 
-import styles from '../../styles/DashboardHeader.module.css';
 import { signOut, useSession } from 'next-auth/react';
 import {
   AUTHENTICATED,
   GREETING,
   SALUTATION,
-} from '../../constant/GlobalConstants';
-import { useRouter } from 'next/router';
+} from '../../../constant/GlobalConstants';
 
-const DashboardHeader = ({ homeLink = '/sellercentral' }) => {
-  const router = useRouter();
+import styles from '../../../styles/DashboardHeader.module.css';
+
+const DashboardHeader = ({ baseUrl = '/sellercentral' }) => {
   const { data: session, status } = useSession();
 
   const [showUserMenu, setShowUserMenu] = useState(false);
 
   const logoutHandler = (e) => {
     e.preventDefault();
-    signOut();
-    router.push('/');
+    signOut({ callbackUrl: '/' });
   };
 
   return (
     <header className={styles.container}>
       <div className={styles.logo__box}>
-        <Link href={homeLink} passHref>
+        <Link href={baseUrl} passHref>
           <a>
             <Image
               src='/logo.svg'

@@ -1,9 +1,9 @@
-import ProductListing from '../../../../../../components/sellercentral/ProductListing';
-import AdminLayout from '../../../../../../components/sellercentral/AdminLayout';
+import AdminLayout from '../../../../../../components/sellercentral/admin/AdminLayout';
+import ProductListing from '../../../../../../components/sellercentral/product/ProductListing';
 
 const productsPage = () => {
   return (
-    <AdminLayout>
+    <AdminLayout adminBaseUrl={'baseUrl'}>
       <ProductListing />
     </AdminLayout>
   );

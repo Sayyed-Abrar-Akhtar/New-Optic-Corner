@@ -8,14 +8,14 @@ import {
   FILTER_SORT,
   FILTER_TAG,
   INPUT_TYPE_CHECKBOX,
-} from '../../constant/GlobalConstants';
+} from '../../../constant/GlobalConstants';
 
-import styles from '../../styles/ProductListing.module.css';
-import Filter from './Filter';
+import styles from '../../../styles/ProductListing.module.css';
+import Filter from '../filter/Filter';
 import ProductsList from './ProductsList';
-import SelectedFilter from './SelectedFilter';
+import SelectedFilter from '../filter/SelectedFilter';
 
-const ProductListing = () => {
+const ProductListing = ({ baseUrl }) => {
   const categoryData = [
     { text: 'category', value: '' },
     { text: 'men', value: 'men' },
@@ -53,7 +53,6 @@ const ProductListing = () => {
 
   useEffect(() => {
     !arrLoading && setShow(true);
-    console.log(show);
   }, [arrLoading, show]);
 
   return (

@@ -1,8 +1,13 @@
 import React from 'react';
-import StaffLayout from '../../../../../../components/sellercentral/StaffLayout';
+import ProductListing from '../../../../../../components/sellercentral/product/ProductListing';
+import StaffLayout from '../../../../../../components/sellercentral/staff/StaffLayout';
 
 const productsPage = () => {
-  return <StaffLayout>ordersPage</StaffLayout>;
+  return (
+    <StaffLayout>
+      <ProductListing />
+    </StaffLayout>
+  );
 };
 
 export default productsPage;

@@ -14,17 +14,17 @@ import {
   PRODUCTS,
   STAFFS,
   TAGS,
-} from '../../constant/GlobalConstants';
+} from '../../../constant/GlobalConstants';
 
-import styles from '../../styles/Sidebar.module.css';
+import styles from '../../../styles/Sidebar.module.css';
 
-const SidebarItem = ({ menuType, menuLink, menuName, menuId, url }) => {
+const SidebarItem = ({ menuType, menuLink, menuName, menuId, baseUrl }) => {
   switch (menuType) {
     case PRODUCTS:
       return (
         <li className={styles.item} id={menuId}>
           <MdOutlineDashboard className={styles.icon} />
-          <Link href={`${url}${menuLink}`}>
+          <Link href={`${baseUrl}${menuLink}`}>
             <a className={styles.link}>{menuName}</a>
           </Link>
         </li>
@@ -34,7 +34,7 @@ const SidebarItem = ({ menuType, menuLink, menuName, menuId, url }) => {
       return (
         <li className={styles.item} id={menuId}>
           <MdOutlineLocalMall className={styles.icon} />
-          <Link href={`${url}${menuLink}`}>
+          <Link href={`${baseUrl}${menuLink}`}>
             <a className={styles.link}>{menuName}</a>
           </Link>
         </li>
@@ -44,7 +44,7 @@ const SidebarItem = ({ menuType, menuLink, menuName, menuId, url }) => {
       return (
         <li className={styles.item} id={menuId}>
           <MdStorefront className={styles.icon} />
-          <Link href={`${url}${menuLink}`}>
+          <Link href={`${baseUrl}${menuLink}`}>
             <a className={styles.link}>{menuName}</a>
           </Link>
         </li>
@@ -53,7 +53,7 @@ const SidebarItem = ({ menuType, menuLink, menuName, menuId, url }) => {
       return (
         <li className={styles.item} id={menuId}>
           <MdOutlinePeopleAlt className={styles.icon} />
-          <Link href={`${url}${menuLink}`}>
+          <Link href={`${baseUrl}${menuLink}`}>
             <a className={styles.link}>{menuName}</a>
           </Link>
         </li>
@@ -63,7 +63,7 @@ const SidebarItem = ({ menuType, menuLink, menuName, menuId, url }) => {
       return (
         <li className={styles.item} id={menuId}>
           <MdTag className={styles.icon} />
-          <Link href={`${url}${menuLink}`}>
+          <Link href={`${baseUrl}${menuLink}`}>
             <a className={styles.link}>{menuName}</a>
           </Link>
         </li>
@@ -72,7 +72,7 @@ const SidebarItem = ({ menuType, menuLink, menuName, menuId, url }) => {
     default:
       return (
         <li className={styles.item}>
-          <Link href={`${url}${menuLink}`}>
+          <Link href={`${baseUrl}${menuLink}`}>
             <a className={styles.link}>{menuName}</a>
           </Link>
         </li>

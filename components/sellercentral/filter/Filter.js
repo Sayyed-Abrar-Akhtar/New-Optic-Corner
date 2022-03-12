@@ -3,7 +3,7 @@ import React from 'react';
 import { BsFilter, BsSearch } from 'react-icons/bs';
 import { BiSortAlt2 } from 'react-icons/bi';
 
-import styles from '../../styles/Filter.module.css';
+import styles from '../../../styles/Filter.module.css';
 import {
   FILTER_CATEGORY,
   FILTER_SEARCH,
@@ -14,7 +14,7 @@ import {
   INPUT_TYPE_NUMBER,
   INPUT_TYPE_RADIO,
   INPUT_TYPE_TEXT,
-} from '../../constant/GlobalConstants';
+} from '../../../constant/GlobalConstants';
 
 const Filter = ({
   type = 'text',
