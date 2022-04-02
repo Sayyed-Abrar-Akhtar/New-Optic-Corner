@@ -7,11 +7,7 @@ const productSchema = new mongoose.Schema(
       required: [true, 'Please enter product title.'],
       trim: true,
     },
-    price: {
-      type: Number,
-      required: [true, 'Please enter price of the product.'],
-      default: 0.0,
-    },
+
     description: {
       type: String,
       required: [true, 'Please enter product description.'],
@@ -19,13 +15,12 @@ const productSchema = new mongoose.Schema(
     variant: [
       {
         color: {
-          name: {
-            type: String,
-            required: [true, 'Please enter variant color.'],
-          },
-          code: {
-            type: String,
-          },
+          type: String,
+          required: [true, 'Please enter variant color.'],
+        },
+        sku: {
+          type: String,
+          required: [true, 'Please enter variant color.'],
         },
         images: [
           {
@@ -39,6 +34,11 @@ const productSchema = new mongoose.Schema(
             },
           },
         ],
+        price: {
+          type: Number,
+          required: [true, 'Please enter price of the product.'],
+          default: 0.0,
+        },
         stock: {
           type: Number,
           required: [
@@ -59,6 +59,7 @@ const productSchema = new mongoose.Schema(
       required: true,
       enum: {
         values: ['men', 'women', 'kid', 'unisex'],
+        message: '{VALUE} is not supported',
       },
     },
   },

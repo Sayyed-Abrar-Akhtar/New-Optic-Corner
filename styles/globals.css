@@ -4,6 +4,8 @@
   --white: rgb(255, 255, 255);
   --black: rgb(0, 0, 0);
   --discount: rgb(228, 58, 54);
+  --ok: rgb(0, 171, 102);
+  --cancel: rgb(186, 63, 56);
   --margin-3: 3rem;
   --padding-3: 3rem;
   --margin-6: 6rem;
@@ -37,6 +39,7 @@
   --dashboard-border-radius: 10px;
   --dashboard-primary-color-dark: rgb(0, 87, 75);
   --dashboard-primary-color: rgb(1, 140, 121);
+  --dashboard-primary-color-light: rgba(1, 140, 121, 0.5);
   --dashboard-faded-text: rgb(116, 118, 121);
   --dashboard-hover-gradient: linear-gradient(
     to right,

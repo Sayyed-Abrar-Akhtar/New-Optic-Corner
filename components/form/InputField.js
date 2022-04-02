@@ -8,12 +8,19 @@ const InputField = ({
   id = 'id',
   value = 'text',
   setValue,
+  sellercentral = false,
 }) => {
   return (
-    <div className={styles.input_group}>
+    <div
+      className={`${styles.input_group} ${
+        sellercentral && styles.input_group__sellercentral
+      }`}
+    >
       <div>
         <input
-          className={styles.form_control}
+          className={`${styles.form_control} ${
+            sellercentral && styles.form_control__sellercentral
+          }`}
           type={type}
           id={id}
           value={value}
@@ -21,7 +28,12 @@ const InputField = ({
           onChange={(e) => setValue(e.target.value)}
         />
 
-        <label className={styles.input_group__text} htmlFor={id}>
+        <label
+          className={`${styles.input_group__text} ${
+            sellercentral && styles.input_group__text__sellercentral
+          }`}
+          htmlFor={id}
+        >
           {label}
         </label>
       </div>
