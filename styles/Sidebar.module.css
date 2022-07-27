@@ -49,3 +49,13 @@
 .item:hover > .link {
   color: var(--dashboard-primary-color);
 }
+
+@media screen and (max-width: 768px) {
+  .list {
+    display: flex;
+    flex-flow: wrap;
+  }
+  .item {
+    min-width: 15rem;
+  }
+}

@@ -80,7 +80,7 @@ const SellercentralScreen = ({ screenType, page }) => {
   if (screenType === ADMIN && page === PRODUCT_ADD_PAGE) {
     return (
       <AdminLayout baseUrl={baseUrl} authorized={authorized} menuArr={menuArr}>
-        <NewProduct />
+        <NewProduct baseUrl={baseUrl} />
       </AdminLayout>
     );
   }

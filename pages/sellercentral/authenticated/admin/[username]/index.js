@@ -4,8 +4,6 @@ import {
   ADMIN_DASHBOARD,
 } from '../../../../../constant/GlobalConstants';
 
-const adminHomePage = () => {
+export default function adminHomePage() {
   return <SellercentralScreen screenType={ADMIN} page={ADMIN_DASHBOARD} />;
-};
-
-export default adminHomePage;
+}

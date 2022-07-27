@@ -6,7 +6,7 @@ import User from '../../../models/user';
 
 export default NextAuth({
   session: {
-    jw: true,
+    jwt: true,
   },
   providers: [
     CredentialsProvider({

@@ -9,6 +9,13 @@
   grid-template-columns: 2.5fr 1fr;
 }
 
+@media screen and (max-width: 1000px) {
+  .container {
+    grid-template-rows: min-content min-content;
+    grid-template-columns: 1fr;
+  }
+}
+
 .field__container {
   margin: 2rem 0;
   padding: 2rem;
@@ -20,18 +27,23 @@
 }
 
 .variant_imgs_container {
-  display: grid;
+  /* display: grid;
   grid-template-rows: auto;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem; */
+  display: flex;
+  flex-flow: wrap;
+  align-items: center;
+  justify-content: flex-start;
   margin: 1.5rem 0;
   padding: 2rem;
   border: 2px solid var(--dashboard-primary-color);
 }
 
+@media screen and (min-width: 480px) and (max-width: 768px) {
+}
+
 .selected_variant_imgs {
-  width: 15rem;
-  height: 15rem;
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -39,12 +51,25 @@
 }
 
 .input_file_label {
-  width: 15rem;
-  height: 15rem;
   border: 1px dashed var(--dashboard-primary-color);
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.selected_variant_imgs,
+.input_file_label {
+  width: 15rem;
+  height: 15rem;
+  margin: 0.5rem;
+}
+
+@media screen and (max-width: 600px) {
+  .input_file_label,
+  .selected_variant_imgs {
+    width: 10rem;
+    height: 10rem;
+  }
 }
 
 .variant_imgs_container,
@@ -71,12 +96,19 @@
   justify-content: center;
 }
 
+.add_product,
 .add_variant {
   cursor: pointer;
   background-color: var(--dashboard-primary-color);
   padding: 0.5rem 1.25rem;
   text-transform: capitalize;
   align-items: center;
+}
+
+.add_product {
+  width: max-content;
+  margin: 3rem auto;
+  padding: 1.5rem 3rem;
 }
 
 .selected_variant > b {
@@ -229,7 +261,6 @@
 }
 
 .aside {
-  margin: 2rem 0;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -238,7 +269,31 @@
 
 .category_container,
 .tags_container {
-  width: 90%;
+  width: 95%;
+  margin-top: 2rem;
+  padding: 2rem 1rem;
+  border-radius: var(--border-radius);
+  margin-left: 5%;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+@media screen and (max-width: 1000px) {
+  .category_container,
+  .tags_container {
+    width: 100%;
+  }
+  .categories {
+    display: flex;
+    flex-flow: wrap;
+  }
+}
+
+.category_container > h4 {
+  color: var(--dashboard-primary-color);
+  width: max-content;
+  border-bottom: 2px solid var(--dashboard-primary-color);
+  padding-bottom: 0.5rem;
 }
 
 .tags {

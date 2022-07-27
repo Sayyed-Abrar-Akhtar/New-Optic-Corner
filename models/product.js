@@ -24,11 +24,11 @@ const productSchema = new mongoose.Schema(
         },
         images: [
           {
-            public_id: {
+            id: {
               type: String,
               required: true,
             },
-            url: {
+            secure_url: {
               type: String,
               required: true,
             },
@@ -54,14 +54,12 @@ const productSchema = new mongoose.Schema(
         trim: true,
       },
     ],
-    category: {
-      type: String,
-      required: true,
-      enum: {
-        values: ['men', 'women', 'kid', 'unisex'],
-        message: '{VALUE} is not supported',
+    category: [
+      {
+        type: String,
+        required: true,
       },
-    },
+    ],
   },
   { timestamps: true }
 );

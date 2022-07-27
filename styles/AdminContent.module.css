@@ -16,3 +16,10 @@
   box-shadow: var(--box-shadow);
   border-radius: var(--border-radius);
 }
+
+@media screen and (max-width: 768px) {
+  .content {
+    grid-template-rows: min-content 1fr;
+    grid-template-columns: 1fr;
+  }
+}

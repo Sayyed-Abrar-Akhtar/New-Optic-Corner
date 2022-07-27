@@ -1,5 +1,18 @@
 export class AddProductValidator {
-  constructor(color, sku, stock, images, title, price, description, category) {
+  constructor(
+    color,
+    sku,
+    stock,
+    images,
+    price,
+    title,
+    description,
+    tagsArr,
+    category_men,
+    category_women,
+    category_kid,
+    category_unisex
+  ) {
     this.color = color || '';
     this.sku = sku || '';
     this.stock = stock || 0;
@@ -7,7 +20,12 @@ export class AddProductValidator {
     this.title = title || '';
     this.price = price || 0;
     this.description = description || '';
-    this.category = category || '';
+    this.tagsArr = tagsArr || [];
+    this.category_men = category_men || false;
+    this.category_women = category_women || false;
+    this.category_kid = category_kid || false;
+    this.category_unisex = category_unisex || false;
+
     this.message = [];
   }
 
@@ -39,10 +57,19 @@ export class AddProductValidator {
     if (this.description === '') {
       this.message.push('Product description is required!');
     }
-    if (this.category === '5') {
-      this.message.push('Product has no stock!');
+    if (this.tagsArr.length === 0) {
+      this.message.push('Tags is missing!');
     }
 
     return this.message;
+  };
+
+  categoryValidator = () => {
+    const arr = [];
+    if (this.category_men) arr.push['men'];
+    if (this.category_women) arr.push['women'];
+    if (this.category_kid) arr.push['kid'];
+    if (this.category_unisex) arr.push['unisex'];
+    return arr;
   };
 }

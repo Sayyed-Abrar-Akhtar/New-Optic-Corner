@@ -5,6 +5,7 @@ import { ADMIN, LOADING } from '../../../constant/GlobalConstants';
 
 import menus from '../../../data/sidebarMenu';
 import SellercentralControl from '../../../utils/sellercentralControl';
+import Spinner from '../../spinner/Spinner';
 import Layout from '../layout/Layout';
 import AdminContent from './AdminContent';
 
@@ -38,7 +39,7 @@ const AdminLayout = ({ children, baseUrl, authorized, menuArr }) => {
   return (
     <p>
       {menuArr[0] && menuArr[0].type === LOADING ? (
-        `${LOADING}...`
+        <Spinner />
       ) : (
         <>
           {'Not Authorised!'}

@@ -1,0 +1,33 @@
+.checkbox_label {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  cursor: pointer;
+  min-width: 12rem;
+}
+
+.checkbox_label > span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+}
+
+.checkbox_label > span > svg {
+  width: 3rem;
+  height: 3rem;
+  fill: var(--dashboard-primary-color);
+}
+
+.checkbox_label > p {
+  line-height: 2.25rem;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  color: #555;
+  font-weight: 700;
+  color: var(--dashboard-primary-color);
+}
+
+.checkbox_label + input {
+  display: none;
+}

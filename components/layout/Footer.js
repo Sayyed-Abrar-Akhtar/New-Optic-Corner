@@ -15,9 +15,10 @@ const Footer = () => {
   const [loadMap, setLoadMap] = useState(false);
 
   useEffect(() => {
-    setTimeout(() => {
+    const loadMapTimer = setTimeout(() => {
       setLoadMap(true);
     }, 4000);
+    return () => clearTimeout(loadMapTimer);
   });
 
   return (

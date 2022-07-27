@@ -4,8 +4,6 @@ import {
   STAFF_DASHBOARD,
 } from '../../../../../constant/GlobalConstants';
 
-const staffHomePage = () => {
+export default function staffHomePage() {
   return <SellercentralScreen screenType={STAFF} page={STAFF_DASHBOARD} />;
-};
-
-export default staffHomePage;
+}
