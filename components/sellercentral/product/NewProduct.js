@@ -7,12 +7,12 @@ import { useRouter } from 'next/router';
 import inputStyles from '../../../styles/InputField.module.css';
 
 import { AddProductValidator } from '../../../utils/addProductValidator';
-import InputField from '../../form/InputField';
-import TextArea from '../../form/TextArea';
 import { useDispatch, useSelector } from 'react-redux';
 import { addProduct } from '../../../redux/actions/productActions';
 import { fileUploadSingle } from '../../../redux/actions/fileUploadAction';
 import { FILE_UPLOAD_RESET } from '../../../redux/constants/fileUploadConstants';
+import InputField from '../../form/InputField';
+import TextArea from '../../form/TextArea';
 import CheckBox from '../../form/CheckBox';
 import Spinner from '../../spinner/Spinner';
 

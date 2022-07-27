@@ -60,7 +60,7 @@ const SellercentralScreen = ({ screenType, page }) => {
   if (screenType === STAFF && page === STAFF_DASHBOARD) {
     return (
       <StaffLayout baseUrl={baseUrl} authorized={authorized} menuArr={menuArr}>
-        ADMIN DASHBOARD PAGE
+        <ProductListing baseUrl={baseUrl} />
       </StaffLayout>
     );
   }
@@ -90,7 +90,7 @@ const SellercentralScreen = ({ screenType, page }) => {
   if (screenType === STAFF && page === PRODUCT_ADD_PAGE) {
     return (
       <StaffLayout baseUrl={baseUrl} authorized={authorized} menuArr={menuArr}>
-        <NewProduct />
+        <NewProduct baseUrl={baseUrl} />
       </StaffLayout>
     );
   }
