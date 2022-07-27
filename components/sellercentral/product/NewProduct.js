@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { toast } from 'react-toastify';
 import { GiHelp } from 'react-icons/gi';
 
@@ -6,16 +7,21 @@ import { useRouter } from 'next/router';
 
 import inputStyles from '../../../styles/InputField.module.css';
 
-import { useDispatch, useSelector } from 'react-redux';
 import { addProduct } from '../../../redux/actions/productActions';
 import { fileUploadSingle } from '../../../redux/actions/fileUploadAction';
 import { FILE_UPLOAD_RESET } from '../../../redux/constants/fileUploadConstants';
+import { ADDED_PRODUCT_RESET } from '../../../redux/constants/productConstants';
+
 import InputField from '../../form/InputField';
+import TextArea from '../../form/TextArea';
 import CheckBox from '../../form/CheckBox';
 import Spinner from '../../spinner/Spinner';
 
 import styles from '../../../styles/NewProduct.module.css';
-import { ADDED_PRODUCT_RESET } from '../../../redux/constants/productConstants';
+import {
+  productValidator,
+  variantValidator,
+} from '../../../utils/addProductValidator';
 
 const NewProduct = ({ baseUrl }) => {
   const dispatch = useDispatch();
@@ -143,20 +149,12 @@ const NewProduct = ({ baseUrl }) => {
   };
 
   const addVariantHandler = (e) => {
-    // const addProductValidator = new AddProductValidator(
-    //   color,
-    //   sku,
-    //   stock,
-    //   images,
-    //   price
-    // );
+    const messages = variantValidator(color, sku, stock, images, price);
 
-    // const messages = addProductValidator.variantValidator();
-
-    // if (messages.length > 0) {
-    //   setError([...messages]);
-    //   return;
-    // }
+    if (messages.length > 0) {
+      setError([...messages]);
+      return;
+    }
 
     setVariantObjArr([...variantObjArr, { color, sku, stock, price, images }]);
     setColor('');
@@ -171,20 +169,8 @@ const NewProduct = ({ baseUrl }) => {
   const addProductHandler = (e) => {
     e.preventDefault();
 
-    // const addProductValidator = new AddProductValidator(
-    //   '',
-    //   '',
-    //   0,
-    //   [],
-    //   0,
-    //   title,
-    //   desc,
-    //   tagsArr,
-    //   menChecked,
-    //   womenChecked,
-    //   kidChecked,
-    //   unisexChecked
-    // );
+    const messages = productValidator(title, desc, tagsArr);
+
     const categories = [];
     if (menChecked) {
       categories.push('men');
@@ -199,7 +185,7 @@ const NewProduct = ({ baseUrl }) => {
       categories.push('unisex');
     }
 
-    // setError([...error, ...addProductValidator.productValidator()]);
+    setError([...error, ...messages]);
     const productObj = {
       title,
       description: desc,
@@ -240,24 +226,14 @@ const NewProduct = ({ baseUrl }) => {
                 sellercentral={true}
               />
 
-              <InputField
-                type='text'
-                label='Description'
-                id='product-desc'
-                placeholder='Product description'
-                value={desc}
-                setValue={setDesc}
-                sellercentral={true}
-              />
-
-              {/* <TextArea
+              <TextArea
                 val={desc}
                 setVal={setDesc}
                 label='Description'
                 id='product-desc'
                 sellercentral={true}
                 placeholder='Product description'
-              /> */}
+              />
             </div>
 
             <div className={styles.field__container}>
