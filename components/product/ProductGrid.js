@@ -3,15 +3,18 @@ import React from 'react';
 import styles from '../../styles/ProductGrid.module.css';
 import Card from './Card';
 
-const ProductGrid = ({ title = 'Add title' }) => {
+const ProductGrid = ({ title = 'Add title', products }) => {
   return (
     <>
       <h2 className='heading'>{title}</h2>
       <section className={styles.product__grid}>
-        <Card productId='123' />
-        <Card productId='123' />
-        <Card productId='123' />
-        <Card productId='123' />
+        {products ? (
+          products.map((product) => (
+            <Card key={product._id} product={product} />
+          ))
+        ) : (
+          <p>No products found!</p>
+        )}
       </section>
     </>
   );

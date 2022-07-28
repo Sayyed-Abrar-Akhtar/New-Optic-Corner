@@ -1,32 +1,862 @@
-{
-  "success": true,
-  "resPerPage": 3,
-  "productsCount": 8,
-  "filteredProductsCount": 8,
-  "products": [
-    {
-      "tags": [],
-      "_id": "61715fe78b8a1eceacc34f9d",
-      "title": "Bluecut Sunglasses",
-      "price": 500,
-      "__v": 0,
-      "variant": []
-    },
-    {
-      "tags": [],
-      "_id": "617160008b8a1eceacc34f9f",
-      "title": "Bluecut Sunglasses",
-      "price": 500,
-      "__v": 0,
-      "variant": []
-    },
-    {
-      "tags": [],
-      "_id": "617160028b8a1eceacc34fa1",
-      "title": "Bluecut Sunglasses",
-      "price": 500,
-      "__v": 0,
-      "variant": []
-    }
-  ]
-}
+[
+  {
+    "_id": "62e2a49188cac9f82e04c2c6",
+    "title": "test",
+    "description": "bjhjh",
+    "featured_image": "https://res.cloudinary.com/new-optic-corner-abdul/image/upload/v1659020422/exss4e4c4hr1ygb4nh3j.jpg",
+    "discount": 0,
+    "featured_price": 6565,
+    "variant": [
+      {
+        "color": "jhjkhh",
+        "sku": "hjkh",
+        "images": [
+          {
+            "id": "exss4e4c4hr1ygb4nh3j",
+            "secure_url": "https://res.cloudinary.com/new-optic-corner-abdul/image/upload/v1659020422/exss4e4c4hr1ygb4nh3j.jpg",
+            "_id": "62e2a49188cac9f82e04c2c8"
+          }
+        ],
+        "price": 6565,
+        "stock": 5656,
+        "_id": "62e2a49188cac9f82e04c2c7"
+      }
+    ],
+    "tags": ["nb"],
+    "category": ["men"],
+    "createdAt": "2022-07-28T15:00:33.878Z",
+    "updatedAt": "2022-07-28T15:00:33.878Z",
+    "__v": 0
+  },
+  {
+    "_id": "62e2a36c88cac9f82e04c2aa",
+    "title": "Test2",
+    "description": "bghjg",
+    "featured_image": "https://res.cloudinary.com/new-optic-corner-abdul/image/upload/v1659020101/oygzqs9vfbwwuyambryw.jpg",
+    "discount": 0,
+    "featured_price": 3,
+    "variant": [
+      {
+        "color": "TRansparent",
+        "sku": "hjhkh",
+        "images": [
+          {
+            "id": "oygzqs9vfbwwuyambryw",
+            "secure_url": "https://res.cloudinary.com/new-optic-corner-abdul/image/upload/v1659020101/oygzqs9vfbwwuyambryw.jpg",
+            "_id": "62e2a36c88cac9f82e04c2ac"
+          }
+        ],
+        "price": 3,
+        "stock": 5,
+        "_id": "62e2a36c88cac9f82e04c2ab"
+      }
+    ],
+    "tags": ["test"],
+    "category": ["men"],
+    "createdAt": "2022-07-28T14:55:40.162Z",
+    "updatedAt": "2022-07-28T14:55:40.162Z",
+    "__v": 0
+  },
+  {
+    "_id": "62e2a1a688cac9f82e04c28a",
+    "title": "TEST PRODUCT",
+    "description": "TEST",
+    "featured_image": "https://res.cloudinary.com/new-optic-corner-abdul/image/upload/v1659019626/ait02z9qb1cdjbjiytko.jpg",
+    "discount": 0,
+    "featured_price": 5000,
+    "variant": [
+      {
+        "color": "BLACK",
+        "sku": "BLK",
+        "images": [
+          {
+            "id": "ait02z9qb1cdjbjiytko",
+            "secure_url": "https://res.cloudinary.com/new-optic-corner-abdul/image/upload/v1659019626/ait02z9qb1cdjbjiytko.jpg",
+            "_id": "62e2a1a688cac9f82e04c28c"
+          },
+          {
+            "id": "vaed69okma7i6dhqgjqf",
+            "secure_url": "https://res.cloudinary.com/new-optic-corner-abdul/image/upload/v1659019635/vaed69okma7i6dhqgjqf.jpg",
+            "_id": "62e2a1a688cac9f82e04c28d"
+          },
+          {
+            "id": "f234vdpkui9u9w1yucti",
+            "secure_url": "https://res.cloudinary.com/new-optic-corner-abdul/image/upload/v1659019636/f234vdpkui9u9w1yucti.jpg",
+            "_id": "62e2a1a688cac9f82e04c28e"
+          },
+          {
+            "id": "itsgixyzgjp9xr9huo2c",
+            "secure_url": "https://res.cloudinary.com/new-optic-corner-abdul/image/upload/v1659019637/itsgixyzgjp9xr9huo2c.jpg",
+            "_id": "62e2a1a688cac9f82e04c28f"
+          }
+        ],
+        "price": 5000,
+        "stock": 5,
+        "_id": "62e2a1a688cac9f82e04c28b"
+      },
+      {
+        "color": "Blue",
+        "sku": "BLU",
+        "images": [
+          {
+            "id": "ohsw1plp4omxjlwin9zx",
+            "secure_url": "https://res.cloudinary.com/new-optic-corner-abdul/image/upload/v1659019669/ohsw1plp4omxjlwin9zx.jpg",
+            "_id": "62e2a1a688cac9f82e04c291"
+          },
+          {
+            "id": "idzpbbgjf7qq8j4fxgoe",
+            "secure_url": "https://res.cloudinary.com/new-optic-corner-abdul/image/upload/v1659019675/idzpbbgjf7qq8j4fxgoe.jpg",
+            "_id": "62e2a1a688cac9f82e04c292"
+          }
+        ],
+        "price": 1500,
+        "stock": 5,
+        "_id": "62e2a1a688cac9f82e04c290"
+      }
+    ],
+    "tags": [],
+    "category": ["men", "unisex"],
+    "createdAt": "2022-07-28T14:48:06.206Z",
+    "updatedAt": "2022-07-28T14:48:06.206Z",
+    "__v": 0
+  },
+
+  {
+    "_id": "62e116f49a675fbd38834d26",
+    "title": "Test",
+    "featured_images": "https://res.cloudinary.com/new-optic-corner-abdul/image/upload/v1658919029/new-optic-corner-abdul/products/variants/1658919028082.jpg",
+    "discount": 0,
+    "description": "gfgh",
+    "variant": [
+      {
+        "color": "black",
+        "sku": "blk",
+        "price": 1700,
+        "stock": 5,
+        "_id": "62e116f49a675fbd38834d27",
+        "images": []
+      }
+    ],
+    "tags": ["trending"],
+    "category": ["men"],
+    "createdAt": "2022-07-27T10:44:04.657Z",
+    "updatedAt": "2022-07-27T10:44:04.657Z",
+    "__v": 0
+  },
+  {
+    "_id": "62e116599a675fbd38834d22",
+    "title": "Cool Men Summer Eyewear",
+    "featured_images": "https://res.cloudinary.com/new-optic-corner-abdul/image/upload/v1658919029/new-optic-corner-abdul/products/variants/1658919028082.jpg",
+    "discount": 0,
+    "description": "UV Protection \nBlue Cut\nSummer wear\nSunglasses",
+    "variant": [
+      {
+        "color": "Black",
+        "sku": "BLK",
+        "price": 1500,
+        "stock": 5,
+        "_id": "62e116599a675fbd38834d23",
+        "images": []
+      },
+      {
+        "color": "Transparent",
+        "sku": "TRP",
+        "price": 1500,
+        "stock": 6,
+        "_id": "62e116599a675fbd38834d24",
+        "images": []
+      }
+    ],
+    "tags": ["trending", "sunglasses"],
+    "category": ["unisex"],
+    "createdAt": "2022-07-27T10:41:29.526Z",
+    "updatedAt": "2022-07-27T10:41:29.526Z",
+    "__v": 0
+  },
+  {
+    "_id": "62e10589a765f05557709209",
+    "title": "Summer UV protection sunglass",
+    "featured_images": "https://res.cloudinary.com/new-optic-corner-abdul/image/upload/v1658919029/new-optic-corner-abdul/products/variants/1658919028082.jpg",
+    "discount": 0,
+    "description": "Summer\nUV Protection",
+    "variant": [
+      {
+        "color": "Black",
+        "sku": "BLK",
+        "price": 2500,
+        "stock": 5,
+        "_id": "62e10589a765f0555770920a",
+        "images": []
+      }
+    ],
+    "tags": ["trending"],
+    "category": ["unisex"],
+    "createdAt": "2022-07-27T09:29:45.882Z",
+    "updatedAt": "2022-07-27T09:29:45.882Z",
+    "__v": 0
+  },
+  {
+    "_id": "62e104eea765f05557709206",
+    "title": "Square Sunglass",
+    "featured_images": "https://res.cloudinary.com/new-optic-corner-abdul/image/upload/v1658919029/new-optic-corner-abdul/products/variants/1658919028082.jpg",
+    "discount": 0,
+    "description": "Sunglass",
+    "variant": [
+      {
+        "color": "Black",
+        "sku": "BLK-SS22",
+        "price": 1800,
+        "stock": 6,
+        "_id": "62e104eea765f05557709207",
+        "images": []
+      }
+    ],
+    "tags": ["ss22"],
+    "category": ["men"],
+    "createdAt": "2022-07-27T09:27:10.515Z",
+    "updatedAt": "2022-07-27T09:27:10.515Z",
+    "__v": 0
+  },
+  {
+    "_id": "62e0ffb1a765f05557709203",
+    "title": "Black Sunglass",
+    "featured_images": "https://res.cloudinary.com/new-optic-corner-abdul/image/upload/v1658919029/new-optic-corner-abdul/products/variants/1658919028082.jpg",
+    "discount": 0,
+    "description": "Black Sunglass",
+    "variant": [
+      {
+        "color": "Black",
+        "sku": "BLK",
+        "price": 1750,
+        "stock": 5,
+        "_id": "62e0ffb1a765f05557709204",
+        "images": []
+      }
+    ],
+    "tags": ["black"],
+    "category": ["unisex"],
+    "createdAt": "2022-07-27T09:04:49.280Z",
+    "updatedAt": "2022-07-27T09:04:49.280Z",
+    "__v": 0
+  },
+  {
+    "_id": "62e0fdcba765f05557709200",
+    "title": "Square Frame Men Power glass",
+    "featured_images": "https://res.cloudinary.com/new-optic-corner-abdul/image/upload/v1658919029/new-optic-corner-abdul/products/variants/1658919028082.jpg",
+    "discount": 0,
+    "description": "Square Frame\nPlastic material",
+    "variant": [
+      {
+        "color": "White",
+        "sku": "WHT",
+        "price": 2500,
+        "stock": 8,
+        "_id": "62e0fdcba765f05557709201",
+        "images": []
+      }
+    ],
+    "tags": ["newin", "ss22"],
+    "category": ["men"],
+    "createdAt": "2022-07-27T08:56:43.559Z",
+    "updatedAt": "2022-07-27T08:56:43.559Z",
+    "__v": 0
+  },
+  {
+    "_id": "62e0fd42a765f055577091fd",
+    "title": "New Summer Sunglasses",
+    "featured_images": "https://res.cloudinary.com/new-optic-corner-abdul/image/upload/v1658919029/new-optic-corner-abdul/products/variants/1658919028082.jpg",
+    "discount": 0,
+    "description": "New Summer Sunglasses\nBlue cut\nUV Protection",
+    "variant": [
+      {
+        "color": "Black",
+        "sku": "BLK",
+        "price": 5000,
+        "stock": 50,
+        "_id": "62e0fd42a765f055577091fe",
+        "images": []
+      }
+    ],
+    "tags": ["trending"],
+    "category": ["men", "unisex"],
+    "createdAt": "2022-07-27T08:54:26.872Z",
+    "updatedAt": "2022-07-27T08:54:26.872Z",
+    "__v": 0
+  },
+  {
+    "_id": "62e0fd03a765f055577091fa",
+    "title": "New Summer Sunglasses",
+    "featured_images": "https://res.cloudinary.com/new-optic-corner-abdul/image/upload/v1658919029/new-optic-corner-abdul/products/variants/1658919028082.jpg",
+    "discount": 0,
+    "description": "New Summer Sunglasses\nBlue cut\nUV Protection",
+    "variant": [
+      {
+        "color": "Black",
+        "sku": "BLK",
+        "price": 5000,
+        "stock": 50,
+        "_id": "62e0fd03a765f055577091fb",
+        "images": []
+      }
+    ],
+    "tags": ["trending"],
+    "category": ["men", "unisex"],
+    "createdAt": "2022-07-27T08:53:23.262Z",
+    "updatedAt": "2022-07-27T08:53:23.262Z",
+    "__v": 0
+  },
+  {
+    "_id": "62e0fad8a765f055577091f3",
+    "title": "Blue cut Sunglasses",
+    "featured_images": "https://res.cloudinary.com/new-optic-corner-abdul/image/upload/v1658919029/new-optic-corner-abdul/products/variants/1658919028082.jpg",
+    "discount": 0,
+    "description": "Blue cut sunglasses\nFor long hour screen exposure\nPrevent from headache\nPremium Quality",
+    "variant": [
+      {
+        "color": "Black",
+        "sku": "BLK-SS22",
+        "price": 2500,
+        "stock": 5,
+        "_id": "62e0fad8a765f055577091f4",
+        "images": []
+      },
+      {
+        "color": "Transparent",
+        "sku": "TRP-SS22",
+        "price": 1500,
+        "stock": 10,
+        "_id": "62e0fad8a765f055577091f5",
+        "images": []
+      }
+    ],
+    "tags": ["BLACK", "trending"],
+    "category": ["men"],
+    "createdAt": "2022-07-27T08:44:08.721Z",
+    "updatedAt": "2022-07-27T08:44:08.721Z",
+    "__v": 0
+  },
+  {
+    "_id": "62dfaba48686ee104f2b3efa",
+    "title": "hjkhjh",
+    "featured_images": "https://res.cloudinary.com/new-optic-corner-abdul/image/upload/v1658919029/new-optic-corner-abdul/products/variants/1658919028082.jpg",
+    "discount": 0,
+    "description": "hjhh",
+    "variant": [
+      {
+        "color": "hjkh",
+        "sku": "jhj",
+        "price": 50,
+        "stock": 50,
+        "_id": "62dfaba48686ee104f2b3efb",
+        "images": []
+      },
+      {
+        "color": "ghjg",
+        "sku": "ghg",
+        "price": 5,
+        "stock": 5,
+        "_id": "62dfaba48686ee104f2b3efc",
+        "images": []
+      }
+    ],
+    "tags": ["jhjh", "hjhgjg"],
+    "category": ["women", "kid"],
+    "createdAt": "2022-07-26T08:53:56.828Z",
+    "updatedAt": "2022-07-26T08:53:56.828Z",
+    "__v": 0
+  },
+  {
+    "_id": "62dfab6a8686ee104f2b3ef6",
+    "title": "hjkhjh",
+    "featured_images": "https://res.cloudinary.com/new-optic-corner-abdul/image/upload/v1658919029/new-optic-corner-abdul/products/variants/1658919028082.jpg",
+    "discount": 0,
+    "description": "hjhh",
+    "variant": [
+      {
+        "color": "hjkh",
+        "sku": "jhj",
+        "price": 50,
+        "stock": 50,
+        "_id": "62dfab6a8686ee104f2b3ef7",
+        "images": []
+      },
+      {
+        "color": "ghjg",
+        "sku": "ghg",
+        "price": 5,
+        "stock": 5,
+        "_id": "62dfab6a8686ee104f2b3ef8",
+        "images": []
+      }
+    ],
+    "tags": ["jhjh", "hjhgjg"],
+    "category": ["women", "kid"],
+    "createdAt": "2022-07-26T08:52:58.636Z",
+    "updatedAt": "2022-07-26T08:52:58.636Z",
+    "__v": 0
+  },
+  {
+    "_id": "62dfab118686ee104f2b3ef3",
+    "title": "nbvbn",
+    "featured_images": "https://res.cloudinary.com/new-optic-corner-abdul/image/upload/v1658919029/new-optic-corner-abdul/products/variants/1658919028082.jpg",
+    "discount": 0,
+    "description": "vvbnv",
+    "variant": [
+      {
+        "color": "vbvbv",
+        "sku": "vbn",
+        "price": 55,
+        "stock": 55,
+        "_id": "62dfab118686ee104f2b3ef4",
+        "images": []
+      }
+    ],
+    "tags": ["newin", "ss20"],
+    "category": ["men"],
+    "createdAt": "2022-07-26T08:51:29.406Z",
+    "updatedAt": "2022-07-26T08:51:29.406Z",
+    "__v": 0
+  },
+  {
+    "_id": "62dfaaab8686ee104f2b3ef0",
+    "title": "jhj",
+    "featured_images": "https://res.cloudinary.com/new-optic-corner-abdul/image/upload/v1658919029/new-optic-corner-abdul/products/variants/1658919028082.jpg",
+    "discount": 0,
+    "description": "hjhjhkjh",
+    "variant": [
+      {
+        "color": "jkh",
+        "sku": "jkj",
+        "price": 45,
+        "stock": 45,
+        "_id": "62dfaaab8686ee104f2b3ef1",
+        "images": []
+      }
+    ],
+    "tags": ["123", "64"],
+    "category": ["unisex"],
+    "createdAt": "2022-07-26T08:49:47.826Z",
+    "updatedAt": "2022-07-26T08:49:47.826Z",
+    "__v": 0
+  },
+  {
+    "_id": "62dfa9ef8686ee104f2b3eed",
+    "title": "ngj",
+    "featured_images": "https://res.cloudinary.com/new-optic-corner-abdul/image/upload/v1658919029/new-optic-corner-abdul/products/variants/1658919028082.jpg",
+    "discount": 0,
+    "description": "jhghg",
+    "variant": [
+      {
+        "color": "jhgh",
+        "sku": "ghgj",
+        "price": 55,
+        "stock": 5,
+        "_id": "62dfa9ef8686ee104f2b3eee",
+        "images": []
+      }
+    ],
+    "tags": ["nbw"],
+    "category": ["men"],
+    "createdAt": "2022-07-26T08:46:39.555Z",
+    "updatedAt": "2022-07-26T08:46:39.555Z",
+    "__v": 0
+  },
+  {
+    "_id": "62dfa9da8686ee104f2b3eea",
+    "title": "ngj",
+    "featured_images": "https://res.cloudinary.com/new-optic-corner-abdul/image/upload/v1658919029/new-optic-corner-abdul/products/variants/1658919028082.jpg",
+    "discount": 0,
+    "description": "jhghg",
+    "variant": [
+      {
+        "color": "jhgh",
+        "sku": "ghgj",
+        "price": 55,
+        "stock": 5,
+        "_id": "62dfa9da8686ee104f2b3eeb",
+        "images": []
+      }
+    ],
+    "tags": ["trending"],
+    "category": ["men"],
+    "createdAt": "2022-07-26T08:46:18.427Z",
+    "updatedAt": "2022-07-26T08:46:18.427Z",
+    "__v": 0
+  },
+  {
+    "_id": "62dfa9868686ee104f2b3ee7",
+    "title": "Blue cut sunglasses",
+    "featured_images": "https://res.cloudinary.com/new-optic-corner-abdul/image/upload/v1658919029/new-optic-corner-abdul/products/variants/1658919028082.jpg",
+    "discount": 0,
+    "description": "hvnv",
+    "variant": [
+      {
+        "color": "REd",
+        "sku": "rd",
+        "price": 600,
+        "stock": 60,
+        "_id": "62dfa9868686ee104f2b3ee8",
+        "images": []
+      }
+    ],
+    "tags": ["ss21"],
+    "category": ["men"],
+    "createdAt": "2022-07-26T08:44:54.821Z",
+    "updatedAt": "2022-07-26T08:44:54.821Z",
+    "__v": 0
+  },
+  {
+    "_id": "62dfa5df8686ee104f2b3ee3",
+    "title": "Super Sunglasses",
+    "featured_images": "https://res.cloudinary.com/new-optic-corner-abdul/image/upload/v1658919029/new-optic-corner-abdul/products/variants/1658919028082.jpg",
+    "discount": 0,
+    "description": "Metal Frame\nTransparent Glass",
+    "variant": [
+      {
+        "color": "Black",
+        "sku": "BLK",
+        "price": 5000,
+        "stock": 5,
+        "_id": "62dfa5df8686ee104f2b3ee4",
+        "images": []
+      },
+      {
+        "color": "Transparent",
+        "sku": "TRP",
+        "price": 6000,
+        "stock": 60,
+        "_id": "62dfa5df8686ee104f2b3ee5",
+        "images": []
+      }
+    ],
+    "tags": ["newin", "ss22"],
+    "category": ["men"],
+    "createdAt": "2022-07-26T08:29:19.105Z",
+    "updatedAt": "2022-07-26T08:29:19.105Z",
+    "__v": 0
+  },
+  {
+    "_id": "62df9c818686ee104f2b3edb",
+    "title": "Summer Sunglasses",
+    "featured_images": "https://res.cloudinary.com/new-optic-corner-abdul/image/upload/v1658919029/new-optic-corner-abdul/products/variants/1658919028082.jpg",
+    "discount": 0,
+    "description": "Metal Frame\n",
+    "variant": [
+      {
+        "color": "Black",
+        "sku": "BLK",
+        "price": 5000,
+        "stock": 50,
+        "_id": "62df9c818686ee104f2b3edc",
+        "images": []
+      },
+      {
+        "color": "Transparent",
+        "sku": "TRP",
+        "price": 8000,
+        "stock": 80,
+        "_id": "62df9c818686ee104f2b3edd",
+        "images": []
+      },
+      {
+        "color": "Red",
+        "sku": "RD",
+        "price": 6000,
+        "stock": 60,
+        "_id": "62df9c818686ee104f2b3ede",
+        "images": []
+      }
+    ],
+    "tags": ["SS22", "newin"],
+    "category": ["men"],
+    "createdAt": "2022-07-26T07:49:21.672Z",
+    "updatedAt": "2022-07-26T07:49:21.672Z",
+    "__v": 0
+  },
+  {
+    "tags": [],
+    "category": [],
+    "_id": "61757c29da2d69316f5df027",
+    "title": "Sunglass",
+    "price": 0,
+    "createdAt": "2021-10-24T15:30:49.170Z",
+    "updatedAt": "2021-10-24T15:30:49.170Z",
+    "__v": 0,
+    "variant": []
+  },
+  {
+    "tags": [],
+    "category": [],
+    "_id": "61757c18da2d69316f5df025",
+    "price": 500,
+    "createdAt": "2021-10-24T15:30:32.161Z",
+    "updatedAt": "2021-10-24T15:30:32.161Z",
+    "__v": 0,
+    "variant": []
+  },
+  {
+    "tags": [],
+    "category": [],
+    "_id": "61757c09da2d69316f5df023",
+    "price": 500,
+    "createdAt": "2021-10-24T15:30:17.694Z",
+    "updatedAt": "2021-10-24T15:30:17.694Z",
+    "__v": 0,
+    "variant": []
+  },
+  {
+    "tags": [],
+    "category": [],
+    "_id": "61757befda2d69316f5df021",
+    "title": "500",
+    "price": 500,
+    "createdAt": "2021-10-24T15:29:51.074Z",
+    "updatedAt": "2021-10-24T15:29:51.074Z",
+    "__v": 0,
+    "variant": []
+  },
+  {
+    "tags": [],
+    "category": [],
+    "_id": "61755ae3f50963bc8e325be3",
+    "title": "Night Vision Sunglasses",
+    "price": 450,
+    "createdAt": "2021-10-24T13:08:51.855Z",
+    "updatedAt": "2021-10-24T13:15:49.261Z",
+    "__v": 0,
+    "variant": []
+  },
+  {
+    "tags": [],
+    "category": [],
+    "_id": "61715fe78b8a1eceacc34f9d",
+    "title": "Bluecut Sunglasses",
+    "price": 500,
+    "__v": 0,
+    "variant": []
+  },
+  {
+    "tags": [],
+    "category": [],
+    "_id": "617160008b8a1eceacc34f9f",
+    "title": "Bluecut Sunglasses",
+    "price": 500,
+    "__v": 0,
+    "variant": []
+  },
+  {
+    "tags": [],
+    "category": [],
+    "_id": "617160028b8a1eceacc34fa1",
+    "title": "Bluecut Sunglasses",
+    "price": 500,
+    "__v": 0,
+    "variant": []
+  },
+  {
+    "_id": "62e290c688cac9f82e04c14c",
+    "title": "Black Gradient Sunglass",
+    "description": "Black Gradient Sunglass",
+    "featured_image": "https://res.cloudinary.com/new-optic-corner-abdul/image/upload/v1659015344/new-optic-corner-abdul/products/variants/1659015342804.jpg",
+    "discount": 0,
+    "featured_price": 1750,
+    "variant": [
+      {
+        "color": "Black",
+        "sku": "BLK",
+        "images": [
+          {
+            "id": "709e8116b8ba99880aa33d768aedbdb4",
+            "secure_url": "https://res.cloudinary.com/new-optic-corner-abdul/image/upload/v1659015344/new-optic-corner-abdul/products/variants/1659015342804.jpg",
+            "_id": "62e290c688cac9f82e04c14e"
+          },
+          {
+            "id": "2cb7f4eb1ad353ae3ce68f51d46e050c",
+            "secure_url": "https://res.cloudinary.com/new-optic-corner-abdul/image/upload/v1659015349/new-optic-corner-abdul/products/variants/1659015348436.jpg",
+            "_id": "62e290c688cac9f82e04c14f"
+          }
+        ],
+        "price": 1750,
+        "stock": 6,
+        "_id": "62e290c688cac9f82e04c14d"
+      }
+    ],
+    "tags": ["sunglass", "powerglass", "trending", "uv", "blue cut"],
+    "category": ["unisex"],
+    "createdAt": "2022-07-28T13:36:06.235Z",
+    "updatedAt": "2022-07-28T13:36:06.235Z",
+    "__v": 0
+  },
+  {
+    "_id": "62e2906688cac9f82e04c13d",
+    "title": "Mens Transparent Sunglass",
+    "description": "Mens Transparent Sunglass\nTransparent\nSunglass",
+    "featured_image": "https://res.cloudinary.com/new-optic-corner-abdul/image/upload/v1659015215/new-optic-corner-abdul/products/variants/1659015213734.jpg",
+    "discount": 0,
+    "featured_price": 2150,
+    "variant": [
+      {
+        "color": "Transparent",
+        "sku": "TRP",
+        "images": [
+          {
+            "id": "179e79d0605bae398c1d813221dc6b27",
+            "secure_url": "https://res.cloudinary.com/new-optic-corner-abdul/image/upload/v1659015215/new-optic-corner-abdul/products/variants/1659015213734.jpg",
+            "_id": "62e2906688cac9f82e04c13f"
+          }
+        ],
+        "price": 2150,
+        "stock": 4,
+        "_id": "62e2906688cac9f82e04c13e"
+      }
+    ],
+    "tags": ["trending", "uv", "blue cut", "powerglass", "sunglass"],
+    "category": ["unisex"],
+    "createdAt": "2022-07-28T13:34:30.959Z",
+    "updatedAt": "2022-07-28T13:34:30.959Z",
+    "__v": 0
+  },
+  {
+    "_id": "62e28fc488cac9f82e04c12f",
+    "title": "Mens Blue Gradient Sunglass",
+    "description": "Mens Blue Gradient Sunglass\nUV\nBlue Cut",
+    "featured_image": "https://res.cloudinary.com/new-optic-corner-abdul/image/upload/v1659015028/new-optic-corner-abdul/products/variants/1659015026364.jpg",
+    "discount": 0,
+    "featured_price": 2000,
+    "variant": [
+      {
+        "color": "Blue",
+        "sku": "BLU",
+        "images": [
+          {
+            "id": "09de8fac8f58ad78e4b95ebf0741025b",
+            "secure_url": "https://res.cloudinary.com/new-optic-corner-abdul/image/upload/v1659015028/new-optic-corner-abdul/products/variants/1659015026364.jpg",
+            "_id": "62e28fc488cac9f82e04c131"
+          },
+          {
+            "id": "afd538155a57010e1f4a0e19c10f38f3",
+            "secure_url": "https://res.cloudinary.com/new-optic-corner-abdul/image/upload/v1659015035/new-optic-corner-abdul/products/variants/1659015034121.jpg",
+            "_id": "62e28fc488cac9f82e04c132"
+          }
+        ],
+        "price": 2000,
+        "stock": 6,
+        "_id": "62e28fc488cac9f82e04c130"
+      }
+    ],
+    "tags": ["trending", "Blue cut", "sunglass", "uv"],
+    "category": ["men"],
+    "createdAt": "2022-07-28T13:31:48.943Z",
+    "updatedAt": "2022-07-28T13:31:48.943Z",
+    "__v": 0
+  },
+
+  {
+    "featured_price": 1800,
+    "_id": "62e28cd1c847b9f60f2f0bf6",
+    "title": "Mens Black Sunglasses",
+    "description": "Mens Black Sunglasses",
+    "featured_image": "https://res.cloudinary.com/new-optic-corner-abdul/image/upload/v1659014331/new-optic-corner-abdul/products/variants/1659014330789.jpg",
+    "discount": 0,
+    "variant": [
+      {
+        "color": "Black",
+        "sku": "BLK",
+        "images": [
+          {
+            "id": "4c167fe8e27a3a73f5ead04ca72f876c",
+            "secure_url": "https://res.cloudinary.com/new-optic-corner-abdul/image/upload/v1659014331/new-optic-corner-abdul/products/variants/1659014330789.jpg",
+            "_id": "62e28cd1c847b9f60f2f0bf8"
+          },
+          {
+            "id": "073ae6151be02087d841e7b9f3564119",
+            "secure_url": "https://res.cloudinary.com/new-optic-corner-abdul/image/upload/v1659014334/new-optic-corner-abdul/products/variants/1659014333502.jpg",
+            "_id": "62e28cd1c847b9f60f2f0bf9"
+          },
+          {
+            "id": "255e06bc852c03e009bcdeabc8839eb8",
+            "secure_url": "https://res.cloudinary.com/new-optic-corner-abdul/image/upload/v1659014335/new-optic-corner-abdul/products/variants/1659014333467.jpg",
+            "_id": "62e28cd1c847b9f60f2f0bfa"
+          },
+          {
+            "id": "0f593f7afa1a59baf06974bdf750b69b",
+            "secure_url": "https://res.cloudinary.com/new-optic-corner-abdul/image/upload/v1659014335/new-optic-corner-abdul/products/variants/1659014334290.jpg",
+            "_id": "62e28cd1c847b9f60f2f0bfb"
+          }
+        ],
+        "price": 1800,
+        "stock": 5,
+        "_id": "62e28cd1c847b9f60f2f0bf7"
+      }
+    ],
+    "tags": ["trending", "UV", "Blue cut", "sunglass"],
+    "category": ["men"]
+  },
+  {
+    "_id": "62e118a69a675fbd38834d29",
+    "title": "Summer Sunglasses",
+    "featured_images": "https://res.cloudinary.com/new-optic-corner-abdul/image/upload/v1658919029/new-optic-corner-abdul/products/variants/1658919028082.jpg",
+    "discount": 0,
+    "description": "Summer wear\nUV Protection\nBluecut",
+    "variant": [
+      {
+        "color": "Black",
+        "sku": "BLK",
+        "images": [
+          {
+            "id": "7b5285ca1cdf82216355321e92790eef",
+            "secure_url": "https://res.cloudinary.com/new-optic-corner-abdul/image/upload/v1658919029/new-optic-corner-abdul/products/variants/1658919028082.jpg",
+            "_id": "62e118a69a675fbd38834d2b"
+          },
+          {
+            "id": "fc19644eae7cbe590a1fa18914df0982",
+            "secure_url": "https://res.cloudinary.com/new-optic-corner-abdul/image/upload/v1658919031/new-optic-corner-abdul/products/variants/1658919031397.jpg",
+            "_id": "62e118a69a675fbd38834d2c"
+          },
+          {
+            "id": "be9f78b43601f452bb5534f99799c22f",
+            "secure_url": "https://res.cloudinary.com/new-optic-corner-abdul/image/upload/v1658919035/new-optic-corner-abdul/products/variants/1658919035133.jpg",
+            "_id": "62e118a69a675fbd38834d2d"
+          },
+          {
+            "id": "205492ce0e9f1e892f17c3ff2ccb2045",
+            "secure_url": "https://res.cloudinary.com/new-optic-corner-abdul/image/upload/v1658919040/new-optic-corner-abdul/products/variants/1658919040192.jpg",
+            "_id": "62e118a69a675fbd38834d2e"
+          }
+        ],
+        "price": 1500,
+        "stock": 5,
+        "_id": "62e118a69a675fbd38834d2a"
+      },
+      {
+        "color": "Transparent",
+        "sku": "TRP",
+        "images": [
+          {
+            "id": "0b8d9fcb13fa85b5704d51d26e3dfd4a",
+            "secure_url": "https://res.cloudinary.com/new-optic-corner-abdul/image/upload/v1658919069/new-optic-corner-abdul/products/variants/1658919069081.jpg",
+            "_id": "62e118a69a675fbd38834d30"
+          },
+          {
+            "id": "bcfdaa47bcae1882a584e0c53bded424",
+            "secure_url": "https://res.cloudinary.com/new-optic-corner-abdul/image/upload/v1658919070/new-optic-corner-abdul/products/variants/1658919070353.jpg",
+            "_id": "62e118a69a675fbd38834d31"
+          },
+          {
+            "id": "d78a77ad9e3c81ba39226e4be8774aeb",
+            "secure_url": "https://res.cloudinary.com/new-optic-corner-abdul/image/upload/v1658919072/new-optic-corner-abdul/products/variants/1658919071761.jpg",
+            "_id": "62e118a69a675fbd38834d32"
+          }
+        ],
+        "price": 1600,
+        "stock": 6,
+        "_id": "62e118a69a675fbd38834d2f"
+      }
+    ],
+    "tags": ["UV", "trending"],
+    "category": ["men"],
+    "createdAt": "2022-07-27T10:51:18.685Z",
+    "updatedAt": "2022-07-27T10:51:18.685Z",
+    "__v": 0
+  }
+]

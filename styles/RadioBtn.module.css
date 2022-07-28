@@ -1,0 +1,35 @@
+.unchecked {
+  display: block;
+}
+
+.checked {
+  display: none;
+}
+
+.checked,
+.unchecked {
+  margin-right: 0.75rem;
+}
+
+.checked,
+.radio_input:checked + label {
+  color: var(--dashboard-primary-color-dark);
+}
+
+.radio_input + label {
+  letter-spacing: 1px;
+  font-size: 1.75rem;
+}
+
+.unchecked,
+.radio_input + label {
+  color: var(--dashboard-primary-color);
+}
+
+.radio_input:checked + label > .unchecked {
+  display: none;
+}
+
+.radio_input:checked + label > .checked {
+  display: block;
+}

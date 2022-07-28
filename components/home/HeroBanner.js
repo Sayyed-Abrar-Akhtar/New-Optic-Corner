@@ -31,7 +31,7 @@ const HeroBanner = ({ hero = {} }) => {
               {hero.subtitle ||
                 'Up to 50% special depawali discount on trendy sunglasses and power glasses online in Nepal.'}
             </p>
-            <Btn to='/product' text={hero.cta.text} />
+            <Btn to='/products' text={hero.cta.text} />
           </section>
         </>
       )}

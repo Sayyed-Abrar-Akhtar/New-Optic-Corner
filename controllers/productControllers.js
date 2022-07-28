@@ -1,4 +1,10 @@
 import cloudinary from 'cloudinary';
+import {
+  PRODUCT_TAG_TRENDING,
+  PRODUCT_TYPE_CONTACT_LENS,
+  PRODUCT_TYPE_POWERGLASSES,
+  PRODUCT_TYPE_SUNGLASSES,
+} from '../constant/GlobalConstants';
 
 import AsyncHandler from '../middlewares/AsyncHandler';
 import Product from '../models/product';
@@ -42,12 +48,83 @@ cloudinary.config({
 //   });
 // });
 
+/*--------------------------------------------------------------------------------------*/
+// @desc    Fetch All Products.
+// @route   GET https://localhost:3000/api/products/
+// @access  Public
 const allProducts = AsyncHandler(async (req, res) => {
   const products = await Product.find().sort({ createdAt: -1 });
   res.status(200).json({
     success: true,
     data: products,
   });
+});
+
+/*--------------------------------------------------------------------------------------*/
+// @desc    Fetch All Sunglasses.
+// @route   GET https://localhost:3000/api/products/
+// @access  Public
+const allSunglasses = AsyncHandler(async (req, res) => {
+  const products = await Product.find({
+    product_type: PRODUCT_TYPE_SUNGLASSES,
+  }).sort({ createdAt: -1 });
+  res.status(200).json({
+    success: true,
+    data: products,
+  });
+});
+
+/*--------------------------------------------------------------------------------------*/
+// @desc    Fetch All Sunglasses.
+// @route   GET https://localhost:3000/api/products/
+// @access  Public
+const allPowerGlasses = AsyncHandler(async (req, res) => {
+  const products = await Product.find({
+    product_type: PRODUCT_TYPE_POWERGLASSES,
+  }).sort({ createdAt: -1 });
+  res.status(200).json({
+    success: true,
+    data: products,
+  });
+});
+
+/*--------------------------------------------------------------------------------------*/
+// @desc    Fetch All Sunglasses.
+// @route   GET https://localhost:3000/api/products/
+// @access  Public
+const allContactLenses = AsyncHandler(async (req, res) => {
+  const products = await Product.find({
+    product_type: PRODUCT_TYPE_CONTACT_LENS,
+  }).sort({ createdAt: -1 });
+  res.status(200).json({
+    success: true,
+    data: products,
+  });
+});
+
+/*--------------------------------------------------------------------------------------*/
+// @desc    Fetch All Sunglasses.
+// @route   GET https://localhost:3000/api/products/
+// @access  Public
+const trendingProducts = AsyncHandler(async (req, res) => {
+  const products = await Product.find().sort({ createdAt: -1 }).limit(4);
+
+  const trendingProducts = products
+    .filter((item) =>
+      item.tags ? item.tags.includes(PRODUCT_TAG_TRENDING) : []
+    )
+    .filter((item, idx) => idx < 4);
+  if (trendingProducts) {
+    res.status(200).json({
+      success: true,
+      data: trendingProducts,
+    });
+  } else {
+    res.status(500).json({
+      success: false,
+      message: 'No products found',
+    });
+  }
 });
 
 /*--------------------------------------------------------------------------------------*/
@@ -68,9 +145,14 @@ const fetchProduct = AsyncHandler(async (req, res, next) => {
 // @access  Public
 const addNewProduct = AsyncHandler(async (req, res) => {
   const productData = req.body;
-  //console.log('req.product', productData.variant[0].images, '<= the end::::');
 
-  const product = await Product.create(productData);
+  const productObj = {
+    ...productData,
+    featured_image: productData.variant[0].images[0].secure_url,
+    featured_price: productData.variant[0].price,
+  };
+
+  const product = await Product.create(productObj);
   //console.log('product', product, '<= the end::::');
   if (!product) {
     return next(new ErrorHandler('Product failed to create!!', 404));
@@ -95,7 +177,7 @@ const getImagesLink = async (image) => {
 };
 
 /*--------------------------------------------------------------------------------------*/
-// @desc    Update Room.
+// @desc    Update Product.
 // @route   UPDATE https://localhost:3000/api/products/:id
 // @access  Public
 const updateProduct = AsyncHandler(async (req, res, next) => {
@@ -132,4 +214,13 @@ export const deleteProduct = AsyncHandler(async (req, res, next) => {
     .json({ success: true, message: 'Product deleted successfully' });
 });
 
-export { allProducts, fetchProduct, addNewProduct, updateProduct };
+export {
+  allProducts,
+  allSunglasses,
+  allPowerGlasses,
+  allContactLenses,
+  trendingProducts,
+  fetchProduct,
+  addNewProduct,
+  updateProduct,
+};

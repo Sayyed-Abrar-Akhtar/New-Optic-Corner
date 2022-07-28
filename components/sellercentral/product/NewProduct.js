@@ -23,14 +23,17 @@ import {
   productValidator,
   variantValidator,
 } from '../../../utils/newProductValidator';
+import RadioBtn from '../../form/RadioBtn';
 
 const NewProduct = ({ baseUrl }) => {
   const dispatch = useDispatch();
   const router = useRouter();
 
-  const { uploading, imageData } = useSelector(
-    (state) => state.singleFileUpload
-  );
+  const {
+    uploading,
+    imageData,
+    error: errorUploadingFIle,
+  } = useSelector((state) => state.singleFileUpload);
   const {
     loading,
     error: errorProduct,
@@ -41,6 +44,7 @@ const NewProduct = ({ baseUrl }) => {
   const [desc, setDesc] = useState('');
   const [color, setColor] = useState('');
   const [sku, setSku] = useState('');
+  const [product_type, setProduct_type] = useState('');
   const [price, setPrice] = useState(0);
   const [stock, setStock] = useState(0);
   const [images, setImages] = useState([]);
@@ -60,19 +64,20 @@ const NewProduct = ({ baseUrl }) => {
   const [showVariantAddButton, setShowVariantAddbutton] = useState(false);
   const [imgLoading, setImgLoading] = useState(false);
   const [imgArrLength, setImgArrLength] = useState(0);
+  const [addedProduct, setAddedProduct] = useState(false);
 
   useEffect(() => {
     if (!errorProduct && !loading && product && product.success) {
       router.push(baseUrl);
       dispatch({ type: ADDED_PRODUCT_RESET });
+    } else {
+      setAddedProduct(false);
     }
-    if (uploading) {
-      console.log('uploading img...');
-    }
+
     if (imageData && imageData.success) {
       setImages([
         ...images,
-        { id: imageData.id, secure_url: imageData.secure_url },
+        { id: imageData.public_id, secure_url: imageData.secure_url },
       ]);
 
       dispatch({ type: FILE_UPLOAD_RESET });
@@ -85,7 +90,9 @@ const NewProduct = ({ baseUrl }) => {
       setError([]);
     }
     if (tags.length > 0) {
-      const tagsToArr = tags.split('#').filter((tag) => tag !== '');
+      const tagsToArr = tags
+        .split('#')
+        .filter((tag) => tag.toLowerCase() !== '');
       setTagsArr([...tagsToArr]);
     }
     if (
@@ -96,12 +103,17 @@ const NewProduct = ({ baseUrl }) => {
       images.length !== 0 &&
       images.length === imgArrLength
     ) {
+      console.log(images);
       setShowVariantAddbutton(true);
     } else {
       setShowVariantAddbutton(false);
     }
 
-    if (imgArrLength > 0 && images.length !== imgArrLength) {
+    if (
+      !errorUploadingFIle &&
+      imgArrLength > 0 &&
+      images.length !== imgArrLength
+    ) {
       setImgLoading(true);
     } else {
       setImgLoading(false);
@@ -112,7 +124,6 @@ const NewProduct = ({ baseUrl }) => {
     baseUrl,
     product,
     router,
-    uploading,
     images,
     imageData,
     dispatch,
@@ -124,36 +135,21 @@ const NewProduct = ({ baseUrl }) => {
     sku,
     stock,
     imgArrLength,
+    errorUploadingFIle,
   ]);
-
-  const readDroppedFile = async (file) => {
-    const formData = new FormData();
-    formData.append('file', file);
-    formData.append('upload_preset', 'newoptic');
-    formData.append('cloud_name', 'new-optic-corner-abdul');
-    const response = await fetch(
-      '  https://api.cloudinary.com/v1_1/new-optic-corner-abdul/image/upload',
-      {
-        method: 'post',
-        body: formData,
-      }
-    );
-    const data = await response.json();
-
-    dispatch(fileUploadSingle({ image: data.secure_url }));
-  };
 
   const variantImgChangeHandler = (e) => {
     const fileArr = Array.from(e.target.files);
-    setImgArrLength(fileArr.length);
-    fileArr.forEach((file) => readDroppedFile(file));
+
+    setImgArrLength(imgArrLength + fileArr.length);
+    fileArr.forEach((file) => dispatch(fileUploadSingle(file)));
   };
 
   const addVariantHandler = (e) => {
-    const messages = variantValidator(color, sku, stock, images, price);
+    const variantReport = variantValidator(color, sku, stock, images, price);
 
-    if (messages.length > 0) {
-      setError([...messages]);
+    if (!variantReport.isValid) {
+      setError([...error, ...variantReport.message]);
       return;
     }
 
@@ -176,21 +172,26 @@ const NewProduct = ({ baseUrl }) => {
       kidChecked,
       unisexChecked
     );
-    const messages = productValidator(
+    const productReport = productValidator(
       title,
       desc,
       tagsArr,
       categories,
-      variantObjArr
+      variantObjArr,
+      product_type
     );
 
-    setError([...error, ...messages]);
+    if (!productReport.isValid) {
+      setError([...error, ...productReport.message]);
+      return;
+    }
     const productObj = {
       title,
       description: desc,
       variant: variantObjArr,
       tags: tagsArr,
       category: categories,
+      product_type: product_type.toLowerCase(),
     };
     console.log(productObj);
 
@@ -201,6 +202,7 @@ const NewProduct = ({ baseUrl }) => {
     // if (!errorProduct && product.success) {
     //   router.push(baseUrl);
     // }
+    setAddedProduct(true);
   };
 
   const deleteHandler = (e, idx) => {
@@ -209,7 +211,7 @@ const NewProduct = ({ baseUrl }) => {
 
   return (
     <section className={styles.container}>
-      {loading ? (
+      {addedProduct ? (
         <Spinner />
       ) : (
         <>
@@ -396,6 +398,32 @@ const NewProduct = ({ baseUrl }) => {
                   label='unisex'
                   checked={unisexChecked}
                   setChecked={setUnisexChecked}
+                />
+              </div>
+            </section>
+            <section className={styles.category_container}>
+              <h4 className='mb-10'>Choose Product Type</h4>
+              <div className='flex flex-col'>
+                <RadioBtn
+                  label='Sunglasses'
+                  ID='sunglasses'
+                  name='product_type'
+                  val={product_type}
+                  setVal={setProduct_type}
+                />
+                <RadioBtn
+                  label='Powerglasses'
+                  ID='powerglasses'
+                  name='product_type'
+                  val={product_type}
+                  setVal={setProduct_type}
+                />
+                <RadioBtn
+                  label='Contact Lens'
+                  ID='contact_lens'
+                  name='product_type'
+                  val={product_type}
+                  setVal={setProduct_type}
                 />
               </div>
             </section>

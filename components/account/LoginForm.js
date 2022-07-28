@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { toast } from 'react-toastify';
 
@@ -10,14 +10,23 @@ import styles from '../../styles/Form.module.css';
 import Account from './Account';
 import Link from 'next/link';
 
-import { signIn } from 'next-auth/react';
+import { signIn, useSession } from 'next-auth/react';
 import { useRouter } from 'next/router';
 import { useSelector } from 'react-redux';
+import { AUTHENTICATED } from '../../constant/GlobalConstants';
 
 const LoginForm = () => {
   const {
     theme: { login },
   } = useSelector((state) => state.getTheme);
+
+  const { status } = useSession();
+
+  useEffect(() => {
+    if (status === AUTHENTICATED) {
+      router.push('/');
+    }
+  }, [status, router]);
 
   const router = useRouter();
 

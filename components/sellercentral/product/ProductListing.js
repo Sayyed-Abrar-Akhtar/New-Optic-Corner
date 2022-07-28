@@ -14,6 +14,9 @@ import styles from '../../../styles/ProductListing.module.css';
 import Filter from '../filter/Filter';
 import ProductsList from './ProductsList';
 import SelectedFilter from '../filter/SelectedFilter';
+import Pagination from '../../pagination/Pagination';
+import { useSelector } from 'react-redux';
+import Spinner from '../../spinner/Spinner';
 
 const ProductListing = ({ baseUrl }) => {
   const categoryData = [
@@ -50,10 +53,17 @@ const ProductListing = ({ baseUrl }) => {
   const [filterSelected, setFilterSelected] = useState([]);
   const [arrLoading, setArrLoading] = useState(true);
   const [show, setShow] = useState(false);
+  const [filteredProducts, setFilteredProducts] = useState([]);
 
   useEffect(() => {
     !arrLoading && setShow(true);
-  }, [arrLoading, show]);
+  }, [arrLoading, show, filteredProducts]);
+
+  const {
+    loading,
+    error,
+    products: { data },
+  } = useSelector((state) => state.allProducts);
 
   return (
     <div className={styles.container}>
@@ -115,7 +125,18 @@ const ProductListing = ({ baseUrl }) => {
         <SelectedFilter filterArr={filterSelected} />
       </div>
       <div className='hr'></div>
-      <ProductsList />
+      <ProductsList products={filteredProducts} />
+      {loading ? (
+        <Spinner />
+      ) : (
+        !error && (
+          <Pagination
+            itemsPerPage={10}
+            items={data}
+            setFilteredItems={setFilteredProducts}
+          />
+        )
+      )}
     </div>
   );
 };

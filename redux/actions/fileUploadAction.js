@@ -5,13 +5,33 @@ import {
   FILE_UPLOAD_SUCCESS,
 } from '../constants/fileUploadConstants';
 
-export const fileUploadSingle = (blob) => async (dispatch) => {
+export const fileUploadSingle = (file) => async (dispatch) => {
   try {
     dispatch({ type: FILE_UPLOADING });
 
-    const { data } = await axios.post('/api/upload', blob);
-
-    dispatch({ type: FILE_UPLOAD_SUCCESS, payload: data });
+    const formData = new FormData();
+    formData.append('file', file);
+    formData.append('upload_preset', 'newoptic');
+    formData.append('cloud_name', 'new-optic-corner-abdul');
+    try {
+      const response = await fetch(
+        '  https://api.cloudinary.com/v1_1/new-optic-corner-abdul/image/upload',
+        {
+          method: 'post',
+          body: formData,
+        }
+      );
+      const data = await response.json();
+      dispatch({
+        type: FILE_UPLOAD_SUCCESS,
+        payload: { success: true, ...data },
+      });
+    } catch (error) {
+      dispatch({
+        type: FILE_UPLOAD_ERROR,
+        payload: { success: false, error: data.error },
+      });
+    }
   } catch (error) {
     dispatch({
       type: FILE_UPLOAD_ERROR,

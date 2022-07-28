@@ -50,3 +50,11 @@ export const TAGS_PAGE = 'TAGS_PAGE';
 
 export const ADMIN_DASHBOARD = 'ADMIN_DASHBOARD';
 export const STAFF_DASHBOARD = 'STAFF_DASHBOARD';
+
+export const PRODUCT_TAG_TRENDING = 'trending';
+export const PRODUCT_TAG_UV = 'uv';
+export const PRODUCT_TAG_BLUECUT = 'blue cut';
+
+export const PRODUCT_TYPE_SUNGLASSES = 'sunglasses';
+export const PRODUCT_TYPE_POWERGLASSES = 'powerglasses';
+export const PRODUCT_TYPE_CONTACT_LENS = 'contact lens';

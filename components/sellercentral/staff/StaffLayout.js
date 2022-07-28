@@ -44,16 +44,16 @@ const StaffLayout = ({ children, baseUrl, authorized, menuArr }) => {
   return (
     <p>
       {menuArr[0] && menuArr[0].type === LOADING ? (
-        <div className='w-[100vw] h-[100vh] flex items-center justify-center'>
+        <span className='w-[100vw] h-[100vh] flex items-center justify-center'>
           <Spinner />
-        </div>
+        </span>
       ) : (
-        <div className='w-[100vw] h-[100vh] flex items-center justify-center'>
+        <span className='w-[100vw] h-[100vh] flex items-center justify-center'>
           {'Not Authorised!'}
           <Link href='/account'>
             <a>Go back</a>
           </Link>
-        </div>
+        </span>
       )}
     </p>
   );

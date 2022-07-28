@@ -12,6 +12,24 @@ const productSchema = new mongoose.Schema(
       type: String,
       required: [true, 'Please enter product description.'],
     },
+    featured_image: {
+      type: String,
+      default:
+        'https://res.cloudinary.com/new-optic-corner-abdul/image/upload/v1658923247/new-optic-corner-abdul/products/vacation-glasses-optical-protection-sun_mtkiyu.jpg',
+    },
+    discount: {
+      type: Number,
+      default: 0,
+    },
+    featured_price: {
+      type: Number,
+      default: 0,
+    },
+    product_type: {
+      type: String,
+      required: [true, 'Please enter variant color.'],
+      default: 'sunglasses',
+    },
     variant: [
       {
         color: {

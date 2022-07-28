@@ -16,7 +16,11 @@ const variantValidator = (color, sku, stock, images, price) => {
     message.push('Variant price is missing!');
   }
 
-  return message;
+  if (message.length > 0) {
+    return { isValid: false, message };
+  } else {
+    return { isValid: true };
+  }
 };
 
 const productValidator = (
@@ -24,7 +28,8 @@ const productValidator = (
   description,
   tagsArr,
   categories,
-  variantObjArr
+  variantObjArr,
+  product_type
 ) => {
   const message = [];
   if (title === '') {
@@ -45,7 +50,15 @@ const productValidator = (
     message.push('Variant is missing!');
   }
 
-  return message;
+  if (product_type === '') {
+    message.push('Product type must be chosen!');
+  }
+
+  if (message.length > 0) {
+    return { isValid: false, message };
+  } else {
+    return { isValid: true };
+  }
 };
 
 const categorySelector = (
