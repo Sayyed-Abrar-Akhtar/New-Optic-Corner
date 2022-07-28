@@ -1,9 +1,5 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useSelector } from 'react-redux';
-import { toast } from 'react-toastify';
-import { PRODUCT_TAG_TRENDING, TRENDING } from '../constant/GlobalConstants';
-import { getTrendingProducts } from '../redux/actions/productActions';
-import { wrapper } from '../redux/store';
 import CategoryBanner from './home/CategoryBanner';
 import FrameGrid from './home/FrameGrid';
 import HeroBanner from './home/HeroBanner';

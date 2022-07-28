@@ -5,9 +5,8 @@ import Link from 'next/link';
 import styles from '../../styles/Card.module.css';
 
 const Card = ({ product }) => {
-  console.log(product);
   return (
-    <Link href={`/product/${product._id}`} passHref>
+    <Link href={`/product/`} passHref>
       <section className={styles.card}>
         {product.discount > 0 && (
           <section className={styles.badge}>{product.discount}%</section>
