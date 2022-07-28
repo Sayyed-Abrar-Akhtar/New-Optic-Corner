@@ -12,6 +12,7 @@ import { LOADING, STAFF } from '../../../constant/GlobalConstants';
 
 import menus from '../../../data/sidebarMenu';
 import SellercentralControl from '../../../utils/sellercentralControl';
+import Spinner from '../../spinner/Spinner';
 
 const StaffLayout = ({ children, baseUrl, authorized, menuArr }) => {
   const router = useRouter();
@@ -43,14 +44,16 @@ const StaffLayout = ({ children, baseUrl, authorized, menuArr }) => {
   return (
     <p>
       {menuArr[0] && menuArr[0].type === LOADING ? (
-        `${LOADING}...`
+        <div className='w-[100vw] h-[100vh] flex items-center justify-center'>
+          <Spinner />
+        </div>
       ) : (
-        <>
+        <div className='w-[100vw] h-[100vh] flex items-center justify-center'>
           {'Not Authorised!'}
           <Link href='/account'>
             <a>Go back</a>
           </Link>
-        </>
+        </div>
       )}
     </p>
   );

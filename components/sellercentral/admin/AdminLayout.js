@@ -39,14 +39,16 @@ const AdminLayout = ({ children, baseUrl, authorized, menuArr }) => {
   return (
     <p>
       {menuArr[0] && menuArr[0].type === LOADING ? (
-        <Spinner />
+        <div className='w-[100vw] h-[100vh] flex items-center justify-center'>
+          <Spinner />
+        </div>
       ) : (
-        <>
+        <div className='w-[100vw] h-[100vh] flex items-center justify-center'>
           {'Not Authorised!'}
           <Link href='/account'>
             <a>Go back</a>
           </Link>
-        </>
+        </div>
       )}
     </p>
   );

@@ -102,7 +102,7 @@ const Footer = () => {
 
       <section className={styles.dev}>
         <p className={styles.dev__job}>
-          Designed and developed with
+          <span>Designed and developed with</span>
           <span>
             <FaHeart className={styles.heart} />
           </span>

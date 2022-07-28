@@ -19,9 +19,10 @@ import Spinner from '../../spinner/Spinner';
 
 import styles from '../../../styles/NewProduct.module.css';
 import {
+  categorySelector,
   productValidator,
   variantValidator,
-} from '../../../utils/addProductValidator';
+} from '../../../utils/newProductValidator';
 
 const NewProduct = ({ baseUrl }) => {
   const dispatch = useDispatch();
@@ -169,21 +170,19 @@ const NewProduct = ({ baseUrl }) => {
   const addProductHandler = (e) => {
     e.preventDefault();
 
-    const messages = productValidator(title, desc, tagsArr);
-
-    const categories = [];
-    if (menChecked) {
-      categories.push('men');
-    }
-    if (womenChecked) {
-      categories.push('women');
-    }
-    if (kidChecked) {
-      categories.push('kid');
-    }
-    if (unisexChecked) {
-      categories.push('unisex');
-    }
+    const categories = categorySelector(
+      menChecked,
+      womenChecked,
+      kidChecked,
+      unisexChecked
+    );
+    const messages = productValidator(
+      title,
+      desc,
+      tagsArr,
+      categories,
+      variantObjArr
+    );
 
     setError([...error, ...messages]);
     const productObj = {
