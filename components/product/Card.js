@@ -8,9 +8,11 @@ const Card = ({ product }) => {
   return (
     <Link href={`/product/`} passHref>
       <section className={styles.card}>
-        {product.discount && product.discount > 0 && (
-          <section className={styles.badge}>{product.discount}%</section>
-        )}
+        {product.discount
+          ? product.discount > 0 && (
+              <section className={styles.badge}>{product.discount}%</section>
+            )
+          : ''}
         <section className={styles.image__container}>
           <Image
             blurDataURL='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mPsOey2HwAFzgJWC3pwEAAAAABJRU5ErkJggg=='
@@ -27,7 +29,11 @@ const Card = ({ product }) => {
           />
           <p className={styles.info}>
             <span>
-              {product.discount && product.discount > 0 ? 'sale' : 'newin'}
+              {product.discount
+                ? product.discount > 0
+                  ? 'sale'
+                  : 'newin'
+                : 'newin'}
             </span>
           </p>
         </section>
