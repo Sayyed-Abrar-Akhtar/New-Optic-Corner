@@ -8,7 +8,7 @@ const Card = ({ product }) => {
   return (
     <Link href={`/product/`} passHref>
       <section className={styles.card}>
-        {product.discount > 0 && (
+        {product.discount && product.discount > 0 && (
           <section className={styles.badge}>{product.discount}%</section>
         )}
         <section className={styles.image__container}>
@@ -26,12 +26,16 @@ const Card = ({ product }) => {
             alt={styles.title}
           />
           <p className={styles.info}>
-            <span>{product.discount > 0 ? 'sale' : 'newin'}</span>
+            <span>
+              {product.discount && product.discount > 0 ? 'sale' : 'newin'}
+            </span>
           </p>
         </section>
         <section className={styles.details}>
-          <h4 className={styles.title}>{product.title}</h4>
-          <p className={styles.price}>NPR {product.featured_price}.00</p>
+          <h4 className={styles.title}>{product.title && product.title}</h4>
+          <p className={styles.price}>
+            NPR {product.featured_price && product.featured_price}.00
+          </p>
         </section>
       </section>
     </Link>
