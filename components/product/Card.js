@@ -8,7 +8,7 @@ const Card = ({ product }) => {
   return (
     <Link href={`/product/`} passHref>
       <section className={styles.card}>
-        {product.discount
+        {product.discount !== undefined
           ? product.discount > 0 && (
               <section className={styles.badge}>{product.discount}%</section>
             )
@@ -29,10 +29,8 @@ const Card = ({ product }) => {
           />
           <p className={styles.info}>
             <span>
-              {product.discount
-                ? product.discount > 0
-                  ? 'sale'
-                  : 'newin'
+              {product.discount !== undefined && product.discount > 0
+                ? 'sale'
                 : 'newin'}
             </span>
           </p>
