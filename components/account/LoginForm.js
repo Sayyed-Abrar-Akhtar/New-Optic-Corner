@@ -16,6 +16,8 @@ import { useSelector } from 'react-redux';
 import { AUTHENTICATED } from '../../constant/GlobalConstants';
 
 const LoginForm = () => {
+  const router = useRouter();
+
   const {
     theme: { login },
   } = useSelector((state) => state.getTheme);
@@ -27,8 +29,6 @@ const LoginForm = () => {
       router.push('/');
     }
   }, [status, router]);
-
-  const router = useRouter();
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
