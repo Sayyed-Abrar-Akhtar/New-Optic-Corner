@@ -8,11 +8,11 @@ const Card = ({ product }) => {
   return (
     <Link href={`/product/`} passHref>
       <section className={styles.card}>
-        {product.discount !== undefined
+        {/* {product.discount !== undefined
           ? product.discount > 0 && (
               <section className={styles.badge}>{product.discount}%</section>
             )
-          : ''}
+          : ''} */}
         <section className={styles.image__container}>
           <Image
             blurDataURL='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mPsOey2HwAFzgJWC3pwEAAAAABJRU5ErkJggg=='
@@ -28,11 +28,12 @@ const Card = ({ product }) => {
             alt={styles.title}
           />
           <p className={styles.info}>
-            <span>
+            {/* <span>
               {product.discount !== undefined && product.discount > 0
                 ? 'sale'
                 : 'newin'}
-            </span>
+            </span> */}
+            newin
           </p>
         </section>
         <section className={styles.details}>
