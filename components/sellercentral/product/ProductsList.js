@@ -6,7 +6,7 @@ import { FaHashtag } from 'react-icons/fa';
 
 import styles from '../../../styles/ProductsList.module.css';
 
-const ProductsList = ({ products }) => {
+const ProductsList = ({ products, baseUrl }) => {
   console.log(products);
   let sum = 0;
 
@@ -29,7 +29,7 @@ const ProductsList = ({ products }) => {
       </div>
 
       {products.map((product, idx) => (
-        <Link href='/' key={idx}>
+        <Link href={`${baseUrl}/products/${product._id}`} key={idx}>
           <a className={styles.lists}>
             <div className={styles.img_container}>
               <Image

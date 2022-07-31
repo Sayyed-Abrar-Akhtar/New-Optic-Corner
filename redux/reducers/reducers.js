@@ -5,6 +5,7 @@ import {
   allProductsReducer,
   contactLensesReducer,
   powerglassesReducer,
+  productReducer,
   sunglassesReducer,
   trendingProductsReducer,
 } from './productReducers';
@@ -18,6 +19,7 @@ const reducers = combineReducers({
   powerglasses: powerglassesReducer,
   contactLenses: contactLensesReducer,
   addProduct: addProductReducer,
+  product: productReducer,
   getTheme: getThemeReducer,
   authRegister: authRegisterReducer,
   singleFileUpload: singleFileUploadReducer,

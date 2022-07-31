@@ -24,6 +24,7 @@ import AdminLayout from './admin/AdminLayout';
 import StaffLayout from './staff/StaffLayout';
 import ProductListing from './product/ProductListing';
 import NewProduct from './product/NewProduct';
+import AddUpdateDeleteProduct from './product/AddUpdateDeleteProduct';
 
 const SellercentralScreen = ({ screenType, page }) => {
   console.log(screenType, page);
@@ -100,7 +101,7 @@ const SellercentralScreen = ({ screenType, page }) => {
   if (screenType === ADMIN && page === PRODUCT_PUT_DEL_PAGE) {
     return (
       <AdminLayout baseUrl={baseUrl} authorized={authorized} menuArr={menuArr}>
-        PRODUCT EDIT AND DELETE PAGE
+        <AddUpdateDeleteProduct baseUrl={baseUrl} />
       </AdminLayout>
     );
   }
@@ -190,7 +191,7 @@ const SellercentralScreen = ({ screenType, page }) => {
   if (screenType === STAFF && page === PRODUCT_PUT_DEL_PAGE) {
     return (
       <StaffLayout baseUrl={baseUrl} authorized={authorized} menuArr={menuArr}>
-        PRODUCT EDIT AND DELETE PAGE
+        <AddUpdateDeleteProduct baseUrl={baseUrl} />
       </StaffLayout>
     );
   }

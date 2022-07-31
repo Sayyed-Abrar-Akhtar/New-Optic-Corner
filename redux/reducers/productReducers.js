@@ -13,6 +13,9 @@ import {
   POWERGLASSES_ERROR,
   POWERGLASSES_LOADING,
   POWERGLASSES_SUCCESS,
+  PRODUCT_ERROR,
+  PRODUCT_LOADING,
+  PRODUCT_SUCCESS,
   SUNGLASSES_ERROR,
   SUNGLASSES_LOADING,
   SUNGLASSES_SUCCESS,
@@ -104,6 +107,21 @@ export const addProductReducer = (state = { product: {} }, action) => {
       return { loading: false, error: action.payload };
     case ADDED_PRODUCT_RESET:
       return { loading: false, product: {} };
+    default:
+      return state;
+  }
+};
+
+export const productReducer = (state = { data: {} }, action) => {
+  switch (action.type) {
+    case PRODUCT_LOADING:
+      return { loading: true };
+    case PRODUCT_SUCCESS:
+      return { loading: false, data: action.payload };
+    case PRODUCT_ERROR:
+      return { loading: false, error: action.payload };
+    case CLEAR_ERRORS:
+      return { ...state, error: null };
     default:
       return state;
   }

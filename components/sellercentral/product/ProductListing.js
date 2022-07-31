@@ -18,7 +18,7 @@ import Pagination from '../../pagination/Pagination';
 import { useSelector } from 'react-redux';
 import Spinner from '../../spinner/Spinner';
 
-const ProductListing = ({ baseUrl }) => {
+const ProductListing = ({ baseUrl = '/product' }) => {
   const categoryData = [
     { text: 'category', value: '' },
     { text: 'men', value: 'men' },
@@ -125,7 +125,7 @@ const ProductListing = ({ baseUrl }) => {
         <SelectedFilter filterArr={filterSelected} />
       </div>
       <div className='hr'></div>
-      <ProductsList products={filteredProducts} />
+      <ProductsList products={filteredProducts} baseUrl={baseUrl} />
       {loading ? (
         <Spinner />
       ) : (

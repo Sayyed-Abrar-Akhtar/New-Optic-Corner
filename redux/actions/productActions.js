@@ -14,6 +14,9 @@ import {
   POWERGLASSES_ERROR,
   POWERGLASSES_LOADING,
   POWERGLASSES_SUCCESS,
+  PRODUCT_ERROR,
+  PRODUCT_LOADING,
+  PRODUCT_SUCCESS,
   SUNGLASSES_ERROR,
   SUNGLASSES_LOADING,
   SUNGLASSES_SUCCESS,
@@ -132,6 +135,26 @@ export const addProduct = (productData) => async (dispatch) => {
   } catch (error) {
     dispatch({
       type: ADD_PRODUCT_ERROR,
+      payload:
+        error.response && error.response.data.message
+          ? error.response.data.message
+          : error.message,
+    });
+  }
+};
+
+export const getProductByID = (req) => async (dispatch) => {
+  const productID = req.url.split('/products/')[1];
+  try {
+    dispatch({ type: PRODUCT_LOADING });
+
+    const { origin } = absoluteUrl(req);
+
+    const { data } = await axios.get(`${origin}/api/products/${productID}`);
+    dispatch({ type: PRODUCT_SUCCESS, payload: data });
+  } catch (error) {
+    dispatch({
+      type: PRODUCT_ERROR,
       payload:
         error.response && error.response.data.message
           ? error.response.data.message

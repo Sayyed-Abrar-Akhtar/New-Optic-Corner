@@ -8,7 +8,6 @@ import {
 
 import AsyncHandler from '../middlewares/AsyncHandler';
 import Product from '../models/product';
-import APIFeatures from '../utils/apiFeatures';
 import ErrorHandler from '../utils/errorHandler';
 
 // SETTING UP CLOUDINARY CONFIG
