@@ -143,14 +143,13 @@ export const addProduct = (productData) => async (dispatch) => {
   }
 };
 
-export const getProductByID = (req) => async (dispatch) => {
-  const productID = req.url.split('/products/')[1];
+export const getProductByID = (req, params) => async (dispatch) => {
   try {
     dispatch({ type: PRODUCT_LOADING });
 
     const { origin } = absoluteUrl(req);
 
-    const { data } = await axios.get(`${origin}/api/products/${productID}`);
+    const { data } = await axios.get(`${origin}/api/products/${params.id}`);
     dispatch({ type: PRODUCT_SUCCESS, payload: data });
   } catch (error) {
     dispatch({

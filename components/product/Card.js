@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -8,7 +8,7 @@ const Card = ({ product }) => {
   return (
     <>
       {product !== undefined ? (
-        <Link href={`/product/`} passHref>
+        <Link href={`/product/${product._id}`} passHref>
           <section className={styles.card}>
             {product.discount
               ? product.discount > 0 && (
@@ -40,7 +40,22 @@ const Card = ({ product }) => {
             <section className={styles.details}>
               <h4 className={styles.title}>{product.title && product.title}</h4>
               <p className={styles.price}>
-                NPR {product.featured_price && product.featured_price}.00
+                {product && product.discount > 0 ? (
+                  <span className='flex justify-center'>
+                    <span>
+                      NPR {''}
+                      {(product.featured_price * (100 - product.discount)) /
+                        100}
+                    </span>
+                    <span className={styles.discount_price}>
+                      NPR {product.featured_price}
+                    </span>
+                  </span>
+                ) : (
+                  <span>
+                    NPR {product.featured_price && product.featured_price}
+                  </span>
+                )}
               </p>
             </section>
           </section>

@@ -3,9 +3,11 @@ import { FaPlus, FaMinus } from 'react-icons/fa';
 
 import styles from '../../styles/Product.module.css';
 
-const Stock = () => {
+const Stock = ({ variants }) => {
   const [qty, setQty] = useState(1);
-  const qtyAvailable = 0;
+  const qtyAvailable = variants.reduce((accumulator, variant) => {
+    return (accumulator += variant.stock);
+  }, 0);
   const min = 1;
   return (
     <>

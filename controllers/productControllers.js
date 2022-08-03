@@ -132,6 +132,7 @@ const trendingProducts = AsyncHandler(async (req, res) => {
 // @access  Public
 const fetchProduct = AsyncHandler(async (req, res, next) => {
   const product = await Product.findById(req.query.id);
+
   if (!product) {
     return next(new ErrorHandler('Product does not exist!!', 404));
   }

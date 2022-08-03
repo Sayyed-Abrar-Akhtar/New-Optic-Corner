@@ -25,11 +25,7 @@ const Promotion = ({ offer = {} }) => {
           <section className={styles.details}>
             <h3 className={styles.title}>{offer.title}</h3>
             <p className={styles.detail}>{offer.subtitle}</p>
-            <Btn
-              to={offer.cta.link}
-              text={offer.cta.text}
-              extraClass={styles.cta}
-            />
+            <Btn to='/offers' text={offer.cta.text} extraClass={styles.cta} />
           </section>
         </section>
       </section>

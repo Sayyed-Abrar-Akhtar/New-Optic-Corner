@@ -48,14 +48,14 @@
   display: grid;
 
   grid-template-rows: 1fr;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1.5fr 1fr 2fr;
   grid-gap: 1rem;
 }
 
 .menu {
   display: grid;
 
-  grid-template-rows: 1fr 4fr;
+  grid-template-rows: 1fr 5fr;
   grid-template-columns: 1fr;
   grid-gap: 1rem;
 
@@ -69,6 +69,7 @@
   text-align: left;
   margin: 0;
   padding: 0;
+  overflow: hidden;
 }
 
 .heading {
