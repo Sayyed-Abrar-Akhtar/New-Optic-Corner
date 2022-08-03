@@ -123,12 +123,7 @@ export const getAllContactLenses = (req) => async (dispatch) => {
 export const addProduct = (productData) => async (dispatch) => {
   try {
     dispatch({ type: ADD_PRODUCT_LOADING });
-    const config = {
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    };
-    console.log(config, productData);
+
     const { data } = await axios.post(`/api/products`, productData);
 
     dispatch({ type: ADD_PRODUCT_SUCCESS, payload: data });

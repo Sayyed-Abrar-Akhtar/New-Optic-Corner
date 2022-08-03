@@ -1,10 +1,6 @@
-import { useSession } from 'next-auth/react';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
-import { ADMIN, LOADING } from '../../../constant/GlobalConstants';
+import { LOADING } from '../../../constant/GlobalConstants';
 
-import menus from '../../../data/sidebarMenu';
-import SellercentralControl from '../../../utils/sellercentralControl';
 import Spinner from '../../spinner/Spinner';
 import Layout from '../layout/Layout';
 import AdminContent from './AdminContent';

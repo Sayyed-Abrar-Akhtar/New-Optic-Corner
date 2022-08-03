@@ -151,9 +151,9 @@ const addNewProduct = AsyncHandler(async (req, res) => {
     featured_image: productData.variant[0].images[0].secure_url,
     featured_price: productData.variant[0].price,
   };
-
+  console.log(productObj);
   const product = await Product.create(productObj);
-  //console.log('product', product, '<= the end::::');
+  console.log('product', product, '<= the end::::');
   if (!product) {
     return next(new ErrorHandler('Product failed to create!!', 404));
   }

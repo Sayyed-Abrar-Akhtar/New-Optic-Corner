@@ -6,6 +6,7 @@ import {
   MdStorefront,
   MdOutlinePeopleAlt,
   MdTag,
+  MdRemoveRedEye,
 } from 'react-icons/md';
 
 import {
@@ -14,6 +15,7 @@ import {
   PRODUCTS,
   STAFFS,
   TAGS,
+  WEBSITE,
 } from '../../../constant/GlobalConstants';
 
 import styles from '../../../styles/Sidebar.module.css';
@@ -64,6 +66,16 @@ const SidebarItem = ({ menuType, menuLink, menuName, menuId, baseUrl }) => {
         <li className={styles.item} id={menuId}>
           <MdTag className={styles.icon} />
           <Link href={`${baseUrl}${menuLink}`}>
+            <a className={styles.link}>{menuName}</a>
+          </Link>
+        </li>
+      );
+
+    case WEBSITE:
+      return (
+        <li className={styles.item} id={menuId}>
+          <MdRemoveRedEye className={styles.icon} />
+          <Link href={menuLink}>
             <a className={styles.link}>{menuName}</a>
           </Link>
         </li>

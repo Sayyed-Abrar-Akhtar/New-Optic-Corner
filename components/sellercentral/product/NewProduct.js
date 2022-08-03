@@ -43,6 +43,7 @@ const NewProduct = ({ baseUrl }) => {
   const [title, setTitle] = useState('');
   const [desc, setDesc] = useState('');
   const [color, setColor] = useState('');
+  const [colorCode, setColorCode] = useState('');
   const [sku, setSku] = useState('');
   const [product_type, setProduct_type] = useState('');
   const [price, setPrice] = useState(0);
@@ -139,8 +140,10 @@ const NewProduct = ({ baseUrl }) => {
   ]);
 
   const variantImgChangeHandler = (e) => {
+    console.log(e.target);
     const fileArr = Array.from(e.target.files);
 
+    console.log(fileArr);
     setImgArrLength(imgArrLength + fileArr.length);
     fileArr.forEach((file) => dispatch(fileUploadSingle(file)));
   };
@@ -153,7 +156,10 @@ const NewProduct = ({ baseUrl }) => {
       return;
     }
 
-    setVariantObjArr([...variantObjArr, { color, sku, stock, price, images }]);
+    setVariantObjArr([
+      ...variantObjArr,
+      { color, code: colorCode, sku, stock, price, images },
+    ]);
     setColor('');
     setSku('');
     setStock(0);
@@ -246,6 +252,15 @@ const NewProduct = ({ baseUrl }) => {
                   placeholder='Color'
                   value={color}
                   setValue={setColor}
+                  sellercentral={true}
+                />
+                <InputField
+                  type='color'
+                  label='Color Picker'
+                  id='variant_color_picker'
+                  placeholder='Color Picker'
+                  value={colorCode}
+                  setValue={setColorCode}
                   sellercentral={true}
                 />
                 <InputField

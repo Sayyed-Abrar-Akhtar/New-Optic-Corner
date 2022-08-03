@@ -18,6 +18,7 @@ export const ORDERS = 'orders';
 export const CUSTOMIZE = 'customize';
 export const STAFFS = 'staffs';
 export const TAGS = 'tags';
+export const WEBSITE = 'website';
 
 // FILTER TYPES
 export const FILTER_TAG = 'taged by';

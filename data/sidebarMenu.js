@@ -1,6 +1,18 @@
-import { CUSTOMIZE, ORDERS, PRODUCTS, TAGS } from '../constant/GlobalConstants';
+import {
+  CUSTOMIZE,
+  ORDERS,
+  PRODUCTS,
+  TAGS,
+  WEBSITE,
+} from '../constant/GlobalConstants';
 
 const menus = [
+  {
+    name: 'website',
+    id: 'website',
+    link: '/',
+    type: `${WEBSITE}`,
+  },
   {
     name: 'products',
     id: 'menu_products',
