@@ -7,12 +7,14 @@ import ProductGrid from '../components/product/ProductGrid';
 import { getAllProducts } from '../redux/actions/productActions';
 import { wrapper } from '../redux/store';
 
+const allProducts = (state) => state.allProducts;
+
 const OffersPage = ({ pageTitle = 'Offers' }) => {
   const [filteredProducts, setFilteredProducts] = useState([]);
 
   const {
     products: { data },
-  } = useSelector((state) => state.allProducts);
+  } = useSelector(allProducts, shallowEqual);
 
   const productsInOffer = data.filter((item) => item.tags.includes('offers'));
   console.log(productsInOffer);

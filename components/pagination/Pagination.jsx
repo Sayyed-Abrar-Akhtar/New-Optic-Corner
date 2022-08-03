@@ -9,7 +9,6 @@ const Pagination = ({ itemsPerPage, items, setFilteredItems }) => {
   const [showNextBtn, setShowNextBtn] = useState(false);
 
   useEffect(() => {
-    if (items === undefined) return;
     if (page > 1) {
       setShowPreviousBtn(true);
     } else {
@@ -26,7 +25,7 @@ const Pagination = ({ itemsPerPage, items, setFilteredItems }) => {
     } else {
       setFilteredItems([...items]);
     }
-  }, [page, items, start, end, setFilteredItems, itemsPerPage]);
+  }, [page, start, end, setFilteredItems, itemsPerPage]);
 
   const previousPageHandler = () => {
     setPage(page - 1 < 0 ? 0 : page - 1);
