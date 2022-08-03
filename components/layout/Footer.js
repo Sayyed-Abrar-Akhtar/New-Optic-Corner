@@ -91,7 +91,7 @@ const Footer = () => {
           </section>
           <section className={styles.legal}>
             <h3 className={styles.name}>
-              New Optic Corner &#10526; Abdullah Muslim (OWNER)
+              New Optic Corner &#10526; Abdullah Muslim (Owner)
             </h3>
             <p className={styles.copyright}>
               &copy; Copyright {new Date().getFullYear()}. All rights reserved.
