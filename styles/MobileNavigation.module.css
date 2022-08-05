@@ -1,13 +1,11 @@
 .mob_nav_container {
-  width: 0vw;
-  height: 0vh;
   position: fixed;
   top: 0;
   right: 0;
   z-index: 999;
   width: 100vw;
   height: 100vh;
-  transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  animation: mobileNavAnimation 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
   background-color: var(--primary-color);
 }
@@ -116,4 +114,15 @@
   padding: 1rem 0;
   font-weight: 700;
   color: var(--white);
+}
+
+@keyframes mobileNavAnimation {
+  from {
+    width: 0vw;
+    height: 0vh;
+  }
+  to {
+    width: 100vw;
+    height: 100vh;
+  }
 }
