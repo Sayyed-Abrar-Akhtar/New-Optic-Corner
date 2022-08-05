@@ -13,7 +13,11 @@ const MobileNavigation = () => {
         className={styles.mob_nav_label}
         onClick={(e) => setChecked(!checked)}
       >
-        <span className={styles.hamburger_menu}></span>
+        {checked ? (
+          <span className={styles.hamburger_menu_checked}></span>
+        ) : (
+          <span className={styles.hamburger_menu}></span>
+        )}
       </label>
       {checked && (
         <div className={styles.mob_nav_container}>
