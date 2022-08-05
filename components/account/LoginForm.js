@@ -6,7 +6,6 @@ import { SiWebauthn } from 'react-icons/si';
 
 import InputField from '../form/InputField';
 
-import styles from '../../styles/Form.module.css';
 import Account from './Account';
 import Link from 'next/link';
 
@@ -14,6 +13,8 @@ import { signIn, useSession } from 'next-auth/react';
 import { useRouter } from 'next/router';
 import { useSelector } from 'react-redux';
 import { AUTHENTICATED } from '../../constant/GlobalConstants';
+
+import styles from '../../styles/Form.module.css';
 
 const LoginForm = () => {
   const router = useRouter();
