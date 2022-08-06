@@ -37,7 +37,7 @@ const DashboardHeader = ({ baseUrl = '/sellercentral' }) => {
           </a>
         </Link>
       </div>
-      <div className={styles.greeting_box}>
+      {/* <div className={styles.greeting_box}>
         <p>
           <b className={styles.name}>
             {session !== undefined && session.user && session.user.name}
@@ -45,7 +45,7 @@ const DashboardHeader = ({ baseUrl = '/sellercentral' }) => {
           <span className={styles.greeting}>{GREETING}</span>
           <span className={styles.salutation}>{SALUTATION}</span>
         </p>
-      </div>
+      </div> */}
       <div className={styles.event_box}>
         {status === AUTHENTICATED && session !== undefined && (
           <div
@@ -69,6 +69,15 @@ const DashboardHeader = ({ baseUrl = '/sellercentral' }) => {
             Logout
           </li>
         </div>
+      </div>
+      <div className={styles.greeting_box}>
+        <p>
+          <b className={styles.name}>
+            {session !== undefined && session.user && session.user.name}
+          </b>
+          <span className={styles.greeting}>{GREETING}</span>
+          <span className={styles.salutation}>{SALUTATION}</span>
+        </p>
       </div>
     </header>
   );

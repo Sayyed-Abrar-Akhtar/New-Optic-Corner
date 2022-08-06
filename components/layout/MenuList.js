@@ -13,6 +13,10 @@ import {
   USER,
 } from '../../constant/GlobalConstants';
 
+const nameFormat = (name) => {
+  return name.split(' ').length > 1 ? name.split(' ')[0] : name;
+};
+
 const MenuList = ({ mobile = false, mobileStyles, checked, setChecked }) => {
   const { data: session, status } = useSession();
 
@@ -62,7 +66,7 @@ const MenuList = ({ mobile = false, mobileStyles, checked, setChecked }) => {
                   }')`,
                 }}
               ></span>
-              {name.split(' ')[name.split(' ').length - 1]}
+              {nameFormat(name)}
             </li>
           </a>
         </Link>
@@ -78,7 +82,7 @@ const MenuList = ({ mobile = false, mobileStyles, checked, setChecked }) => {
                   }')`,
                 }}
               ></span>
-              {name.split(' ')[name.split(' ').length - 1]}
+              {nameFormat(name)}
             </li>
           </a>
         </Link>
@@ -97,7 +101,7 @@ const MenuList = ({ mobile = false, mobileStyles, checked, setChecked }) => {
                     }')`,
                   }}
                 ></span>
-                {name.split(' ')[name.split(' ').length - 1]}
+                {nameFormat(name)}
               </li>
             </a>
           </Link>
