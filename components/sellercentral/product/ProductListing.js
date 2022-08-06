@@ -10,13 +10,14 @@ import {
   INPUT_TYPE_CHECKBOX,
 } from '../../../constant/GlobalConstants';
 
-import styles from '../../../styles/ProductListing.module.css';
 import Filter from '../filter/Filter';
 import ProductsList from './ProductsList';
 import SelectedFilter from '../filter/SelectedFilter';
 import Pagination from '../../pagination/Pagination';
 import { useSelector } from 'react-redux';
 import Spinner from '../../spinner/Spinner';
+
+import styles from '../../../styles/ProductListing.module.css';
 
 const ProductListing = ({ baseUrl = '/product' }) => {
   const categoryData = [
@@ -121,10 +122,10 @@ const ProductListing = ({ baseUrl = '/product' }) => {
           </Link>
         </div>
       </div>
-      <div>
+      <div className={styles.selected_filter}>
         <SelectedFilter filterArr={filterSelected} />
       </div>
-      <div className='hr'></div>
+      <div className={`${styles.hr} hr`}></div>
       <ProductsList products={filteredProducts} baseUrl={baseUrl} />
       {loading ? (
         <Spinner />

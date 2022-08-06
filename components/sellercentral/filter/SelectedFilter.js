@@ -2,7 +2,7 @@ import React from 'react';
 
 import styles from '../../../styles/SelectedFilter.module.css';
 
-const SelectedFilter = ({ filterArr = [] }) => {
+const SelectedFilter = ({ filterArr = ['abc', 'def', 'ghi'] }) => {
   return (
     <section className={styles.container}>
       {filterArr.map((item, idx) => (
