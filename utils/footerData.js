@@ -51,19 +51,19 @@ export const menus = [
       },
       {
         name: 'phone',
-        value: '+9779849146927',
+        value: '+9779863589786',
         id: 'phone',
         icon: 'phone',
       },
       {
         name: 'viber',
-        value: '+9779849146927',
+        value: '+9779863589786',
         id: 'viber',
         icon: 'viber',
       },
       {
         name: 'whatsapp',
-        value: '+9779849146927',
+        value: '+9779863589786',
         id: 'whatsapp',
         icon: 'whatsapp',
       },
