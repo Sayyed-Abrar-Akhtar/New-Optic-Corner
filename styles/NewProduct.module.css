@@ -91,6 +91,15 @@
   grid-gap: 1rem;
 }
 
+@media screen and (max-width: 600px) {
+  .variant_input {
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: 1fr;
+
+    justify-content: space-between;
+  }
+}
+
 .btn__container {
   display: flex;
   justify-content: center;
