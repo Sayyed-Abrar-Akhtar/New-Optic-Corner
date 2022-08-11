@@ -79,7 +79,16 @@ const Footer = () => {
                             )}
                           </span>{' '}
                           <span className={styles.list__key}>{list.name}</span>
-                          <span>{list.value}</span>
+                          <span>
+                            {list.icon == 'phone' ? (
+                              <span>
+                                +9779849146927 <br />
+                                {list.value}
+                              </span>
+                            ) : (
+                              list.value
+                            )}
+                          </span>
                         </li>
                       )}
                     </section>

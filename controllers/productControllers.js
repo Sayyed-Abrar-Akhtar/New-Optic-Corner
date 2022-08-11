@@ -152,8 +152,14 @@ const addNewProduct = AsyncHandler(async (req, res) => {
     featured_price: productData.variant[0].price,
   };
   console.log(productObj);
-  const product = await Product.create(productObj);
-  console.log('product', product, '<= the end::::');
+  try {
+    
+    const product = await Product.create(productObj);
+    console.log('product', product, '<= the end::::');
+  } catch (error) {
+    console.log('error', error, '<= the end::::');
+    
+  }
   if (!product) {
     return next(new ErrorHandler('Product failed to create!!', 404));
   }
