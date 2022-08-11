@@ -153,18 +153,16 @@ const addNewProduct = AsyncHandler(async (req, res) => {
   };
   console.log(productObj);
   try {
-    
     const product = await Product.create(productObj);
-    console.log('product', product, '<= the end::::');
+    console.log('product created');
+    if (!product) {
+      return next(new ErrorHandler('Product failed to create!!', 404));
+    }
+
+    res.status(201).json({ success: true, data: product });
   } catch (error) {
     console.log('error', error, '<= the end::::');
-    
   }
-  if (!product) {
-    return next(new ErrorHandler('Product failed to create!!', 404));
-  }
-
-  res.status(201).json({ success: true, data: product });
 });
 
 const getImagesLink = async (image) => {
