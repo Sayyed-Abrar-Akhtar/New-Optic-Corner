@@ -38,8 +38,7 @@ const productSchema = new mongoose.Schema(
         },
         code: {
           type: String,
-          required: [true, 'Please enter variant color.'],
-          default: '#000',
+          default: '#000000',
         },
         sku: {
           type: String,
