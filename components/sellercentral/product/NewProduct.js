@@ -158,7 +158,14 @@ const NewProduct = ({ baseUrl }) => {
 
     setVariantObjArr([
       ...variantObjArr,
-      { color, code: colorCode, sku, stock, price, images },
+      {
+        color,
+        code: colorCode === '' ? color.toLowerCase() : colorCode,
+        sku,
+        stock,
+        price,
+        images,
+      },
     ]);
     setColor('');
     setSku('');
