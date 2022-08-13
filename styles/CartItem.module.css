@@ -1,0 +1,15 @@
+.container {
+  margin: 1rem 0;
+  padding: 1rem;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 0.75fr repeat(2, max-content);
+  grid-gap: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: var(--border-radius);
+}
+
+.container:nth-child(2n) {
+  background: #eee;
+}

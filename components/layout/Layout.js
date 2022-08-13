@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -8,7 +9,7 @@ import Header from './Header';
 import Head from 'next/head';
 import Notification from './Notification';
 import Subscription from './Subscription';
-import { useSelector } from 'react-redux';
+import { getCartItems } from '../../redux/actions/cartItemsAction';
 
 const Layout = ({
   title = 'Home | New Optic Corner',
@@ -18,7 +19,9 @@ const Layout = ({
   children,
   classValue,
 }) => {
+  const dispatch = useDispatch();
   const { theme } = useSelector((state) => state.getTheme);
+  const { cartItems } = useSelector((state) => state.newCartItem);
 
   const styleTag = `
     :root {
@@ -28,6 +31,10 @@ const Layout = ({
       --linear-gradient: ${theme.theme.linear_gradient}
     }
   `;
+
+  useEffect(() => {
+    dispatch(getCartItems());
+  }, [dispatch]);
 
   return (
     <>
@@ -53,7 +60,7 @@ const Layout = ({
         <style>{styleTag}</style>
       </Head>
       <Notification notifications={theme.notification} />
-      <Header />
+      <Header cartItems={cartItems} />
 
       <main className={classValue && classValue}>{children}</main>
       <div className='toast-message-container'>

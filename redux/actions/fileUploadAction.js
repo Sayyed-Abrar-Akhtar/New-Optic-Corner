@@ -15,7 +15,7 @@ export const fileUploadSingle = (file) => async (dispatch) => {
     formData.append('cloud_name', 'new-optic-corner-abdul');
     try {
       const response = await fetch(
-        '  https://api.cloudinary.com/v1_1/new-optic-corner-abdul/image/upload',
+        'https://api.cloudinary.com/v1_1/new-optic-corner-abdul/image/upload',
         {
           method: 'post',
           body: formData,

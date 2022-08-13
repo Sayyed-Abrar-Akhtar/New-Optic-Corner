@@ -1,5 +1,7 @@
 import { combineReducers } from 'redux';
+import { newCartItemReducer } from './cartItemsReducer';
 import { singleFileUploadReducer } from './fileUploadReducers';
+import { orderPlacedReducer, userOrdersReducer } from './orderReducers';
 import {
   addProductReducer,
   allProductsReducer,
@@ -23,6 +25,9 @@ const reducers = combineReducers({
   getTheme: getThemeReducer,
   authRegister: authRegisterReducer,
   singleFileUpload: singleFileUploadReducer,
+  newCartItem: newCartItemReducer,
+  orderPlaced: orderPlacedReducer,
+  userOrders: userOrdersReducer,
 });
 
 export default reducers;

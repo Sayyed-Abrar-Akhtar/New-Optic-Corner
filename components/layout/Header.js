@@ -6,7 +6,7 @@ import Nav from './Nav';
 import MobileNavigation from '../mobile-navigation/MobileNavigation.jsx';
 import styles from '../../styles/Header.module.css';
 
-const Header = () => {
+const Header = ({ cartItems }) => {
   return (
     <>
       <header className={styles.header}>

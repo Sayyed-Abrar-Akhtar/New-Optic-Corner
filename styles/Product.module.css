@@ -10,6 +10,7 @@
 @media screen and (max-width: 800px) {
   .product {
     grid-template-columns: 1fr;
+    margin-bottom: var(--margin-3);
   }
 }
 
@@ -146,7 +147,7 @@
   text-transform: capitalize;
   font-weight: 700;
   padding: 0.75rem 0.5rem;
-  bottom: 0;
+  bottom: 2rem;
   left: -150%;
   opacity: 0;
   background-color: var(--primary-color-dark);
@@ -234,7 +235,11 @@
 }
 
 .cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
+  min-height: 7rem;
   text-align: center;
 }
 
@@ -257,10 +262,11 @@
 @media screen and (max-width: 480px) {
   .product {
     grid-template-columns: 1fr;
-    grid-template-rows: 0.85fr 1fr;
-    column-gap: var(--margin-3);
+    grid-template-rows: max-content 1fr;
+    row-gap: var(--margin-3);
 
     margin: var(--margin-3);
+    margin-bottom: var(--margin-1);
   }
 
   .images {
@@ -269,5 +275,8 @@
 
   .image__container {
     height: 100%;
+  }
+  .description {
+    margin: var(--margin-3);
   }
 }

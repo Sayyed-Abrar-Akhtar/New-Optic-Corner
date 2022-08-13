@@ -106,7 +106,7 @@ const allContactLenses = AsyncHandler(async (req, res) => {
 // @route   GET https://localhost:3000/api/products/
 // @access  Public
 const trendingProducts = AsyncHandler(async (req, res) => {
-  const products = await Product.find().sort({ createdAt: -1 }).limit(4);
+  const products = await Product.find().sort({ createdAt: -1 });
 
   const trendingProducts = products
     .filter((item) =>

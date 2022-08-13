@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
+import { useSession } from 'next-auth/react';
 import Link from 'next/link';
 
 import { menus } from '../../utils/menuData';
-import styles from '../../styles/Nav.module.css';
-import { useSession } from 'next-auth/react';
 import {
   ADMIN,
   AUTHENTICATED,
@@ -12,6 +12,8 @@ import {
   UNAUTHENTICATED,
   USER,
 } from '../../constant/GlobalConstants';
+
+import styles from '../../styles/Nav.module.css';
 
 const nameFormat = (name) => {
   return name.split(' ').length > 1 ? name.split(' ')[0] : name;
@@ -28,6 +30,13 @@ const MenuList = ({ mobile = false, mobileStyles, checked, setChecked }) => {
     name = session.user.name;
   }
 
+  const { cartItems } = useSelector((state) => state.newCartItem);
+  const [itemsInCart, setItemsInCart] = useState(0);
+
+  useEffect(() => {
+    setItemsInCart(cartItems.length);
+  }, [cartItems]);
+
   return (
     <ul className={mobile ? mobileStyles : styles.lists}>
       {menus.map((menu, index) => (
@@ -41,8 +50,18 @@ const MenuList = ({ mobile = false, mobileStyles, checked, setChecked }) => {
       ))}
       <Link href='/cart'>
         <a className={styles.link}>
-          <li className={styles.list} id='cart'>
-            Cart
+          <li
+            className={`${styles.list} relative flex items-end justify-center`}
+            id='cart'
+          >
+            <span>Cart</span>
+            {itemsInCart > 0 && (
+              <span
+                className={`absolute top-[-45%] right-[-40%] ml-1 text-lg bg-[#f5f5f5] z-[-1] rounded-full w-[2.25rem] h-[2.25rem] flex items-center justify-center font-bold text-[#00574b] ${styles.cart_item}`}
+              >
+                {itemsInCart}
+              </span>
+            )}
           </li>
         </a>
       </Link>

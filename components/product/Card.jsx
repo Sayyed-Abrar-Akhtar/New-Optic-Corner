@@ -43,17 +43,17 @@ const Card = ({ product }) => {
                 {product && product.discount > 0 ? (
                   <span className='flex justify-center'>
                     <span>
-                      NPR {''}
+                      रु {''}
                       {(product.featured_price * (100 - product.discount)) /
                         100}
                     </span>
                     <span className={styles.discount_price}>
-                      NPR {product.featured_price}
+                      रु {product.featured_price}
                     </span>
                   </span>
                 ) : (
                   <span>
-                    NPR {product.featured_price && product.featured_price}
+                    रु {product.featured_price && product.featured_price}
                   </span>
                 )}
               </p>

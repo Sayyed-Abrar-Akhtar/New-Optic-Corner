@@ -1,14 +1,12 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { FaPlus, FaMinus } from 'react-icons/fa';
 
 import styles from '../../styles/Product.module.css';
 
-const Stock = ({ variants }) => {
-  const [qty, setQty] = useState(1);
-  const qtyAvailable = variants.reduce((accumulator, variant) => {
-    return (accumulator += variant.stock);
-  }, 0);
+const Stock = ({ variant, qty, setQty }) => {
+  const qtyAvailable = variant.stock;
   const min = 1;
+
   return (
     <>
       {qtyAvailable > 0 ? (
@@ -26,7 +24,7 @@ const Stock = ({ variants }) => {
               />
             </span>
             <span className={`${styles.quantity__selected} quantity__selected`}>
-              {qty}
+              {qty > qtyAvailable ? qtyAvailable : qty}
             </span>
             <span className={styles.quantity__icon__plus}>
               <FaPlus

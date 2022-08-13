@@ -59,3 +59,17 @@ export const PRODUCT_TAG_BLUECUT = 'blue cut';
 export const PRODUCT_TYPE_SUNGLASSES = 'sunglasses';
 export const PRODUCT_TYPE_POWERGLASSES = 'powerglasses';
 export const PRODUCT_TYPE_CONTACT_LENS = 'contact lens';
+
+export const CHECKOUT_REDIRECT = 'checkout-redirect';
+export const ORDER_REDIRECT = 'order-redirect';
+
+export const PROVINCE_1 = { name: 'Province 1', value: 'province1' };
+export const BAGMATI = { name: 'Bagmati Pradesh', value: 'bagmati' };
+export const MADHESH = { name: 'Madhesh Pradesh', value: 'madhesh' };
+export const GANDAKI = { name: 'Gandaki Pradesh', value: 'gandaki' };
+export const LUMBINI = { name: 'Lumbini Pradesh', value: 'lumbini' };
+export const KARNALI = { name: 'Karnali Pradesh', value: 'karnali' };
+export const SUDUR_PASHCHIM = {
+  name: 'Sudur Pashchim Pradesh',
+  value: 'sudur pashchim',
+};

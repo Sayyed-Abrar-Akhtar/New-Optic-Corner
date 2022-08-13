@@ -360,7 +360,7 @@ const NewProduct = ({ baseUrl }) => {
                               {variantObj.stock && variantObj.stock}
                             </span>
                             <span className='font-semibold'>
-                              Npr. {variantObj.price && variantObj.price}/-
+                              रु {variantObj.price && variantObj.price}/-
                             </span>
                           </p>
                         </div>

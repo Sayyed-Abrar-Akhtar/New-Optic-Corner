@@ -18,17 +18,26 @@ const orderSchema = new mongoose.Schema(
           required: true,
           ref: 'Product',
         },
+        variant: {
+          type: mongoose.Schema.Types.ObjectId,
+          required: true,
+          ref: 'Product',
+        },
       },
     ],
     shipping: {
-      address: { type: String, required: true },
-      city: { type: String, required: true },
-      province: { type: String, required: true },
-      phone: { type: String, required: true },
+      address: { type: String, default: '' },
+      city: { type: String, default: '' },
+      province: { type: String, default: '' },
+      phone: { type: String, default: '' },
+    },
+    shipping_charge: {
+      type: Number,
+      default: 0,
     },
     tax: {
       type: Number,
-      required: true,
+      default: 0,
     },
   },
   {

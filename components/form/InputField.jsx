@@ -9,6 +9,7 @@ const InputField = ({
   value = 'text',
   setValue,
   sellercentral = false,
+  ...otherProps
 }) => {
   return (
     <div
@@ -26,6 +27,7 @@ const InputField = ({
           value={value}
           placeholder={label}
           onChange={(e) => setValue(e.target.value)}
+          {...otherProps}
         />
 
         <label

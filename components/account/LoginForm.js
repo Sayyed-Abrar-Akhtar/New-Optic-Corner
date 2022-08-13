@@ -12,7 +12,11 @@ import Link from 'next/link';
 import { signIn, useSession } from 'next-auth/react';
 import { useRouter } from 'next/router';
 import { useSelector } from 'react-redux';
-import { AUTHENTICATED } from '../../constant/GlobalConstants';
+import {
+  AUTHENTICATED,
+  CHECKOUT_REDIRECT,
+  ORDER_REDIRECT,
+} from '../../constant/GlobalConstants';
 
 import styles from '../../styles/Form.module.css';
 
@@ -27,7 +31,23 @@ const LoginForm = () => {
 
   useEffect(() => {
     if (status === AUTHENTICATED) {
-      router.push('/');
+      switch (router.query.type) {
+        case CHECKOUT_REDIRECT:
+          router.push('/checkout');
+          break;
+
+        case ORDER_REDIRECT:
+          router.push('/orders');
+          break;
+        default:
+          router.push('/');
+          break;
+      }
+      // if (router.query.type === CHECKOUT_REDIRECT) {
+      //   router.push('/checkout');
+      // } else {
+      //   router.push('/');
+      // }
     }
   }, [status, router]);
 
@@ -47,7 +67,23 @@ const LoginForm = () => {
     if (result.error) {
       toast.error(result.error);
     } else {
-      router.push('/');
+      switch (router.query.type) {
+        case CHECKOUT_REDIRECT:
+          router.push('/checkout');
+          break;
+
+        case ORDER_REDIRECT:
+          router.push('/orders');
+          break;
+        default:
+          router.push('/');
+          break;
+      }
+      // if (router.query.type === CHECKOUT_REDIRECT) {
+      //   router.push('/checkout');
+      // } else {
+      //   router.push('/');
+      // }
     }
   };
 

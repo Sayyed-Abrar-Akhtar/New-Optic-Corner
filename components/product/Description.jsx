@@ -4,7 +4,7 @@ import styles from '../../styles/Product.module.css';
 
 const Description = ({ description }) => {
   const descList = description.slice('\n');
-  console.log(typeof descList);
+  //console.log(typeof descList);
   return (
     <section className={styles.description}>
       <h4>Descriptions</h4>

@@ -6,7 +6,7 @@ const Price = ({ variant, discount }) => {
   return (
     <h3 className={styles.price}>
       <span className='text-[1.65rem] font-semibold'>
-        NPR{' '}
+        रु{' '}
         {discount
           ? variant.price * ((100 - discount) / 100).toFixed(2)
           : variant.price}
@@ -15,7 +15,7 @@ const Price = ({ variant, discount }) => {
         <span
           className={`${styles.discount_price} text-[1.65rem] ml-4 font-semibold`}
         >
-          NPR {variant.price}
+          रु {variant.price}
         </span>
       ) : null}
     </h3>

@@ -1,3 +1,4 @@
+import CartPage from '../components/cart-page/CartPage';
 import Layout from '../components/layout/Layout';
 
 const cart = () => {
@@ -8,7 +9,7 @@ const cart = () => {
         description='The latest and trendy eyewear, lenses, power glasses, sunglasses online in Nepal.'
         ogUrl='https://www.newopticcorner.com.np/cart'
       >
-        Cart
+        <CartPage />
       </Layout>
     </div>
   );

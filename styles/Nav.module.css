@@ -70,6 +70,12 @@
   .nav {
     display: none;
   }
+
+  .cart_item {
+    top: 50%;
+    right: 30%;
+    transform: translate(-50%, -50%);
+  }
 }
 
 @media screen and (min-width: 701px) {
