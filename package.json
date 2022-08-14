@@ -10,6 +10,7 @@
     "lint": "next lint --no-cache"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.6.2",
     "axios": "^0.24.0",
     "bcryptjs": "^2.4.3",
     "cloudinary": "^1.28.1",
