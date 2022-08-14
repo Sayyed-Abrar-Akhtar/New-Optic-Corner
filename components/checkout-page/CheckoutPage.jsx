@@ -13,6 +13,8 @@ import { placeOrder } from '../../redux/actions/orderActions';
 import { NEW_CART_ITEM_RESET } from '../../redux/constants/cartItemsConstants';
 import { PLACE_ORDER_RESET } from '../../redux/constants/orderConstants';
 
+import { sendEmailNotification } from '../../utils/emailNotification';
+
 import {
   AUTHENTICATED,
   PROVINCE_1,
@@ -31,7 +33,7 @@ const CheckoutPage = () => {
   const { status, data } = useSession();
 
   const { cartItems } = useSelector((state) => state.newCartItem);
-  const { success } = useSelector((state) => state.orderPlaced);
+  const { success, order } = useSelector((state) => state.orderPlaced);
 
   const router = useRouter();
   const dispatch = useDispatch();
@@ -49,16 +51,21 @@ const CheckoutPage = () => {
 
   useEffect(() => {
     let showSuccessTimeout;
-    if (success) {
-      setShowSuccess(true);
-      showSuccessTimeout = setTimeout(() => {
-        dispatch({ type: NEW_CART_ITEM_RESET });
-        dispatch({ type: PLACE_ORDER_RESET });
-        router.push('/orders');
-        setShowSuccess(false);
-        console.log('yo');
-      }, [5000]);
-    }
+    const triggerCreateOrder = async () => {
+      if (success) {
+        await sendEmailNotification(order._id, data.user.name, data.user.email);
+        setShowSuccess(true);
+        showSuccessTimeout = setTimeout(() => {
+          dispatch({ type: NEW_CART_ITEM_RESET });
+          dispatch({ type: PLACE_ORDER_RESET });
+          router.push('/orders');
+          setShowSuccess(false);
+          console.log('yo');
+        }, [5000]);
+      }
+    };
+
+    triggerCreateOrder();
 
     if (status === LOADING) {
       setLoading(true);
@@ -83,8 +90,11 @@ const CheckoutPage = () => {
     }
     shippingCharge(province);
 
-    return () => clearTimeout(showSuccessTimeout);
-  }, [router, status, cartItems, province, success, dispatch]);
+    return () => {
+      clearTimeout(showSuccessTimeout);
+      triggerCreateOrder;
+    };
+  }, [router, data, order, status, cartItems, province, success, dispatch]);
 
   const shippingCharge = (province) => {
     switch (province) {
