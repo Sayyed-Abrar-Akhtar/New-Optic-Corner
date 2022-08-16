@@ -12,7 +12,7 @@ export const menus = [
   {
     id: 'powerglasses',
     text: 'Power Glasses',
-    link: '/powerglassess',
+    link: '/powerglasses',
   },
   {
     id: 'contact-lens',
