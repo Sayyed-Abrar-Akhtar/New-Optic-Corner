@@ -14,7 +14,7 @@ const Header = ({ cartItems }) => {
           <Link href='/' passHref>
             <a className={styles.logo__link}>
               <Image
-                src='/logo.png'
+                src='/logo-noc.png'
                 alt='New Optic Corner'
                 width={600}
                 height={400}
