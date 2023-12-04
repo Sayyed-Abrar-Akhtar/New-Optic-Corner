@@ -10,11 +10,22 @@
   font-size: 1.2rem;
   font-weight: 600;
   line-height: 4.6rem;
-  width: 33%;
+  width: max-content;
   padding: 0 0.5%;
   text-align: center;
   letter-spacing: 1px;
   text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.flag {
+  border-radius: 50%;
+  width: 25px;
+  height: 33px;
+  margin: auto 0;
 }
 
 @media screen and (max-width: 480px) {

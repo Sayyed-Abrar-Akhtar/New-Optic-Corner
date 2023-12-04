@@ -17,7 +17,7 @@ const HeroBanner = ({ hero = {} }) => {
                 src={`${hero.image.url}`}
                 layout='fill'
                 objectFit='cover'
-                objectPosition='right'
+                objectPosition='center'
                 placeholder='blur'
                 alt={hero.title}
               />

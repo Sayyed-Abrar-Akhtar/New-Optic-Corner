@@ -15,12 +15,12 @@
 }
 
 .caption {
-  width: 60rem;
+  width: 80rem;
   padding: var(--padding-3);
   position: absolute;
-  top: 50%;
-  background: var(--linear-gradient);
-  transform: translateY(-50%);
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -33,7 +33,7 @@
 .cta {
   text-align: center;
   margin: 1rem 0;
-  color: var(--white);
+  color: var(--black);
 }
 
 .subtitle {
@@ -52,6 +52,7 @@
     width: 90%;
     margin: 0 auto;
     padding: 1rem 0.75rem;
+    top: 80%;
     left: 50%;
     transform: translate(-50%, -30%);
   }
@@ -63,14 +64,14 @@
   }
 
   .title {
-    font-size: 2rem;
+    font-size: 1.75rem;
     line-height: 1.5rem;
   }
 
   .subtitle,
   .cta {
-    font-size: 1.75rem;
-    line-height: 2.5rem;
+    font-size: 1.25rem;
+    line-height: 150%;
   }
 }
 
@@ -81,9 +82,10 @@
   }
 
   .caption {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
     padding: 5rem 0.75rem;
+    top: 65%;
     left: 50%;
     transform: translate(-50%, -20%);
   }
